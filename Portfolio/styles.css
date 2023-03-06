@@ -1,0 +1,46 @@
+.naruto {
+  width: 120px;
+  height: 133px;
+  background-image: url('./images/Mobile\ -\ Senran\ no\ Samurai\ Kingdom\ JPN\ -\ Naruto\ Uzumaki.png');
+  z-index: 1
+}
+
+.run {
+  animation: run steps(6) .5s infinite;
+}
+@keyframes run {
+  from { background-position: 0px 150px ; }
+  to { background-position: -735px 150px; }
+}
+
+.naruto-standing {
+  width: 90px;
+  height: 133px;
+  background-image: url('./images/Mobile\ -\ Senran\ no\ Samurai\ Kingdom\ JPN\ -\ Naruto\ Uzumaki.png');
+  z-index: 1;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.stand {
+  animation: stand steps(4) 1s infinite;
+}
+@keyframes stand {
+  from { background-position: 0px 0px; }
+  to { background-position: -490px 0px; }
+}
+/* .naruto {
+  width: 272px;
+  height: 310px;
+  background-image: url('./images/Screen\ Shot\ 2023-02-24\ at\ 2.08.09\ PM.png');
+  position: absolute;
+  z-index: 1
+}
+
+.run {
+  animation: run steps(6) 1s infinite;
+}
+@keyframes run {
+  from { background-position: 0px; }
+  to { background-position: -1632px; }
+} */
