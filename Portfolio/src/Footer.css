@@ -1,0 +1,11 @@
+.inset-shadow {
+  box-shadow: inset 0 3px 3px -1px rgba(0, 0, 0, 0.1);
+}
+
+.topScrollButtonBg {
+  transition: transform 0.3s ease; /* Add a transition for the 'transform' property */
+}
+
+.topScrollButtonBg:hover {
+  transform: translateY(-7px); /* Adjust the vertical translation as needed */
+}
