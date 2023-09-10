@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { githubIcon, linkedInIcon, igIcon } from '../public/assets/icons';
+import { githubIcon, linkedInIcon, igIcon } from '../assets/icons';
 
 export default function NavBar () {
   const { pathname } = useLocation();

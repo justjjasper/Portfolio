@@ -56,9 +56,9 @@ export default function About () {
   }, []);
 
   return (
-    <div className={`flex-col flex relative border-4 items-center`}>
+    <div className={`flex-col flex relative items-center`}>
 
-      <div className='border-b-2'>
+      <div className='about shadow-md mb-1'>
         <div ref={aboutRef} id='about' className='about. border-b-[1.5px] font-proxima text-[#333333] flex justify-between my-[5.5rem] mx-[12rem]'>
           <span className={`text transition-transform duration-[1000ms] ease-in-out ${aboutInView ? '' : "-translate-x-full"} ${aboutInView ? '' : 'right-96'} self-center`}>
             <h1 className={`text-8xl relative font-bold mb-6`}>about.</h1>
@@ -69,7 +69,8 @@ export default function About () {
         </div>
       </div>
 
-        <div ref={chartRef} id='chart' className='bg-[#FAFAFA] w-full flex justify-center font-light py-8 px-10 border-b-[1.5px]'>
+      <div ref={chartRef} id='chart' className='bg-[#FAFAFA] shadow-sm mt-0.5 w-full flex justify-center font-light py-8
+        px-10 border-b-[1.5px]'>
           <div className='text-xl self-center flex flex-col text-gray-600'>
             <span className='text-3xl text-black pb-4'>Part Weekend Warrior</span>
             <span className='py-2'>Runner</span>
@@ -89,10 +90,11 @@ export default function About () {
           </div>
       </div>
 
-      <div className=' flex justify-center font-light py-2 border-b-[1.5px] w-full'>
+      <div className='randomFacts flex justify-center font-light py-2 w-full border-b-[1.5px]'>
         <div ref={narutoRef} id='naruto' className={`h-4/12 w-4/12 transition-transform duration-[1000ms] ease-in-out ${naruto ? '' : "-translate-x-full"}`}>
           <img src='../../images/epicNaruto.png'/>
         </div>
+
         <div className='text-xl flex flex-col text-gray-600 self-center'>
           <span className='text-3xl text-black pb-4'>Random Facts</span>
           <span className='py-2'>I've ran 6 Marathons</span>
@@ -103,7 +105,7 @@ export default function About () {
         </div>
       </div>
 
-      <div className='flex flex-col h-80 w-full items-center px-80'>
+      <div className='mySkills  shadow-md mb-[1px] bg-[#FAFAFA] flex flex-col h-80 w-full items-center px-80'>
         <div className='flex self-end'>
           <span>My Skills</span>
         </div>

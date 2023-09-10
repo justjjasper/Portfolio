@@ -17,7 +17,7 @@ export default function Home () {
       </section>
 
 
-      <section className= 'latestWorks bg-[#FAFAFA] w-full h-80 border-black items-center flex justify-center'>
+      <section className= 'latestWorks shadow-md mb-[1px] bg-[#FAFAFA] w-full h-80 items-center flex justify-center'>
       <div className=''>Latest Works</div>
       </section>
     </div>
