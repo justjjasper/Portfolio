@@ -2,7 +2,10 @@
 module.exports = {
   content: ["./src/**/*.{html,js,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'proxima': ['"proxima nova light"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'Sans-serif']
+      }
+    },
   },
-  plugins: [],
 }

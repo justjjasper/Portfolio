@@ -1,20 +1,67 @@
-import { Link } from 'react-router-dom'
-import About from './Pages/About'
-import Home from './Pages/Home'
-import Experience from './Pages/Experience'
-import Projects from './Pages/Projects'
-import Contact from './Pages/Contact'
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { githubIcon, linkedInIcon, igIcon } from '../public/assets/icons';
 
 export default function NavBar () {
+  const { pathname } = useLocation();
+
+  const [showNav, setShowNav] = useState<boolean>(false);
+
+  useEffect(() => {
+    setTimeout(() => setShowNav(true), 150)
+  }, []);
+
+  const menuItem = [
+    { path: '/about', label: 'about' },
+    { path: '/experience', label: 'experience' },
+    { path: '/projects', label: 'projects' },
+    { path: '/contact', label: 'contact' },
+  ];
+
+  const reload = () => {
+    setShowNav(false);
+    setTimeout(() => setShowNav(true), 450);
+  }
+
   return (
-    <nav>
-      <ul>
-        <li><Link to= '/'> home </Link></li>
-        <li><Link to= '/about'> about </Link></li>
-        <li><Link to= '/experience'> experience </Link></li>
-        <li><Link to= '/projects'> projects </Link></li>
-        <li><Link to= '/contact'> contacts </Link></li>
-      </ul>
-    </nav>
+    <div className= {`bg-black text-white h-24 font-proxima text-lg flex items-center transform transition-transform duration-[400ms] ease-in ${showNav ? '' : "-translate-y-full"}`}>
+       <div className='flex absolute'>
+        <div className='relative naruto run'/>
+        <div className='relative naruto-standing stand right-4 bottom-2'/>
+      </div>
+      <nav className=' w-full flex justify-around'>
+        <span className='inline'>
+          <Link to='/' onClick={reload}>
+            <div className="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full hover:bg-gray-600 ">
+               <span className="font-medium text-gray-600 dark:text-black">JB</span>
+            </div>
+          </Link>
+        </span>
+
+        <ul className='inline w-20'>
+          {menuItem.map(item => (
+            <li className='inline px-4 relative top-1'key={item.path}>
+              <Link onClick={reload} className={`${item.path === pathname ? 'text-gray-600' : 'text-white'} hover:text-gray-600`}to={item.path}>
+                {item.label}
+              </Link>
+              </li>
+          ))}
+        </ul>
+
+        <ul className='flex w-60 justify-evenly'>
+          <li className='inline hover:text-gray-600 px-2'> <a href='https://www.linkedin.com/in/jasper-bucad' title='Connect with me on Linkedin' target='_blank'>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-8 h-8 inline"><path fill="currentColor"
+          d={linkedInIcon}/></svg>
+            </a></li>
+          <li className='inline hover:text-gray-600 px-2'> <a href='https://github.com/justjjasper' title='View my code on Github' target='_blank'>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" className="w-8 h-8 inline"><path fill="currentColor" d={githubIcon}/></svg>
+            </a></li>
+          <li className='inline hover:text-gray-600 px-2'> <a href='https://www.instagram.com/onlywithjasper/' title='Follow me on Instagram' target='_blank'>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-8 h-8 inline"><path fill="currentColor"
+          d= {igIcon}/></svg>
+            </a></li>
+        </ul>
+      </nav>
+    </div>
   )
 }
