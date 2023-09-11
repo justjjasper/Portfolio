@@ -21,13 +21,12 @@ export default function Footer() {
     <section className= 'text-[#8E8E8E] flex items-center justify-around bg-[#F4F4F4] h-24'>
       <div className='fakeBackGroundButton bg-[#F4F4F4] flex self-start h-[70px] w-32 absolute -mt-16 rounded-t-full'></div>
 
-      <div className='topScrollButtonBg inset-shadow h-16 w-32 bg-[#F4F4F4] rounded-t-full flex self-start absolute -mt-16 items-end justify-center'
+      <div className='topScrollButtonBg inset-shadow h-16 w-32 bg-[#F4F4F4] rounded-t-full flex self-start absolute -mt-16 justify-center'
       onClick={scrollToTop}>
-        <div className= 'topScrollButton h-12 w-12'>
+        <div className= 'topScrollButton h-16 w-16 flex self-end'>
           {upArrow}
         </div>
       </div>
-
 
       <div className='@JasperBucad hover:text-black'>
         <a href= '/'> © 2023 Jasper Bucad</a>

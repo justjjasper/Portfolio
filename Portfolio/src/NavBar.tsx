@@ -29,10 +29,10 @@ export default function NavBar () {
         <div className='relative naruto run'/>
         <div className='relative naruto-standing stand right-4 bottom-2'/>
       </div>
-      <nav className=' w-full flex justify-around'>
+      <nav className=' w-full flex justify-around items-center'>
         <span className='inline'>
           <Link to='/' onClick={reload}>
-            <div className="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full hover:bg-gray-600 ">
+            <div className="relative inline-flex items-center justify-center w-14 h-14 overflow-hidden bg-gray-100 rounded-full hover:bg-gray-600 ">
                <span className="font-medium text-gray-600 dark:text-black">JB</span>
             </div>
           </Link>
