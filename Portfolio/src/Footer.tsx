@@ -23,7 +23,7 @@ export default function Footer() {
 
       <div className='topScrollButtonBg inset-shadow h-16 w-32 bg-[#F4F4F4] rounded-t-full flex self-start absolute -mt-16 justify-center'
       onClick={scrollToTop}>
-        <div className= 'topScrollButton h-16 w-16 flex self-end'>
+        <div className= 'flex self-end'>
           {upArrow}
         </div>
       </div>

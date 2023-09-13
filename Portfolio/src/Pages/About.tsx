@@ -115,19 +115,133 @@ export default function About () {
 
           <div className='iconContainer flex flex-col w-96 h-72 justify-center gap-16'>
             <span className= 'flex flex-row justify-between'>
-              <img src='../../assets/reactIcon.png' className='h-24 w-30'/>
-              <img src='../../assets/tailwindIcon.png' className='h-16 w-24'/>
-              <img src='../../assets/htmlIcon.png' className='h-24 w-24'/>
+              <img src='../../assets/reactIcon.png' className='h-24 w-30 transition-transform transform-gpu hover:scale-110'
+                alt='React Icon'
+              />
+              <img src='../../assets/tailwindIcon.png' className='h-16 w-24 transition-transform transform-gpu hover:scale-110'
+                alt='Tailwind Icon'/>
+              <img src='../../assets/htmlIcon.png' className='h-24 w-24 transition-transform transform-gpu hover:scale-110'
+                alt='Html Icon'
+              />
             </span>
             <span className= 'flex flex-row justify-between'>
-              <img src='../../assets/typescriptIcon.png' className='h-24 w-24'/>
-              <img src='../../assets/figmaIcon.png'className='h-24 w-16'/>
-              <img src='../../assets/snowboardIcon.png' className='h-24 w-24'/>
+              <img src='../../assets/typescriptIcon.png' className='h-24 w-24 transition-transform transform-gpu hover:scale-110'
+                alt='Typescript Icon'
+              />
+              <img src='../../assets/figmaIcon.png'className='h-24 w-16 transition-transform transform-gpu hover:scale-110'
+                alt='Figma Icon'
+              />
+              <a href='https://www.tiktok.com/@jasperswrld.com/video/7245148001432390954' target='_blank'>
+                <img src='../../assets/snowboardIcon.png' className='h-24 w-24 transition-transform transform-gpu hover:scale-110'
+                  alt='Snowboarding Icon'
+                />
+              </a>
             </span>
            </div>
 
-          <div> bars </div>
+          <div className='skillBars border-4 border-black w-5/12'>
+            <div className='reactSkillBar'>
+              <div className='topPortion flex flex-row w-full'>
+                React JS
+                  <div className='flex-grow relative'>
+                    <div className='absolute flex flex-row-reverse' style={{ width: '90%' }}>
+                     90%
+                    </div>
+                  </div>
+              </div>
 
+              <div className='bottomPortion'>
+                <div className='w-full h-6 border-2 border-black rounded-md'>
+                  <div className='h-full bg-blue-500 rounded' style={{ width: '90%' }}></div>
+                </div>
+              </div>
+            </div>
+
+            <div className='tailwindSkillBar'>
+              <div className='topPortion flex flex-row w-full'>
+                Tailwind
+                  <div className='flex-grow relative'>
+                    <div className='absolute flex flex-row-reverse' style={{ width: '80%' }}>
+                     80%
+                    </div>
+                  </div>
+              </div>
+
+              <div className='bottomPortion'>
+                <div className='w-full h-6 border-2 border-black rounded-md'>
+                  <div className='h-full bg-blue-500 rounded' style={{ width: '80%' }}></div>
+                </div>
+              </div>
+            </div>
+
+            <div className='htmlSkillBar'>
+              <div className='topPortion flex flex-row w-full'>
+                HTML
+                  <div className='flex-grow relative'>
+                    <div className='absolute flex flex-row-reverse' style={{ width: '85%' }}>
+                     85%
+                    </div>
+                  </div>
+              </div>
+
+              <div className='bottomPortion'>
+                <div className='w-full h-6 border-2 border-black rounded-md'>
+                  <div className='h-full bg-blue-500 rounded' style={{ width: '85%' }}></div>
+                </div>
+              </div>
+            </div>
+
+            <div className='typeScriptSkillBar'>
+              <div className='topPortion flex flex-row w-full'>
+                TypeScript
+                  <div className='flex-grow relative'>
+                    <div className='absolute flex flex-row-reverse' style={{ width: '85%' }}>
+                     85%
+                    </div>
+                  </div>
+              </div>
+
+              <div className='bottomPortion'>
+                <div className='w-full h-6 border-2 border-black rounded-md'>
+                  <div className='h-full bg-blue-500 rounded' style={{ width: '85%' }}></div>
+                </div>
+              </div>
+            </div>
+
+            <div className='figmaSkillBar'>
+              <div className='topPortion flex flex-row w-full'>
+                FIGMA
+                  <div className='flex-grow relative'>
+                    <div className='absolute flex flex-row-reverse' style={{ width: '80%' }}>
+                     80%
+                    </div>
+                  </div>
+              </div>
+
+              <div className='bottomPortion'>
+                <div className='w-full h-6 border-2 border-black rounded-md'>
+                  <div className='h-full bg-blue-500 rounded' style={{ width: '80%' }}></div>
+                </div>
+              </div>
+            </div>
+
+            <div className='snowboardingSkillBar'>
+              <div className='topPortion flex flex-row w-full'>
+                SNOWBOARDING
+                  <div className='flex-grow relative'>
+                    <div className='absolute flex flex-row-reverse' style={{ width: '75%' }}>
+                     75%
+                    </div>
+                  </div>
+              </div>
+
+              <div className='bottomPortion'>
+                <div className='w-full h-6 border-2 border-black rounded-md'>
+                  <div className='h-full bg-blue-500 rounded' style={{ width: '75%' }}></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
 
