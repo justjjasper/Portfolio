@@ -10,15 +10,8 @@ export default function About () {
   const chartRef = useRef(null);
   const narutoRef = useRef(null);
 
-  interface Map {
-    [key: string]: number
-  };
-
-  const map:Map = {};
-
-  const track = (target: Element) => {
-    map[target.id] = 1
-  };
+  let aboutUnobserve = false
+  let narutoUnobserve = false
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
@@ -27,38 +20,47 @@ export default function About () {
         switch (target) {
           case aboutRef.current:
             setAboutInView(isIntersecting);
-            track(target)
-            console.log(map)
-            break;
+            // aboutUnobserve = true
+            //@ts-ignore
+            // if (aboutUnobserve) observer.unobserve(aboutRef.current)
+
+          break;
           case chartRef.current:
             setChart(isIntersecting);
-            track(target)
             break;
           case narutoRef.current:
             setNaruto(isIntersecting);
-            track(target)
-            break;
+            narutoUnobserve = true
+             //@ts-ignore
+            // if (narutoUnobserve) {
+            //   observer.unobserve(narutoRef.current)
+            //   console.log('proced? naruto?')
+            // }
+          break;
           default:
-            break;
+          break;
         }
       });
     });
-    //@ts-ignore
+
+    // @ts-ignore
+
     observer.observe(aboutRef.current);
     //@ts-ignore
     observer.observe(chartRef.current);
     //@ts-ignore
     observer.observe(narutoRef.current);
 
+
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [aboutRef.current, narutoRef.current]);
 
   return (
     <div className={`flex-col flex relative items-center`}>
 
-      <div className='about shadow-md mb-1'>
+      <section className='about shadow-md mb-1'>
         <div ref={aboutRef} id='about' className='about. border-b-[1.5px] font-proxima text-[#333333] flex justify-between my-[5.5rem] mx-[12rem]'>
           <span className={`text transition-transform duration-[1000ms] ease-in-out ${aboutInView ? '' : "-translate-x-full"} ${aboutInView ? '' : 'right-96'} self-center`}>
             <h1 className={`text-8xl relative font-bold mb-6`}>about.</h1>
@@ -67,9 +69,9 @@ export default function About () {
           </span>
             <img className={`relative transition-transform duration-[1000ms] ease-in-out ${aboutInView ? '' : "translate-x-full"} w-5/12 h-5/12 object-cover mr-10`} src='../../images/1.JPG'/>
         </div>
-      </div>
+      </section>
 
-      <div ref={chartRef} id='chart' className='bg-[#FAFAFA] shadow-sm mt-0.5 w-full flex justify-center font-light py-8
+      <section ref={chartRef} id='chart' className='bg-[#FAFAFA] shadow-sm mt-0.5 w-full flex justify-center font-light py-8
         px-10 border-b-[1.5px]'>
           <div className='text-xl self-center flex flex-col text-gray-600'>
             <span className='text-3xl text-black pb-4'>Part Weekend Warrior</span>
@@ -88,9 +90,9 @@ export default function About () {
             <span className='py-2'>HTML / CSS</span>
             <span className='py-2'>Squashing Bugs</span>
           </div>
-      </div>
+      </section>
 
-      <div className='randomFacts flex justify-center font-light py-2 w-full border-b-[1.5px]'>
+      <section className='randomFacts flex justify-center font-light py-2 w-full border-b-[1.5px]'>
         <div ref={narutoRef} id='naruto' className={`h-4/12 w-4/12 transition-transform duration-[1000ms] ease-in-out ${naruto ? '' : "-translate-x-full"}`}>
           <img src='../../images/epicNaruto.png'/>
         </div>
@@ -103,24 +105,33 @@ export default function About () {
           <span className='py-2 w-[25ch]'>My squat, bench, & deadlift collective total is 1000lbs</span>
           <span className='py-2'>I have a maltipoo named Mango</span>
         </div>
-      </div>
+      </section>
 
-      <div className='mySkills  shadow-md mb-[1px] bg-[#FAFAFA] flex flex-col h-80 w-full items-center px-80'>
-        <div className='flex self-end'>
-          <span>My Skills</span>
+      <section className='mySkills  shadow-md mb-[1px] bg-[#FAFAFA] flex flex-col h-[30rem] w-full items-center p-10'>
+        <span className='text-3xl'>My Skills</span>
+
+
+        <div className= 'skillsContentContainer flex flex-row font-light justify-around w-full'>
+
+          <div className='iconContainer flex flex-col w-96 h-72 justify-center gap-16'>
+            <span className= 'flex flex-row justify-between'>
+              <img src='../../assets/reactIcon.png' className='h-24 w-30'/>
+              <img src='../../assets/tailwindIcon.png' className='h-16 w-24'/>
+              <img src='../../assets/htmlIcon.png' className='h-24 w-24'/>
+            </span>
+            <span className= 'flex flex-row justify-between'>
+              <img src='../../assets/typescriptIcon.png' className='h-24 w-24'/>
+              <img src='../../assets/figmaIcon.png'className='h-24 w-16'/>
+              <img src='../../assets/snowboardIcon.png' className='h-24 w-24'/>
+            </span>
+           </div>
+
+          <div> bars </div>
+
         </div>
 
-        <div className='flex items-end relative'>
-          {/* <div className='z-10 absolute border-2 border-black w-24 h-24'>
 
-          </div> */}
-          <div className="h-10 w-20 mx-2 bg-blue-500"></div>
-          <div className="h-20 w-20 mx-2 bg-green-500"></div>
-          <div className="h-5 w-20 mx-2 bg-red-500"></div>
-          <div className="h-5 w-20 mx-2 bg-yellow-500"></div>
-          <div className="h-5 w-20 mx-2 bg-pink-500"></div>
-        </div>
-      </div>
+      </section>
 
     </div>
   )
