@@ -1,4 +1,4 @@
-import { upArrow } from '../assets/icons';
+import { upArrow } from '../images/icons';
 import './Footer.css'
 
 export default function Footer() {
