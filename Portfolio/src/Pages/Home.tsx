@@ -25,7 +25,7 @@ export default function Home () {
       </div>
 
       <div className='w-9/12 flex justify-between'>
-        <div className='latestWorks shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col'>
+        <div className='latestWork shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col'>
           <span className='p-3'>
            <img className='h-[200px] w-[305px] rounded shadow-sm' src='../../images/fitLogHorizontalLogo.png'/>
           </span>
@@ -34,7 +34,7 @@ export default function Home () {
         </div>
 
 
-        <div className='latestWorks shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform    hover:shadow-latetstWorksShadow-lg flex flex-col'>
+        <div className='latestWork shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform    hover:shadow-latetstWorksShadow-lg flex flex-col'>
           <span className='p-3'>
             <img className='h-[200px] w-[305px] object-cover rounded shadow-sm' src='../../images/fecLandingPage.png'/>
           </span>
@@ -42,7 +42,7 @@ export default function Home () {
           <p className='pl-3'>Mock e-Commerce Web Page</p>
         </div>
 
-        <div className='latestWorks shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform    hover:shadow-latetstWorksShadow-lg flex flex-col'>
+        <div className='latestWork shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform    hover:shadow-latetstWorksShadow-lg flex flex-col'>
           <span className='p-3'>
             <img className='h-[200px] w-[305px] object-fit rounded shadow-sm' src='../../images/loadBalancer.png'/>
           </span>

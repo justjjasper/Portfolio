@@ -27,20 +27,23 @@ export default function Footer() {
           {upArrow}
         </div>
       </div>
+      <div className='w-9/12 flex justify-between'>
 
-      <div className='@JasperBucad hover:text-black'>
-        <a href= '/'> © 2023 Jasper Bucad</a>
+
+        <div className='@JasperBucad hover:text-black'>
+          <a href= '/'> © 2023 Jasper Bucad</a>
+        </div>
+
+        <nav className= 'FooterMenu'>
+          <ul className='flex justify-around w-80'>
+          {menuItem.map((item, index) => (
+              <li key={index}>
+                <a className='hover:text-gray-600' href= {item.path}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
-
-      <nav className= 'FooterMenu'>
-        <ul className='flex justify-around w-80'>
-        {menuItem.map((item, index) => (
-            <li key={index}>
-              <a className='hover:text-gray-600' href= {item.path}>{item.label}</a>
-            </li>
-          ))}
-        </ul>
-      </nav>
     </section>
   )
 }
