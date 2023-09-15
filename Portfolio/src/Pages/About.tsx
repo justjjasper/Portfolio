@@ -87,7 +87,7 @@ export default function About () {
             <span className='text-3xl text-black pb-4'>Part Coder</span>
             <span className='py-2'>Front End Developer</span>
             <span className='py-2'>React</span>
-            <span className='py-2'>HTML / CSS</span>
+            <span className='py-2'>UI / UX Design</span>
             <span className='py-2'>Squashing Bugs</span>
           </div>
       </section>
@@ -148,7 +148,7 @@ export default function About () {
 
               <div className='bottomPortion'>
                 <div className='w-full h-4 bg-[#D9D9D9] rounded-md'>
-                  <div className='h-full bg-[#626368] rounded-md' style={{ width: '90%' }}></div>
+                  <div className='h-full bg-[#EF8432] rounded-md' style={{ width: '90%' }}></div>
                 </div>
               </div>
             </div>
@@ -161,7 +161,7 @@ export default function About () {
 
               <div className='bottomPortion'>
                 <div className='w-full h-4 bg-[#D9D9D9] rounded-md'>
-                  <div className='h-full bg-[#626368] rounded-md' style={{ width: '80%' }}></div>
+                  <div className='h-full bg-[#EF8432] rounded-md' style={{ width: '80%' }}></div>
                 </div>
               </div>
             </div>
@@ -174,7 +174,7 @@ export default function About () {
 
               <div className='bottomPortion'>
                 <div className='w-full h-4 bg-[#D9D9D9] rounded-md'>
-                  <div className='h-full bg-[#626368] rounded-md' style={{ width: '85%' }}></div>
+                  <div className='h-full bg-[#EF8432] rounded-md' style={{ width: '85%' }}></div>
                 </div>
               </div>
             </div>
@@ -187,7 +187,7 @@ export default function About () {
 
               <div className='bottomPortion'>
                 <div className='w-full h-4 bg-[#D9D9D9] rounded-md'>
-                  <div className='h-full bg-[#626368] rounded-md' style={{ width: '85%' }}></div>
+                  <div className='h-full bg-[#EF8432] rounded-md' style={{ width: '85%' }}></div>
                 </div>
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function About () {
 
               <div className='bottomPortion'>
                 <div className='w-full h-4 bg-[#D9D9D9] rounded-md'>
-                  <div className='h-full bg-[#626368] rounded-md' style={{ width: '80%' }}></div>
+                  <div className='h-full bg-[#EF8432] rounded-md' style={{ width: '80%' }}></div>
                 </div>
               </div>
             </div>
@@ -213,7 +213,7 @@ export default function About () {
 
               <div className='bottomPortion'>
                 <div className='w-full h-4 bg-[#D9D9D9] rounded-md'>
-                  <div className='h-full bg-[#626368] rounded-md' style={{ width: '75%' }}></div>
+                  <div className='h-full bg-[#EF8432] rounded-md' style={{ width: '75%' }}></div>
                 </div>
               </div>
             </div>
