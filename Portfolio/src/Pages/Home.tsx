@@ -27,7 +27,7 @@ export default function Home () {
       <div className='w-9/12 flex justify-between'>
         <div className='latestWork shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col'>
           <span className='p-3'>
-           <img className='h-[200px] w-[305px] rounded shadow-sm' src='../../images/fitLogHorizontalLogo.png'/>
+           <img className='h-[200px] w-[305px] rounded shadow-sm' src='../../images/fitLogHorizontalLogo.png' alt='FitLog+ Image'/>
           </span>
           <p className='pl-3 text-xl text-black'>FitLog+</p>
           <p className='pl-3'>Fitness Mobile Application</p>
@@ -36,7 +36,7 @@ export default function Home () {
 
         <div className='latestWork shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform    hover:shadow-latetstWorksShadow-lg flex flex-col'>
           <span className='p-3'>
-            <img className='h-[200px] w-[305px] object-cover rounded shadow-sm' src='../../images/fecLandingPage.png'/>
+            <img className='h-[200px] w-[305px] object-cover rounded shadow-sm' src='../../images/fecLandingPage.png' alt='Strings Image'/>
           </span>
           <p className='pl-3 text-xl text-black'>Strings</p>
           <p className='pl-3'>Mock e-Commerce Web Page</p>
@@ -44,7 +44,7 @@ export default function Home () {
 
         <div className='latestWork shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform    hover:shadow-latetstWorksShadow-lg flex flex-col'>
           <span className='p-3'>
-            <img className='h-[200px] w-[305px] object-fit rounded shadow-sm' src='../../images/loadBalancer.png'/>
+            <img className='h-[200px] w-[305px] object-fit rounded shadow-sm' src='../../images/loadBalancer.png' alt='System Design Image'/>
           </span>
           <p className='pl-3 text-xl text-black'>System Design</p>
           <p className='pl-3'>Optimized a Legacy System</p>
