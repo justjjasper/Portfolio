@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 
-
 export default function About () {
   const [aboutInView, setAboutInView] = useState<boolean>(false);
   const [chart, setChart] = useState<boolean>(false);

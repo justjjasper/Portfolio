@@ -10,7 +10,10 @@ module.exports = {
       boxShadow: {
         'latestWorksShadow-md': '0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 -3px 2px -2px rgba(0, 0, 0, 0.1)',
         'latetstWorksShadow-lg':'0 10px 15px -3px rgb(0, 0, 0, 0.3), 0 -6px 6px -4px rgb(0, 0, 0, 0.1)'
-      }
+      },
+      backgroundColor: {
+        'black-70': 'rgba(0, 0, 0, 0.85)',
+      },
     },
   },
 }

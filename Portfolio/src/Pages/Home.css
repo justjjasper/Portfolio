@@ -1,0 +1,18 @@
+.latestWork::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Your background color with opacity */
+  backdrop-filter: blur(10px); /* Adjust the blur as needed */
+  pointer-events: none; /* To allow interactions with the main element */
+  z-index: -1; /* Place the pseudo-element behind the main content */
+  opacity: 0; /* Initially, make it transparent */
+  transition: opacity 0.3s; /* Transition for opacity */
+}
+
+.latestWork:hover::before {
+  opacity: 1; /* Show the blur effect on hover */
+}
