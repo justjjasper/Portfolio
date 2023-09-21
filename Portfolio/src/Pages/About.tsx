@@ -57,9 +57,9 @@ export default function About () {
   }, [aboutRef.current, narutoRef.current]);
 
   return (
-    <div className={`flex-col flex relative items-center`}>
+    <div className='flex-col flex relative items-center'>
 
-      <section className='about shadow-md mb-1'>
+      <section className='flex about shadow-md mb-1'>
         <div ref={aboutRef} id='about' className='about. border-b-[1.5px] font-proxima text-[#333333] flex justify-between my-[5.5rem] mx-[12rem]'>
           <span className={`text transition-transform duration-[1000ms] ease-in-out ${aboutInView ? '' : "-translate-x-full"} ${aboutInView ? '' : 'right-96'} self-center`}>
             <h1 className={`text-8xl relative font-bold mb-6`}>about.</h1>
@@ -70,7 +70,7 @@ export default function About () {
         </div>
       </section>
 
-      <section ref={chartRef} id='chart' className='bg-[#FAFAFA] shadow-sm mt-0.5 w-full flex justify-center font-light py-8
+      <section ref={chartRef} id='chart' className='bg-[#FAFAFA] flex shadow-sm mt-0.5 w-full justify-center font-light py-8
         px-10 border-b-[1.5px]'>
           <div className='text-xl self-center flex flex-col text-gray-600'>
             <span className='text-3xl text-black pb-4'>Part Weekend Warrior</span>
@@ -106,7 +106,7 @@ export default function About () {
         </div>
       </section>
 
-      <section className='mySkills  shadow-md mb-[1px] bg-[#FAFAFA] flex flex-col h-[30rem] w-full items-center p-10'>
+      <section className='mySkills flex shadow-md mb-[1px] bg-[#FAFAFA] flex-col h-[30rem] w-full items-center p-10'>
         <span className='text-3xl mb-6'>My Skills</span>
 
 

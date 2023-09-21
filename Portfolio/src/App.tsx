@@ -1,16 +1,20 @@
-import { useState, useEffect } from 'react'
+import { lazy, Suspense, useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import styles from './input.css'
 import { Routes, Route } from 'react-router-dom'
-import NavBar from './NavBar'
-import Home from './Pages/Home'
-import About from './Pages/About'
+const LazyNavBar = lazy(() => import('./NavBar'))
+const LazyHome = lazy(() => import('./Pages/Home'))
+const LazyAbout = lazy(() => import('./Pages/About'))
+const LazyExperience = lazy(() => import('./Pages/Experience'))
+const LazyProjects = lazy(() => import('./Pages/Projects'))
+const LazyContact = lazy(() => import('./Pages/Contact'))
+const LazyFooter = lazy(() => import('./Footer'))
 import Experience from './Pages/Experience'
 import Projects from './Pages/Projects'
 import Contact from './Pages/Contact'
 import Footer from './Footer'
 
-// import './App.css'
+//Loading fallback is questionable
 
 function App() {
   return (
@@ -19,15 +23,51 @@ function App() {
         <div className='relative naruto run'/>
         <div className='relative naruto-standing stand right-4 bottom-2'/>
       </div> */}
-    <NavBar/>
+    <Suspense fallback={<div>Loading...</div>}>
+      <LazyNavBar/>
+    </Suspense>
+
     <Routes>
-    <Route path='/' element={<Home/>}/>
-    <Route path='/about' element={<About/>}/>
-    <Route path='/experience' element={<Experience/>}/>
-    <Route path='/projects' element={<Projects/>}/>
-    <Route path='/contact' element={<Contact/>}/>
+      <Route
+        path='/'
+        element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyHome/>
+          </Suspense>
+        }/>
+      <Route
+        path='/about'
+        element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyAbout/>
+          </Suspense>
+        }/>
+      <Route
+        path='/experience'
+        element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyExperience/>
+          </Suspense>
+        }/>
+      <Route
+        path='/projects'
+        element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyProjects/>
+          </Suspense>
+        }/>
+      <Route
+        path='/contact'
+        element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyContact/>
+          </Suspense>
+        }/>
     </Routes>
-    <Footer/>
+
+    <Suspense fallback={<div>Loading...</div>}>
+      <LazyFooter/>
+    </Suspense>
     </div>
   )
 }
