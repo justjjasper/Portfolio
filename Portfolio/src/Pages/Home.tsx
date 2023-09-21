@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { reactNativeIcon, typeScriptIcon, reduxIcon, figmaIcon, nodeJSIcon,expressJSIcon, awsIcon, psqlIcon} from "../../images/icons";
 
 export default function Home () {
@@ -6,6 +6,7 @@ export default function Home () {
   const [fitLogHovered, setFitLogHovered] = useState(false);
   const [stringsHovered, setStringsHovered] = useState(false);
   const [systemDesignHovered, setSystemDesignHovered] = useState(false);
+  const [showSection, setShowSection] = useState(false);
 
   const handleFitLogMouseEnter = () => {
     setFitLogHovered(true);
@@ -31,9 +32,23 @@ export default function Home () {
     setSystemDesignHovered(false);
   };
 
+  useEffect(() => {
+    // Use this useEffect to control when to show the section
+    // For example, you can use a timer or some other event to trigger it
+    const timer = setTimeout(() => {
+      setShowSection(true);
+    }, 900);
+
+    // Clean up the timer when the component unmounts
+    return () => clearTimeout(timer);
+  }, []);
+
+
   return (
     <div className='flex flex-col'>
-      <section className= 'landingSection h-[37rem] border-b-2 w-full justify-center flex p-20 text-[#333333]'>
+      <section
+        className={`landingSection h-[37rem] border-b-2 w-full justify-center flex p-20 text-[#333333] ${showSection ? 'opacity-100 transition-opacity duration-1000' : 'opacity-0'}`}
+      >
         <div className='flex flex-col self-center font-proxima relative right-10'>
           <h1 className="pb-4 text-6xl  w-[10ch] font-bold tracking-tight">weekend warrior</h1>
           <span className='w-[25ch] text-[#7B7B7B]'>Athlete that loves physical activities.</span>

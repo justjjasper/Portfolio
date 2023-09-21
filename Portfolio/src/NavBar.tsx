@@ -31,11 +31,11 @@ export default function NavBar () {
       </div>
       <nav className=' w-full flex justify-around items-center'>
         <span className='inline'>
-          <Link to='/' onClick={reload}>
+          <a href='/' onClick={reload}>
             <div className="relative inline-flex items-center justify-center w-14 h-14 overflow-hidden bg-gray-100 rounded-full hover:bg-gray-600 ">
                <span className="font-medium text-gray-600 dark:text-black">JB</span>
             </div>
-          </Link>
+          </a>
         </span>
 
         <ul className='inline w-20'>
