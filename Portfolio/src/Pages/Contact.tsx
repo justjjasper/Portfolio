@@ -1,30 +1,49 @@
 import { linkedInIcon, githubIcon, igIcon } from "../../images/icons";
-import { FormEvent, useRef } from "react";
+import { FormEvent, useRef, useState } from "react";
 import axios from 'axios';
 
 export default function Contact () {
   const nameRef = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
   const messageRef = useRef<HTMLTextAreaElement | null>(null);
+  const [errorStatus, setErrorStatus] = useState(false)
+  const [successStatus, setSuccessStatus] = useState(false)
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    // if email is confirmed, reset fields and show success
-    // if not, keep fields and show error
+    let name = nameRef.current?.value;
+    let email = emailRef.current?.value;
+    let message = messageRef.current?.value;
     console.log(nameRef.current?.value, emailRef.current?.value, messageRef.current?.value )
 
-    const payload = {
-      name: nameRef.current?.value,
-      email: emailRef.current?.value,
-      message: messageRef.current?.value
-    };
+    const emailRegex = /\S+@\S+\.\S+/;
 
-    try {
-      await axios.post('http://127.0.0.1:3000/contact', payload )
-    } catch(err) {
-      console.error('Error in posting contact message from client side', err)
+    if (!name || !email || !message) {
+      setSuccessStatus(false);
+      setErrorStatus(true);
+      console.log('1')
+    } else if (!emailRegex.test(email)) {
+      setSuccessStatus(false);
+      setErrorStatus(true)
+      console.log('2')
+    } else {
+      nameRef.current!.value = '';
+      emailRef.current!.value = '';
+      messageRef.current!.value = '';
+
+      const payload = {
+        name,
+        email,
+        message,
+      };
+
+      try {
+        await axios.post('http://127.0.0.1:3000/contact', payload )
+      } catch(err) {
+        console.error('Error in posting contact message from client side', err)
+      }
     }
+
   };
 
   return (
