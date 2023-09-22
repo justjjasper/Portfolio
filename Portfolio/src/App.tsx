@@ -1,6 +1,4 @@
 import { lazy, Suspense, useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import styles from './input.css'
 import { Routes, Route } from 'react-router-dom'
 const LazyNavBar = lazy(() => import('./NavBar'))
 const LazyHome = lazy(() => import('./Pages/Home'))
@@ -9,10 +7,6 @@ const LazyExperience = lazy(() => import('./Pages/Experience'))
 const LazyProjects = lazy(() => import('./Pages/Projects'))
 const LazyContact = lazy(() => import('./Pages/Contact'))
 const LazyFooter = lazy(() => import('./Footer'))
-import Experience from './Pages/Experience'
-import Projects from './Pages/Projects'
-import Contact from './Pages/Contact'
-import Footer from './Footer'
 
 //Loading fallback is questionable
 
