@@ -1,5 +1,6 @@
 import { linkedInIcon, githubIcon, igIcon, loadingSVG } from "../../images/icons";
 import { FormEvent, useRef, useState } from "react";
+import { throttle } from '../helperFunctions/throttleUtil';
 import axios from 'axios';
 
 export default function Contact () {
@@ -10,8 +11,7 @@ export default function Contact () {
   const [successStatus, setSuccessStatus] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleFormSubmit = async () => {
 
     let name = nameRef.current?.value;
     let email = emailRef.current?.value;
@@ -53,6 +53,13 @@ export default function Contact () {
       }
     }
 
+  };
+
+  const throttledFormSubmit = throttle(handleFormSubmit, 5000);
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    throttledFormSubmit();
   };
 
   return (
