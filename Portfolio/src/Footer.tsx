@@ -8,7 +8,7 @@ export default function Footer() {
 
   const menuItem = [
     { path: '/about', label: 'about' },
-    { path: '/experience', label: 'experience' },
+    // { path: '/experience', label: 'experience' },
     { path: '/projects', label: 'projects' },
     { path: '/contact', label: 'contact' },
   ];

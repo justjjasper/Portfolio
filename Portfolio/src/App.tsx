@@ -23,7 +23,7 @@ function App() {
         <div className='relative naruto run'/>
         <div className='relative naruto-standing stand right-4 bottom-2'/>
       </div> */}
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense>
       <LazyNavBar/>
     </Suspense>
 
@@ -31,41 +31,41 @@ function App() {
       <Route
         path='/'
         element={
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense>
             <LazyHome/>
           </Suspense>
         }/>
       <Route
         path='/about'
         element={
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense>
             <LazyAbout/>
           </Suspense>
         }/>
       <Route
         path='/experience'
         element={
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense>
             <LazyExperience/>
           </Suspense>
         }/>
       <Route
         path='/projects'
         element={
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense>
             <LazyProjects/>
           </Suspense>
         }/>
       <Route
         path='/contact'
         element={
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense>
             <LazyContact/>
           </Suspense>
         }/>
     </Routes>
 
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense>
       <LazyFooter/>
     </Suspense>
     </div>

@@ -50,7 +50,7 @@ export default function Home () {
       >
         <div className='flex flex-col self-center font-proxima relative right-10'>
           <h1 className="pb-4 text-6xl  w-[10ch] font-bold tracking-tight">weekend warrior</h1>
-          <span className='w-[25ch] text-[#7B7B7B]'>Athlete that loves physical activities.</span>
+          <span className='w-[25ch] text-[#7B7B7B]'>Athlete that enjoys physical activities.</span>
         </div>
 
         <img className='w-96 h-96 object-cover relative right-10'src='../../images/1.JPG'/>

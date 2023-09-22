@@ -13,7 +13,7 @@ export default function NavBar () {
 
   const menuItem = [
     { path: '/about', label: 'about' },
-    { path: '/experience', label: 'experience' },
+    // { path: '/experience', label: 'experience' },
     { path: '/projects', label: 'projects' },
     { path: '/contact', label: 'contact' },
   ];
@@ -24,13 +24,13 @@ export default function NavBar () {
   }
 
   return (
-    <div className= {`bg-black text-white h-24 font-proxima text-lg flex items-center transform transition-transform duration-[400ms] ease-in ${showNav ? '' : "-translate-y-full"}`}>
-       <div className='flex absolute'>
+    <div className= {`bg-black text-white h-24 font-proxima text-lg flex justify-center items-center transform transition-transform duration-[400ms] ease-in ${showNav ? '' : "-translate-y-full"}`}>
+       {/* <div className='flex absolute'>
         <div className='relative naruto run'/>
         <div className='relative naruto-standing stand right-4 bottom-2'/>
-      </div>
-      <nav className=' w-full flex justify-around items-center'>
-        <span className='inline'>
+      </div> */}
+      <nav className=' w-9/12 flex justify-between items-center'>
+        <span>
           <a href='/' onClick={reload}>
             <div className="relative inline-flex items-center justify-center w-14 h-14 overflow-hidden bg-gray-100 rounded-full hover:bg-gray-600 ">
                <span className="font-medium text-3xl text-gray-600 dark:text-black">JB</span>
@@ -38,9 +38,9 @@ export default function NavBar () {
           </a>
         </span>
 
-        <ul className='inline w-20'>
+        <ul className='flex ml-48'>
           {menuItem.map(item => (
-            <li className='inline px-4 relative top-1'key={item.path}>
+            <li className='px-4 relative top-1'key={item.path}>
               <Link onClick={reload} className={`${item.path === pathname ? 'text-gray-600' : 'text-white'} hover:text-gray-600`}to={item.path}>
                 {item.label}
               </Link>
