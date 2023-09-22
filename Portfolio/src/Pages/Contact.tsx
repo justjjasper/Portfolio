@@ -1,4 +1,4 @@
-import { linkedInIcon, githubIcon, igIcon } from "../../images/icons";
+import { linkedInIcon, githubIcon, igIcon, loadingSVG } from "../../images/icons";
 import { FormEvent, useRef, useState } from "react";
 import axios from 'axios';
 
@@ -6,29 +6,31 @@ export default function Contact () {
   const nameRef = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
   const messageRef = useRef<HTMLTextAreaElement | null>(null);
-  const [errorStatus, setErrorStatus] = useState(false)
-  const [successStatus, setSuccessStatus] = useState(false)
+  const [errorStatus, setErrorStatus] = useState(false);
+  const [successStatus, setSuccessStatus] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     let name = nameRef.current?.value;
     let email = emailRef.current?.value;
     let message = messageRef.current?.value;
-    console.log(nameRef.current?.value, emailRef.current?.value, messageRef.current?.value )
 
     const emailRegex = /\S+@\S+\.\S+/;
 
     if (!name || !email || !message) {
+      setLoading(false);
       setSuccessStatus(false);
       setErrorStatus(true);
-      console.log('1')
     } else if (!emailRegex.test(email)) {
+      setLoading(false);
       setSuccessStatus(false);
       setErrorStatus(true)
-      console.log('2')
     } else {
       setErrorStatus(false);
-      setSuccessStatus(true);
+      setSuccessStatus(false);
+      setLoading(true);
 
       nameRef.current!.value = '';
       emailRef.current!.value = '';
@@ -41,8 +43,12 @@ export default function Contact () {
       };
 
       try {
-        await axios.post('http://127.0.0.1:3000/contact', payload )
+        const response = await axios.post('http://127.0.0.1:3000/contact', payload);
+        setLoading(false);
+        setErrorStatus(false);
+        setSuccessStatus(true);
       } catch(err) {
+        setLoading(false)
         console.error('Error in posting contact message from client side', err)
       }
     }
@@ -148,6 +154,13 @@ export default function Contact () {
               Validation errors occurred. Please confirm the fields and submit it again.
             </div>
           ) : null}
+
+          { loading ? (
+          <span className='flex justify-center'>
+            {loadingSVG}
+          </span>
+          ) : null }
+
         </div>
       </section>
     </div>

@@ -30,11 +30,6 @@ export default function About () {
           case narutoRef.current:
             setNaruto(isIntersecting);
             narutoUnobserve = true
-             //@ts-ignore
-            // if (narutoUnobserve) {
-            //   observer.unobserve(narutoRef.current)
-            //   console.log('proced? naruto?')
-            // }
           break;
           default:
           break;
@@ -186,7 +181,7 @@ export default function About () {
 
               <div className='bottomPortion'>
                 <div className='w-full h-4 bg-[#D9D9D9] rounded-md'>
-                  <div className='h-full bg-[#EF8432] rounded-md' style={{ width: '85%' }}></div>
+                  <div className='h-full bg-[#626368] rounded-md' style={{ width: '85%' }}></div>
                 </div>
               </div>
             </div>
@@ -199,7 +194,7 @@ export default function About () {
 
               <div className='bottomPortion'>
                 <div className='w-full h-4 bg-[#D9D9D9] rounded-md'>
-                  <div className='h-full bg-[#EF8432] rounded-md' style={{ width: '80%' }}></div>
+                  <div className='h-full bg-[#626368] rounded-md' style={{ width: '80%' }}></div>
                 </div>
               </div>
             </div>
@@ -212,7 +207,7 @@ export default function About () {
 
               <div className='bottomPortion'>
                 <div className='w-full h-4 bg-[#D9D9D9] rounded-md'>
-                  <div className='h-full bg-[#EF8432] rounded-md' style={{ width: '75%' }}></div>
+                  <div className='h-full bg-[#626368] rounded-md' style={{ width: '75%' }}></div>
                 </div>
               </div>
             </div>
