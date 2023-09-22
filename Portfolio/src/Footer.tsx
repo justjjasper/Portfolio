@@ -5,7 +5,7 @@ import './Footer.css'
 export default function Footer() {
 
   const { pathname } = useLocation();
-  console.log('ccurent pathname: ', '/projects' === pathname)
+
   const menuItem = [
     { path: '/about', label: 'about' },
     { path: '/experience', label: 'experience' },

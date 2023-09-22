@@ -3,7 +3,7 @@ import { linkedInIcon, githubIcon, igIcon } from "../../images/icons";
 export default function Contact () {
   return (
     <div className='flex flex-col'>
-      <section className='flex h-[37rem] shadow-md mb-[1px] items-center justify-center'>
+      <section className='flex h-[37rem] shadow-md mb-1 items-center justify-center'>
         <div className='content font-proxima text-[#333333] flex flex-col h-[20rem] justify-around'>
           <p className='text-8xl relative font-bold tracking-tighter'>contact.</p>
           <p className='text-[#7B7B7B] text-2xl font-light w-[27ch]'>Get in touch with me via social media or email.</p>
@@ -37,12 +37,44 @@ export default function Contact () {
             </a>
           </div>
 
-
         </div>
 
 
-          <img className='w-4/12 h-4/12 object-cover' src='../../images/1.JPG' alt='Self Image'/>
+        <img className='w-4/12 h-4/12 object-cover' src='../../images/1.JPG' alt='Self Image'/>
 
+      </section>
+
+      <section className='flex h-[32rem] shadow-md mb-[1px] bg-[#FAFAFA] justify-center items-center font-light'>
+        <div className='flex flex-col w-9/12'>
+          <p className='text-4xl tracking-wider text-[#333333] mb-6'>Send me an email</p>
+          <div className='flex flex-row justify-between'>
+
+            <div className='flex flex-col w-6/12 '>
+              <div className='flex flex-col mb-5'>
+                <label className='text-[#333333]' htmlFor='nameInput'>Name</label>
+                <input className='border-[1px] border-gray-600 shadow-inner rounded h-10 p-2' type='text' id='nameInput' name='nameInput'/>
+              </div>
+
+              <div className='flex flex-col mb-5'>
+                <label className='text-[#333333]' htmlFor='emailInput'>Email</label>
+                <input className='border-[1px] border-gray-600 shadow-inner rounded h-10 p-2'type='text' id='emailInput' name='emailInput'/>
+              </div>
+            </div>
+
+            <div className='flex flex-col w-5/12 mb-5'>
+              <label className='text-[#333333]' htmlFor ='messageInput'>Message</label>
+              <textarea className='border-[1px] border-gray-600 shadow-inner rounded h-full p-2' id='messageInput' name='messageInput'/>
+            </div>
+
+          </div>
+
+
+            <button
+              className='flex items-center justify-center h-12 w-36 bg-[#333333] rounded self-end hover:opacity-70 text-lg tracking-wide text-white'>
+              Send email
+            </button>
+
+        </div>
       </section>
     </div>
   )
