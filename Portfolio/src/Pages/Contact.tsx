@@ -1,18 +1,32 @@
 import { linkedInIcon, githubIcon, igIcon } from "../../images/icons";
 import { FormEvent, useRef } from "react";
+import axios from 'axios';
 
 export default function Contact () {
   const nameRef = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
   const messageRef = useRef<HTMLTextAreaElement | null>(null);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // if email is confirmed, reset fields and show success
     // if not, keep fields and show error
     console.log(nameRef.current?.value, emailRef.current?.value, messageRef.current?.value )
-  }
+
+    const payload = {
+      name: nameRef.current?.value,
+      email: emailRef.current?.value,
+      message: messageRef.current?.value
+    };
+
+    try {
+      await axios.post('http://127.0.0.1:3000/contact', payload )
+    } catch(err) {
+      console.error('Error in posting contact message from client side', err)
+    }
+  };
+
   return (
     <div className='flex flex-col'>
       <section className='flex h-[37rem] shadow-md mb-1 items-center justify-center'>
