@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy  } from "react";
 import { reactNativeIcon, typeScriptIcon, reduxIcon, figmaIcon, nodeJSIcon,expressJSIcon, awsIcon, psqlIcon} from "../../images/icons";
+const LazyFooter = lazy(() => import('../Footer'));
 
 export default function Home () {
 
@@ -37,7 +38,7 @@ export default function Home () {
     // For example, you can use a timer or some other event to trigger it
     const timer = setTimeout(() => {
       setShowSection(true);
-    }, 900);
+    }, 700);
 
     // Clean up the timer when the component unmounts
     return () => clearTimeout(timer);
@@ -46,7 +47,7 @@ export default function Home () {
 
   return (
     <div className={`flex flex-col  ${showSection ? 'opacity-100 transition-opacity duration-1000' : 'opacity-0'}`}>
-      <section className='landingSection h-[37rem] flex shadow-md mb-1 w-full justify-center p-20 text-[#333333]'
+      <section className='landingSection h-[36rem] flex shadow-md mb-1 w-full justify-center p-20 text-[#333333]'
       >
         <div className='flex flex-col self-center font-proxima relative right-10'>
           <h1 className="pb-4 text-6xl  w-[10ch] font-bold tracking-tight">weekend warrior</h1>
@@ -61,7 +62,7 @@ export default function Home () {
         </div>
       </section>
 
-      <section className= 'latestWorks flex shadow-md mb-[1px] bg-[#FAFAFA] text-[#7B7B7B] w-full h-[32rem] items-center      justify-center flex-col pb-10'>
+      <section className= 'latestWorks flex shadow-md mb-1 bg-[#FAFAFA] text-[#7B7B7B] w-full h-[32rem] items-center      justify-center flex-col pb-10'>
         <div className='w-9/12 flex justify-between mb-3'>
           <div className=''>───────────────────────</div>
           <div className='font-proxima-semibold tracking-wide'>SOME OF MY LATEST WORKS</div>
@@ -200,6 +201,7 @@ export default function Home () {
           </div>
         </div>
       </section>
+      <LazyFooter/>
     </div>
   )
 }

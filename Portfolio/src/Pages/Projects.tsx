@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy } from "react";
 import { reactNativeIcon, typeScriptIcon, reduxIcon, figmaIcon, nodeJSIcon,expressJSIcon, awsIcon, psqlIcon} from "../../images/icons";
+const LazyFooter = lazy(() => import('../Footer'));
 
 export default function Projects () {
 
@@ -47,7 +48,7 @@ export default function Projects () {
 
   return (
     <div className='flex flex-col'>
-      <section className='projects flex h-[32rem] shadow-md mb-[1px] bg-[#FAFAFA] justify-center items-center gap-8'>
+      <section className='projects flex h-[32rem] shadow-md mb-1 bg-[#FAFAFA] justify-center items-center gap-8'>
 
         <div className='project FitLog relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
             onMouseEnter={handleFitLogMouseEnter}
@@ -222,6 +223,7 @@ export default function Projects () {
             </div>
         </div>
       </section>
+      <LazyFooter/>
     </div>
   )
 }

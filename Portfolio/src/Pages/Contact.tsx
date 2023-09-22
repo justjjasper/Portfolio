@@ -1,6 +1,7 @@
 import { linkedInIcon, githubIcon, igIcon, loadingSVG } from "../../images/icons";
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useRef, useState, lazy } from "react";
 import { throttle } from '../helperFunctions/throttleUtil';
+const LazyFooter = lazy(() => import('../Footer'));
 import axios from 'axios';
 
 export default function Contact () {
@@ -64,7 +65,7 @@ export default function Contact () {
 
   return (
     <div className='flex flex-col'>
-      <section className='flex h-[37rem] shadow-md mb-1 items-center justify-center'>
+      <section className='flex h-[36rem] shadow-md mb-1 items-center justify-center'>
         <div className='content font-proxima text-[#333333] flex flex-col h-[20rem] justify-around'>
           <p className='text-8xl relative font-bold tracking-tighter'>contact.</p>
           <p className='text-[#7B7B7B] text-2xl font-light w-[27ch]'>Get in touch with me via social media or email.</p>
@@ -105,7 +106,7 @@ export default function Contact () {
 
       </section>
 
-      <section className='flex h-[37rem] shadow-md mb-[1px] bg-[#FAFAFA] justify-center items-center font-light'>
+      <section className='flex h-[37rem] shadow-md mb-1 bg-[#FAFAFA] justify-center items-center font-light'>
         <div className='flex flex-col w-9/12'>
           <p className='text-4xl tracking-wider text-[#333333] mb-6'>Send me an email</p>
             <form
@@ -170,6 +171,7 @@ export default function Contact () {
 
         </div>
       </section>
+      <LazyFooter/>
     </div>
   )
 }

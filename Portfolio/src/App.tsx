@@ -12,7 +12,7 @@ const LazyFooter = lazy(() => import('./Footer'))
 
 function App() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       {/* <div className='flex absolute'>
         <div className='relative naruto run'/>
         <div className='relative naruto-standing stand right-4 bottom-2'/>
@@ -21,47 +21,46 @@ function App() {
       <LazyNavBar/>
     </Suspense>
 
-    <Routes>
-      <Route
-        path='/'
-        element={
-          <Suspense>
-            <LazyHome/>
-          </Suspense>
-        }/>
-      <Route
-        path='/about'
-        element={
-          <Suspense>
-            <LazyAbout/>
-          </Suspense>
-        }/>
-      <Route
-        path='/experience'
-        element={
-          <Suspense>
-            <LazyExperience/>
-          </Suspense>
-        }/>
-      <Route
-        path='/projects'
-        element={
-          <Suspense>
-            <LazyProjects/>
-          </Suspense>
-        }/>
-      <Route
-        path='/contact'
-        element={
-          <Suspense>
-            <LazyContact/>
-          </Suspense>
-        }/>
-    </Routes>
+    <div className='flex-1'>
+      <Routes>
+        <Route
+          path='/'
+          element={
+            <Suspense>
+              <LazyHome/>
+            </Suspense>
+          }/>
+        <Route
+          path='/about'
+          element={
+            <Suspense>
+              <LazyAbout/>
+            </Suspense>
+          }/>
+        <Route
+          path='/experience'
+          element={
+            <Suspense>
+              <LazyExperience/>
+            </Suspense>
+          }/>
+        <Route
+          path='/projects'
+          element={
+            <Suspense>
+              <LazyProjects/>
+            </Suspense>
+          }/>
+        <Route
+          path='/contact'
+          element={
+            <Suspense>
+              <LazyContact/>
+            </Suspense>
+          }/>
+      </Routes>
+    </div>
 
-    <Suspense>
-      <LazyFooter/>
-    </Suspense>
     </div>
   )
 }

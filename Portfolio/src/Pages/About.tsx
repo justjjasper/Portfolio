@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, lazy } from 'react';
+const LazyFooter = lazy(() => import('../Footer'));
 
 export default function About () {
   const [aboutInView, setAboutInView] = useState<boolean>(false);
@@ -9,7 +10,6 @@ export default function About () {
   const chartRef = useRef(null);
   const narutoRef = useRef(null);
 
-  let aboutUnobserve = false
   let narutoUnobserve = false
 
   useEffect(() => {
@@ -52,8 +52,7 @@ export default function About () {
   }, [aboutRef.current, narutoRef.current]);
 
   return (
-    <div className='flex-col flex relative items-center'>
-
+    <div className='flex-col flex '>
       <section className='flex about shadow-md mb-1'>
         <div ref={aboutRef} id='about' className='about. border-b-[1.5px] font-proxima text-[#333333] flex justify-between my-[5.5rem] mx-[12rem]'>
           <span className={`text transition-transform duration-[1000ms] ease-in-out ${aboutInView ? '' : "-translate-x-full"} ${aboutInView ? '' : 'right-96'} self-center`}>
@@ -101,7 +100,7 @@ export default function About () {
         </div>
       </section>
 
-      <section className='mySkills flex shadow-md mb-[1px] bg-[#FAFAFA] flex-col h-[30rem] w-full items-center p-10'>
+      <section className='mySkills flex shadow-md mb-1 bg-[#FAFAFA] flex-col h-[30rem] w-full items-center p-10'>
         <span className='text-3xl mb-6'>My Skills</span>
 
 
@@ -216,7 +215,7 @@ export default function About () {
 
 
       </section>
-
+    <LazyFooter/>
     </div>
   )
 }
