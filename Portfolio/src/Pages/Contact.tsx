@@ -1,6 +1,18 @@
 import { linkedInIcon, githubIcon, igIcon } from "../../images/icons";
+import { FormEvent, useRef } from "react";
 
 export default function Contact () {
+  const nameRef = useRef<HTMLInputElement | null>(null);
+  const emailRef = useRef<HTMLInputElement | null>(null);
+  const messageRef = useRef<HTMLTextAreaElement | null>(null);
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // if email is confirmed, reset fields and show success
+    // if not, keep fields and show error
+    console.log(nameRef.current?.value, emailRef.current?.value, messageRef.current?.value )
+  }
   return (
     <div className='flex flex-col'>
       <section className='flex h-[37rem] shadow-md mb-1 items-center justify-center'>
@@ -47,23 +59,39 @@ export default function Contact () {
       <section className='flex h-[32rem] shadow-md mb-[1px] bg-[#FAFAFA] justify-center items-center font-light'>
         <div className='flex flex-col w-9/12'>
           <p className='text-4xl tracking-wider text-[#333333] mb-6'>Send me an email</p>
-            <form className='flex flex-col'>
+            <form
+              className='flex flex-col'
+              onSubmit={handleSubmit}>
               <div className='flex flex-row justify-between'>
                 <div className='flex flex-col w-6/12 '>
                   <div className='flex flex-col mb-5'>
                     <label className='text-[#333333]' htmlFor='nameInput'>Name</label>
-                    <input className='border-[1px] border-gray-600 shadow-inner rounded h-10 p-2' type='text' id='nameInput' name='nameInput'/>
+                    <input
+                      ref={nameRef}
+                      className='border-[1px] border-gray-600 shadow-inner rounded h-10 p-2'
+                      type='text'
+                      id='nameInput'
+                      name='nameInput'/>
                   </div>
 
                   <div className='flex flex-col mb-5'>
                     <label className='text-[#333333]' htmlFor='emailInput'>Email</label>
-                    <input className='border-[1px] border-gray-600 shadow-inner rounded h-10 p-2'type='text' id='emailInput' name='emailInput'/>
+                    <input
+                      ref= {emailRef}
+                      className='border-[1px] border-gray-600 shadow-inner rounded h-10 p-2'
+                      type='text'
+                      id='emailInput'
+                      name='emailInput'/>
                   </div>
                 </div>
 
                 <div className='flex flex-col w-5/12 mb-5'>
                   <label className='text-[#333333]' htmlFor ='messageInput'>Message</label>
-                  <textarea className='border-[1px] border-gray-600 shadow-inner rounded h-full p-2' id='messageInput' name='messageInput'/>
+                  <textarea
+                    ref= {messageRef}
+                    className='border-[1px] border-gray-600 shadow-inner rounded h-full p-2'
+                    id='messageInput'
+                    name='messageInput'/>
                 </div>
               </div>
             <button
