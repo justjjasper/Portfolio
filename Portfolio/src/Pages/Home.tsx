@@ -46,7 +46,7 @@ export default function Home () {
 
   return (
     <div className={`flex flex-col  ${showSection ? 'opacity-100 transition-opacity duration-1000' : 'opacity-0'}`}>
-      <section className='landingSection h-[37rem] flex border-b-2 w-full justify-center p-20 text-[#333333]'
+      <section className='landingSection h-[37rem] flex shadow-md mb-1 w-full justify-center p-20 text-[#333333]'
       >
         <div className='flex flex-col self-center font-proxima relative right-10'>
           <h1 className="pb-4 text-6xl  w-[10ch] font-bold tracking-tight">weekend warrior</h1>

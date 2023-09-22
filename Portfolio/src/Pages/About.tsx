@@ -62,8 +62,8 @@ export default function About () {
       <section className='flex about shadow-md mb-1'>
         <div ref={aboutRef} id='about' className='about. border-b-[1.5px] font-proxima text-[#333333] flex justify-between my-[5.5rem] mx-[12rem]'>
           <span className={`text transition-transform duration-[1000ms] ease-in-out ${aboutInView ? '' : "-translate-x-full"} ${aboutInView ? '' : 'right-96'} self-center`}>
-            <h1 className={`text-8xl relative font-bold mb-6`}>about.</h1>
-            <div className='text-2xl w-[29ch] mb-6 font-light'>I'm a Software Developer based in Los Angeles, California.</div>
+            <h1 className='text-8xl relative font-bold mb-6'>about.</h1>
+            <div className='text-2xl w-[29ch] mb-6 font-light text-[#7B7B7B]'>I'm a Software Developer based in Los Angeles, California.</div>
             <div className='text-lg w-[45ch] font-light'>I'm a tech enthusiast with a keen eye for design and create intricate websites.  When I'm not coding, you can find me doing activities that gets my heart racing!</div>
           </span>
             <img className={`relative transition-transform duration-[1000ms] ease-in-out ${aboutInView ? '' : "translate-x-full"} w-5/12 h-5/12 object-cover mr-10`} src='../../images/1.JPG'/>
