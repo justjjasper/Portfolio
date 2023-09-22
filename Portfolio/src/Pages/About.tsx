@@ -53,7 +53,7 @@ export default function About () {
 
   return (
     <div className='flex-col flex '>
-      <section className='flex about shadow-md mb-1'>
+      <section className='flex about shadow-md mb-1 h-[36rem]'>
         <div ref={aboutRef} id='about' className='about. border-b-[1.5px] font-proxima text-[#333333] flex justify-between my-[5.5rem] mx-[12rem]'>
           <span className={`text transition-transform duration-[1000ms] ease-in-out ${aboutInView ? '' : "-translate-x-full"} ${aboutInView ? '' : 'right-96'} self-center`}>
             <h1 className='text-8xl relative font-bold mb-6'>about.</h1>
