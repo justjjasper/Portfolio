@@ -27,6 +27,9 @@ export default function Contact () {
       setErrorStatus(true)
       console.log('2')
     } else {
+      setErrorStatus(false);
+      setSuccessStatus(true);
+
       nameRef.current!.value = '';
       emailRef.current!.value = '';
       messageRef.current!.value = '';
@@ -89,7 +92,7 @@ export default function Contact () {
 
       </section>
 
-      <section className='flex h-[32rem] shadow-md mb-[1px] bg-[#FAFAFA] justify-center items-center font-light'>
+      <section className='flex h-[37rem] shadow-md mb-[1px] bg-[#FAFAFA] justify-center items-center font-light'>
         <div className='flex flex-col w-9/12'>
           <p className='text-4xl tracking-wider text-[#333333] mb-6'>Send me an email</p>
             <form
@@ -129,10 +132,22 @@ export default function Contact () {
               </div>
             <button
               type='submit'
-              className='flex items-center justify-center h-12 w-36 bg-[#333333] rounded self-end hover:opacity-70 text-lg tracking-wide text-white'>
+              className='flex items-center justify-center h-12 w-36 bg-[#333333] rounded self-end hover:opacity-70 text-lg tracking-wide text-white mb-5'>
               Send email
             </button>
           </form>
+
+          {successStatus ? (
+            <div className='flex border-[1.5px] justify-center items-center h-14 bg-[#EEF9DF] border-[#C4E494] text-[#4E8148]'>
+              Your message was sent successfully. Thanks.
+            </div>
+          ) : null}
+
+          {errorStatus ? (
+            <div className='flex border-[1.5px] justify-center items-center h-14 bg-[#F6EFEF] border-[#E7BDBC] text-[#B0362F]'>
+              Validation errors occurred. Please confirm the fields and submit it again.
+            </div>
+          ) : null}
         </div>
       </section>
     </div>
