@@ -4,11 +4,11 @@ const LazyFooter = lazy(() => import('../Footer'));
 export default function About () {
   const [aboutInView, setAboutInView] = useState<boolean>(false);
   const [chart, setChart] = useState<boolean>(false);
-  const [naruto, setNaruto] = useState<boolean>(false);
+  // const [naruto, setNaruto] = useState<boolean>(false);
 
   const aboutRef = useRef(null);
   const chartRef = useRef(null);
-  const narutoRef = useRef(null);
+  // const narutoRef = useRef(null);
 
   let narutoUnobserve = false
 
@@ -27,10 +27,10 @@ export default function About () {
           case chartRef.current:
             setChart(isIntersecting);
             break;
-          case narutoRef.current:
-            setNaruto(isIntersecting);
-            narutoUnobserve = true
-          break;
+          // case narutoRef.current:
+          //   setNaruto(isIntersecting);
+          //   narutoUnobserve = true
+          // break;
           default:
           break;
         }
@@ -43,13 +43,13 @@ export default function About () {
     //@ts-ignore
     observer.observe(chartRef.current);
     //@ts-ignore
-    observer.observe(narutoRef.current);
+    // observer.observe(narutoRef.current);
 
 
     return () => {
       observer.disconnect();
     };
-  }, [aboutRef.current, narutoRef.current]);
+  }, [aboutRef.current]);
 
   return (
     <div className='flex-col flex '>
@@ -85,7 +85,7 @@ export default function About () {
           </div>
       </section>
 
-      <section className='randomFacts flex justify-center font-light py-2 w-full border-b-[1.5px]'>
+      {/* <section className='randomFacts flex justify-center font-light py-2 w-full border-b-[1.5px]'>
         <div ref={narutoRef} id='naruto' className={`h-4/12 w-4/12 transition-transform duration-[1000ms] ease-in-out ${naruto ? '' : "-translate-x-full"}`}>
           <img src='../../images/epicNaruto.png'/>
         </div>
@@ -98,9 +98,9 @@ export default function About () {
           <span className='py-2 w-[25ch]'>My squat, bench, & deadlift collective total is 1000lbs</span>
           <span className='py-2'>I have a maltipoo named Mango</span>
         </div>
-      </section>
+      </section> */}
 
-      <section className='mySkills flex shadow-md mb-1 bg-[#FAFAFA] flex-col h-[30rem] w-full items-center p-10'>
+      <section className='mySkills flex shadow-md mb-1 flex-col h-[30rem] w-full items-center p-10'>
         <span className='text-3xl mb-6'>My Skills</span>
 
 
