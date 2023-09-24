@@ -65,8 +65,8 @@ export default function Contact () {
 
   return (
     <div className='flex flex-col'>
-      <section className='flex h-[36rem] shadow-md mb-1 items-center justify-center'>
-        <div className='content font-proxima text-[#333333] flex flex-col h-[20rem] justify-around'>
+      <section className='flex flex-col md:flex-row h-[36rem] shadow-md mb-1 items-center justify-center'>
+        <div className='content pt-12 md:pt-0 font-proxima text-[#333333] flex flex-col h-[20rem] justify-around'>
           <p className='text-8xl relative font-bold tracking-tighter'>contact.</p>
           <p className='text-[#7B7B7B] text-2xl font-light w-[27ch]'>Get in touch with me via social media or email.</p>
 
