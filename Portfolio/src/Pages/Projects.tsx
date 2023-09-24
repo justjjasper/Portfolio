@@ -50,6 +50,7 @@ export default function Projects () {
     <div className='flex flex-col'>
       <section className='projects flex h-[32rem] shadow-md mb-1 bg-[#FAFAFA] justify-center items-center gap-8'>
 
+        {/* FitLog+ Project */}
         <div className='project FitLog relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
             onMouseEnter={handleFitLogMouseEnter}
             onMouseLeave={handleFitLogMouseLeave}>
@@ -81,20 +82,21 @@ export default function Projects () {
                     </span>
                   </div>
 
-                <div className='font-bold relative group w-[17ch]'>
+                <div className='font-bold relative group w-48'>
                   <a
                     href='https://www.figma.com/proto/x4fC1slppUfi90Xu3fFvlK/Mobile-Projects?type=design&node-id=1-13&t=at4T8GQ59i5dhzfS-1&scaling=scale-down&page-id=0%3A1'
                     target='_blank'
-                    className='relative z-10 py-2  text-white transition duration-300 ease-in-out flex items-center'
+                    className='relative z-10 py-2  justify-center text-white transition duration-300 ease-in-out flex items-center'
                     >
                     <div className='relative z-10 flex px-4'>Figma Presentation</div>
-                    <div className='absolute w-8 h-8 bg-red-500 rounded-full group-hover:w-full duration-300'></div>
+                    <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
                   </a>
                 </div>
               </div>
             </div>
         </div>
 
+        {/* Strings Project */}
         <div className='latestWork Strings relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform  hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
           onMouseEnter={handleStringsMouseEnter}
           onMouseLeave={handleStringsMouseLeave}>
@@ -123,14 +125,14 @@ export default function Projects () {
                 </span>
               </div>
 
-              <div className='font-bold relative group w-[7ch]'>
+              <div className='font-bold relative group w-16'>
                 <a
                   href='http://ec2-54-227-152-111.compute-1.amazonaws.com:3000/'
                   target='_blank'
-                  className='relative z-10 py-2  text-white transition duration-300 ease-in-out flex items-center'
+                  className='relative z-10 py-2 justify-center text-white transition duration-300 ease-in-out flex items-center'
                   >
                   <div className='relative z-10 flex px-4'>Demo</div>
-                  <div className='absolute w-8 h-8 bg-red-500 rounded-full group-hover:w-full duration-300'></div>
+                  <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
                 </a>
               </div>
 
@@ -138,6 +140,7 @@ export default function Projects () {
           </div>
         </div>
 
+        {/* System Design Project */}
         <div className='latestWork SystemDesign relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
         onMouseEnter={handleSystemDesignMouseEnter}
         onMouseLeave={handleSystemDesignMouseLeave}
@@ -167,20 +170,21 @@ export default function Projects () {
                 </span>
               </div>
 
-              <div className='font-bold relative group w-[12ch]'>
+              <div className='font-bold relative group w-32'>
                 <a
                   href='https://github.com/PickleRick-SDC/Products'
                   target='_blank'
-                  className='relative z-10 text-white transition duration-300 ease-in-out flex items-center'>
+                  className='relative z-10 justify-center text-white transition duration-300 ease-in-out flex items-center'>
                   <div className='relative z-10 flex px-4'>Github Link</div>
-                  <div className='absolute w-8 h-8 bg-red-500 rounded-full group-hover:w-full duration-300'></div>
+                  <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
                   </a>
                 </div>
               </div>
             </div>
         </div>
 
-        <div className='latestWork SystemDesign relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
+        {/* RoadTrip Project */}
+        <div className='latestWork RoadTrip relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
         onMouseEnter={handleRoadTripMouseEnter}
         onMouseLeave={handleRoadTripMouseLeave}
         >
@@ -190,7 +194,7 @@ export default function Projects () {
           <p className='pl-3 text-xl text-black'>Road Trip</p>
           <p className='pl-3'>Destination Planner Mobile Application.</p>
 
-          <div className={`FitLogDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
+          <div className={`RoadTripDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
           ${roadTripHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
             <div className='p-7 text-white flex flex-col justify-around h-full'>
               <div>
@@ -210,13 +214,13 @@ export default function Projects () {
                 </span>
               </div>
 
-              <div className='font-bold relative group w-[12ch]'>
+              <div className='font-bold relative group w-32'>
                 <a
                   href='https://github.com/naruto-blue-ocean'
                   target='_blank'
-                  className='relative z-10 text-white transition duration-300 ease-in-out flex items-center'>
+                  className='relative justify-center z-10 text-white transition duration-300 ease-in-out flex items-center'>
                   <div className='relative z-10 flex px-4'>Github Link</div>
-                  <div className='absolute w-8 h-8 bg-red-500 rounded-full group-hover:w-full duration-300'></div>
+                  <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
                   </a>
                 </div>
               </div>
