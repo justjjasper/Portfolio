@@ -112,8 +112,9 @@ export default function Contact () {
             <form
               className='flex flex-col'
               onSubmit={handleSubmit}>
-              <div className='flex flex-row justify-between'>
-                <div className='flex flex-col w-6/12 '>
+              <div className='flex flex-col md:flex-row justify-between'>
+                <div className='flex flex-col w-full md:w-6/12'>
+
                   <div className='flex flex-col mb-5'>
                     <label className='text-[#333333]' htmlFor='nameInput'>Name</label>
                     <input
@@ -135,7 +136,7 @@ export default function Contact () {
                   </div>
                 </div>
 
-                <div className='flex flex-col w-5/12 mb-5'>
+                <div className='flex flex-col w-full md:w-5/12 mb-5'>
                   <label className='text-[#333333]' htmlFor ='messageInput'>Message</label>
                   <textarea
                     ref= {messageRef}
