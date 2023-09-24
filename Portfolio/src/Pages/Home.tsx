@@ -66,11 +66,12 @@ export default function Home () {
       <section className= 'latestWorks flex shadow-md mb-1 bg-[#FAFAFA] text-[#7B7B7B] w-full py-28 items-center flex-col'>
         <div className='w-9/12 flex justify-between'>
           <div className='w-4/12 border-b-[1px] mb-3 border-[#7B7B7B]'></div>
-          <div className='font-proxima-semibold tracking-wide'>SOME OF MY LATEST WORKS</div>
+          <div className='font-proxima-semibold tracking-wide hidden lg:block'>SOME OF MY LATEST WORKS</div>
+          <div className='font-proxima-semibold tracking-wide lg:hidden'>LATEST WORKS</div>
           <div className='w-4/12 border-b-[1px] mb-3 border-[#7B7B7B]'></div>
         </div>
 
-        <div className='w-[1080px] flex flex-col gap-7 justify-center md:flex-row'>
+        <div className='w-[1080px] flex flex-col gap-7 justify-center items-center md:flex-row'>
           {/* FitLog+ Project */}
           <div className='latestWork FitLog relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
           onMouseEnter={handleFitLogMouseEnter}
