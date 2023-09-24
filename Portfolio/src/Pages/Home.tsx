@@ -103,11 +103,11 @@ export default function Home () {
                   </span>
                 </div>
 
-              <div className='font-bold relative group w-48'>
+              <div className='font-bold relative group w-56 sm:w-48 '>
                 <a
                   href='https://www.figma.com/proto/x4fC1slppUfi90Xu3fFvlK/Mobile-Projects?type=design&node-id=1-13&t=at4T8GQ59i5dhzfS-1&scaling=scale-down&page-id=0%3A1'
                   target='_blank'
-                  className='relative z-10 py-2  text-white transition duration-300 ease-in-out flex justfy-center items-center'
+                  className='relative z-10 py-2  text-white transition duration-300 ease-in-out flex  justify-center items-center'
                   >
                   <div className='relative z-10 flex px-4'>Figma Presentation</div>
                   <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
