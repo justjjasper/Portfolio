@@ -47,18 +47,18 @@ export default function Home () {
 
   return (
     <div className={`flex flex-col  ${showSection ? 'opacity-100 transition-opacity duration-1000' : 'opacity-0'}`}>
-      <section className='landingSection h-[36rem] flex shadow-md mb-1 w-full justify-center p-20 text-[#333333]'
+      <section className='landingSection sm:h-[36rem] h-[20rem] flex shadow-md mb-1 w-full justify-center items-center p-20 text-[#333333]'
       >
         <div className='flex flex-col font-proxima justify-center items-center'>
-          <h1 className="text-6xl font-bold tracking-tight pb-3">weekend warrior</h1>
-          <span className=' text-[#7B7B7B]'>Athlete that enjoys physical activities.</span>
+          <h1 className="lg:text-6xl md:text-5xl text-3xl font-bold tracking-tight pb-3">weekend warrior</h1>
+          <span className='text-[#7B7B7B] hidden md:block'>Athlete that enjoys physical activities.</span>
         </div>
 
-        <img className='w-96 h-96 object-cover'src='../../images/1.JPG'/>
+        <img className='lg:w-96 lg:h-96  md:w-80 md:h-80 h-60 w-60 object-cover'src='../../images/1.JPG'/>
 
         <div className='flex flex-col font-proxima justify-center items-center'>
-          <h1 className='pb-4 text-6xl bottom-16 font-bold tracking-tight'>&lt;coder&gt;</h1>
-          <span className='text-[#7B7B7B] '>Software Developer that writes clean and effcient code.</span>
+          <h1 className='lg:text-6xl md:text-5xl text-3xl pb-4 bottom-16 font-bold tracking-tight'>&lt;coder&gt;</h1>
+          <span className='text-[#7B7B7B] hidden md:block'>Software Developer that writes clean and effcient code.</span>
         </div>
       </section>
 
