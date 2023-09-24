@@ -32,14 +32,14 @@ export default function Footer() {
         </div>
       </div> ) }
 
-      <div className='w-9/12 flex justify-between'>
+      <div className='w-9/12 flex justify-center lg:justify-between'>
 
 
         <div className='@JasperBucad hover:text-black'>
           <a href= '/'> © 2023 Jasper Bucad</a>
         </div>
 
-        <nav className= 'FooterMenu'>
+        <nav className= 'FooterMenu hidden lg:block'>
           <ul className='flex justify-around w-80'>
           {menuItem.map((item, index) => (
               <li key={index}>

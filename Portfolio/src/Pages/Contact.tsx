@@ -44,7 +44,7 @@ export default function Contact () {
       };
 
       try {
-        const response = await axios.post('http:jasperbucad.com:2024/contact', payload);
+        const response = await axios.post('http://jasperbucad.com:3000/contact', payload);
         setLoading(false);
         setErrorStatus(false);
         setSuccessStatus(true);

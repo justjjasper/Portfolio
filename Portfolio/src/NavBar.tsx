@@ -24,7 +24,7 @@ export default function NavBar () {
   }
 
   return (
-    <div className= {`bg-black text-white h-24 font-proxima text-lg flex justify-center items-center transform transition-transform duration-[400ms] ease-in ${showNav ? '' : "-translate-y-full"}`}>
+    <div className= {`bg-black text-white h-24 font-proxima text-lg flex justify-center items-center transform transition-transform duration-[400ms] ease-in ${showNav ? '' : "-translate-y-full"} w-full`}>
        {/* <div className='flex absolute'>
         <div className='relative naruto run'/>
         <div className='relative naruto-standing stand right-4 bottom-2'/>

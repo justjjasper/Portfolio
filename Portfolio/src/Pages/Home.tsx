@@ -49,27 +49,29 @@ export default function Home () {
     <div className={`flex flex-col  ${showSection ? 'opacity-100 transition-opacity duration-1000' : 'opacity-0'}`}>
       <section className='landingSection h-[36rem] flex shadow-md mb-1 w-full justify-center p-20 text-[#333333]'
       >
-        <div className='flex flex-col self-center font-proxima relative right-10'>
-          <h1 className="pb-4 text-6xl  w-[10ch] font-bold tracking-tight">weekend warrior</h1>
-          <span className='w-[25ch] text-[#7B7B7B]'>Athlete that enjoys physical activities.</span>
+        <div className='flex flex-col font-proxima justify-center items-center'>
+          <h1 className="text-6xl font-bold tracking-tight pb-3">weekend warrior</h1>
+          <span className=' text-[#7B7B7B]'>Athlete that enjoys physical activities.</span>
         </div>
 
-        <img className='w-96 h-96 object-cover relative right-10'src='../../images/1.JPG'/>
+        <img className='w-96 h-96 object-cover'src='../../images/1.JPG'/>
 
-        <div className='flex flex-col w-[25ch] self-center font-proxima'>
-          <h1 className='pb-4 text-6xl font-bold tracking-tight'>&lt;coder&gt;</h1>
-          <span className='text-[#7B7B7B]'>Software Developer that writes clean and effcient code.</span>
+        <div className='flex flex-col font-proxima justify-center items-center'>
+          <h1 className='pb-4 text-6xl bottom-16 font-bold tracking-tight'>&lt;coder&gt;</h1>
+          <span className='text-[#7B7B7B] '>Software Developer that writes clean and effcient code.</span>
         </div>
       </section>
 
-      <section className= 'latestWorks flex shadow-md mb-1 bg-[#FAFAFA] text-[#7B7B7B] w-full h-[32rem] items-center      justify-center flex-col pb-10'>
-        <div className='w-9/12 flex justify-between mb-3'>
-          <div className=''>───────────────────────</div>
+      {/* Collection of Project */}
+      <section className= 'latestWorks flex shadow-md mb-1 bg-[#FAFAFA] text-[#7B7B7B] w-full py-28 items-center flex-col'>
+        <div className='w-9/12 flex justify-between'>
+          <div className='w-4/12 border-b-[1px] mb-3 border-[#7B7B7B]'></div>
           <div className='font-proxima-semibold tracking-wide'>SOME OF MY LATEST WORKS</div>
-          <div className=''>───────────────────────</div>
+          <div className='w-4/12 border-b-[1px] mb-3 border-[#7B7B7B]'></div>
         </div>
 
-        <div className='w-9/12 flex justify-between'>
+        <div className='w-[1080px] flex flex-col gap-7 justify-center sm:flex-row'>
+          {/* FitLog+ Project */}
           <div className='latestWork FitLog relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
           onMouseEnter={handleFitLogMouseEnter}
           onMouseLeave={handleFitLogMouseLeave}>
@@ -79,8 +81,7 @@ export default function Home () {
             <p className='pl-3 text-xl text-black'>FitLog+</p>
             <p className='pl-3'>Fitness Mobile Application</p>
 
-            <div
-            className={`FitLogDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
+            <div className={`FitLogDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
             ${fitLogHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
               <div className='p-7 text-white flex flex-col justify-around h-full'>
                 <div>
@@ -101,20 +102,21 @@ export default function Home () {
                   </span>
                 </div>
 
-              <div className='font-bold relative group w-[17ch]'>
+              <div className='font-bold relative group w-48'>
                 <a
                   href='https://www.figma.com/proto/x4fC1slppUfi90Xu3fFvlK/Mobile-Projects?type=design&node-id=1-13&t=at4T8GQ59i5dhzfS-1&scaling=scale-down&page-id=0%3A1'
                   target='_blank'
-                  className='relative z-10 py-2  text-white transition duration-300 ease-in-out flex items-center'
+                  className='relative z-10 py-2  text-white transition duration-300 ease-in-out flex justfy-center items-center'
                   >
                   <div className='relative z-10 flex px-4'>Figma Presentation</div>
-                  <div className='absolute w-8 h-8 bg-red-500 rounded-full group-hover:w-full duration-300'></div>
+                  <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
                 </a>
               </div>
             </div>
           </div>
           </div>
 
+          {/* Strings Project */}
           <div className='latestWork Strings relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform  hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
             onMouseEnter={handleStringsMouseEnter}
             onMouseLeave={handleStringsMouseLeave}>
@@ -143,14 +145,14 @@ export default function Home () {
                   </span>
                 </div>
 
-                <div className='font-bold relative group w-[7ch]'>
+                <div className='font-bold relative group w-16'>
                   <a
                     href='http://ec2-54-227-152-111.compute-1.amazonaws.com:3000/'
                     target='_blank'
-                    className='relative z-10 py-2  text-white transition duration-300 ease-in-out flex items-center'
+                    className='relative z-10 py-2  text-white transition duration-300 ease-in-out flex justify-center items-center'
                     >
                     <div className='relative z-10 flex px-4'>Demo</div>
-                    <div className='absolute w-8 h-8 bg-red-500 rounded-full group-hover:w-full duration-300'></div>
+                    <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
                   </a>
                 </div>
 
@@ -158,6 +160,7 @@ export default function Home () {
             </div>
           </div>
 
+          {/* System Design Project */}
           <div className='latestWork SystemDesign relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
         onMouseEnter={handleSystemDesignMouseEnter}
         onMouseLeave={handleSystemDesignMouseLeave}
@@ -167,6 +170,7 @@ export default function Home () {
           </span>
           <p className='pl-3 text-xl text-black'>System Design</p>
           <p className='pl-3'>Optimized a Legacy System</p>
+
 
           <div className={`SystemDesignDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
           ${systemDesignHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
@@ -187,13 +191,13 @@ export default function Home () {
                 </span>
               </div>
 
-              <div className='font-bold relative group w-[12ch]'>
+              <div className='font-bold relative group w-32'>
                 <a
                   href='https://github.com/PickleRick-SDC/Products'
                   target='_blank'
-                  className='relative z-10 text-white transition duration-300 ease-in-out flex items-center'>
+                  className='relative z-10 text-white transition duration-300 ease-in-out flex justify-center items-center'>
                   <div className='relative z-10 flex px-4'>Github Link</div>
-                  <div className='absolute w-8 h-8 bg-red-500 rounded-full group-hover:w-full duration-300'></div>
+                  <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
                   </a>
                 </div>
               </div>
