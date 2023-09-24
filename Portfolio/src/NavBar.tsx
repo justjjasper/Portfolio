@@ -29,6 +29,7 @@ export default function NavBar () {
         <div className='relative naruto run'/>
         <div className='relative naruto-standing stand right-4 bottom-2'/>
       </div> */}
+
       <nav className=' w-9/12 flex justify-between items-center'>
         <span>
           <a href='/' onClick={reload}>
@@ -38,7 +39,7 @@ export default function NavBar () {
           </a>
         </span>
 
-        <ul className='flex ml-48'>
+        <ul className='hidden md:flex ml-48'>
           {menuItem.map(item => (
             <li className='px-4 relative top-1'key={item.path}>
               <Link onClick={reload} className={`${item.path === pathname ? 'text-gray-600' : 'text-white'} hover:text-gray-600`}to={item.path}>
@@ -48,7 +49,7 @@ export default function NavBar () {
           ))}
         </ul>
 
-        <ul className='flex w-60 justify-evenly'>
+        <ul className='hidden md:flex w-60 justify-evenly'>
           <li className='inline hover:text-gray-600 px-2'> <a href='https://www.linkedin.com/in/jasper-bucad' title='Connect with me on Linkedin' target='_blank'>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-8 h-8 inline"><path fill="currentColor"
           d={linkedInIcon}/></svg>
