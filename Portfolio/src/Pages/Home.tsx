@@ -50,25 +50,25 @@ export default function Home () {
       <section className='landingSection sm:h-[36rem] h-[20rem] flex shadow-md mb-1 w-full justify-center items-center p-20 text-[#333333]'
       >
         <div className='flex flex-col font-proxima justify-center items-center'>
-          <h1 className="lg:text-6xl md:text-5xl text-3xl font-bold tracking-tight pb-3">weekend warrior</h1>
+          <h1 className="lg:text-6xl md:text-5xl sm:text-3xl text-xl font-bold tracking-tight pb-3">weekend warrior</h1>
           <span className='text-[#7B7B7B] hidden md:block'>Athlete that enjoys physical activities.</span>
         </div>
 
-        <img className='lg:w-96 lg:h-96  md:w-80 md:h-80 h-60 w-60 object-cover'src='../../images/1.JPG'/>
+        <img className='lg:w-96 lg:h-96  md:w-80 md:h-80 sm:h-60 sm:w-60  h-48 w-48 object-cover'src='../../images/1.JPG'/>
 
         <div className='flex flex-col font-proxima justify-center items-center'>
-          <h1 className='lg:text-6xl md:text-5xl text-3xl pb-4 bottom-16 font-bold tracking-tight'>&lt;coder&gt;</h1>
+          <h1 className='lg:text-6xl md:text-5xl sm:text-3xl  text-xl pb-4 bottom-16 font-bold tracking-tight'>&lt;coder&gt;</h1>
           <span className='text-[#7B7B7B] hidden md:block'>Software Developer that writes clean and effcient code.</span>
         </div>
       </section>
 
       {/* Collection of Project */}
-      <section className= 'latestWorks flex shadow-md mb-1 bg-[#FAFAFA] text-[#7B7B7B] w-full py-28 items-center flex-col'>
+      <section className= 'latestWorks flex shadow-md mb-1 bg-[#FAFAFA] text-[#7B7B7B] w-full md:py-28 pb-24 pt-16 items-center flex-col'>
         <div className='w-9/12 flex justify-between mb-5'>
-          <div className='w-4/12 border-b-[1px] mb-3 border-[#7B7B7B]'></div>
+          <div className='w-4/12 border-b-[1px] sm:mb-3 mb-2 border-[#7B7B7B]'></div>
           <div className='font-proxima-semibold tracking-wide hidden lg:block'>SOME OF MY LATEST WORKS</div>
-          <div className='font-proxima-semibold tracking-wide lg:hidden'>LATEST WORKS</div>
-          <div className='w-4/12 border-b-[1px] mb-3 border-[#7B7B7B]'></div>
+          <div className='font-proxima-semibold tracking-wide lg:hidden text-xs sm:text-base'>LATEST WORKS</div>
+          <div className='w-4/12 border-b-[1px] sm:mb-3  mb-2 border-[#7B7B7B]'></div>
         </div>
 
         <div className='flex flex-col gap-7 justify-center items-center md:flex-row'>
