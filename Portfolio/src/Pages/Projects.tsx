@@ -199,7 +199,7 @@ export default function Projects () {
             <div className='p-7 text-white flex flex-col justify-around h-full'>
               <div>
                 <p className='text-xl font-semibold'>Road Trip</p>
-                <p className='font-thin'>Built a mobile iOS application that allows users to plan stops and other point of interests for their road trip.
+                <p className='font-thin'>Built a mobile iOS application that allows users to plan stops and other point of interests for their road trip
                 </p>
               </div>
 

@@ -70,7 +70,7 @@ export default function Home () {
           <div className='w-4/12 border-b-[1px] mb-3 border-[#7B7B7B]'></div>
         </div>
 
-        <div className='w-[1080px] flex flex-col gap-7 justify-center sm:flex-row'>
+        <div className='w-[1080px] flex flex-col gap-7 justify-center md:flex-row'>
           {/* FitLog+ Project */}
           <div className='latestWork FitLog relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
           onMouseEnter={handleFitLogMouseEnter}
@@ -161,7 +161,7 @@ export default function Home () {
           </div>
 
           {/* System Design Project */}
-          <div className='latestWork SystemDesign relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
+          <div className='latestWork SystemDesign relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden sm:flex md:hidden lg:flex'
         onMouseEnter={handleSystemDesignMouseEnter}
         onMouseLeave={handleSystemDesignMouseLeave}
         >
