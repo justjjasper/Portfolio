@@ -12,56 +12,58 @@ export default function About () {
 
   let narutoUnobserve = false
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        const { isIntersecting, target } = entry;
-        switch (target) {
-          case aboutRef.current:
-            setAboutInView(isIntersecting);
-            // aboutUnobserve = true
-            //@ts-ignore
-            // if (aboutUnobserve) observer.unobserve(aboutRef.current)
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(entries => {
+  //     entries.forEach(entry => {
+  //       const { isIntersecting, target } = entry;
+  //       switch (target) {
+  //         case aboutRef.current:
+  //           setAboutInView(isIntersecting);
+  //           // aboutUnobserve = true
+  //           //@ts-ignore
+  //           // if (aboutUnobserve) observer.unobserve(aboutRef.current)
 
-          break;
-          case chartRef.current:
-            setChart(isIntersecting);
-            break;
-          // case narutoRef.current:
-          //   setNaruto(isIntersecting);
-          //   narutoUnobserve = true
-          // break;
-          default:
-          break;
-        }
-      });
-    });
+  //         break;
+  //         case chartRef.current:
+  //           setChart(isIntersecting);
+  //           break;
+  //         // case narutoRef.current:
+  //         //   setNaruto(isIntersecting);
+  //         //   narutoUnobserve = true
+  //         // break;
+  //         default:
+  //         break;
+  //       }
+  //     });
+  //   });
 
-    // @ts-ignore
+  //   // @ts-ignore
 
-    observer.observe(aboutRef.current);
-    //@ts-ignore
-    observer.observe(chartRef.current);
-    //@ts-ignore
-    // observer.observe(narutoRef.current);
+  //   observer.observe(aboutRef.current);
+  //   //@ts-ignore
+  //   observer.observe(chartRef.current);
+  //   //@ts-ignore
+  //   // observer.observe(narutoRef.current);
 
 
-    return () => {
-      observer.disconnect();
-    };
-  }, [aboutRef.current]);
+  //   return () => {
+  //     observer.disconnect();
+  //   };
+  // }, [aboutRef.current]);
 
   return (
     <div className='flex-col flex '>
       {/* About */}
-      <section className='flex about shadow-md mb-1 h-[37rem]'>
-        <div ref={aboutRef} id='about' className='about. border-b-[1.5px] font-proxima text-[#333333] flex justify-between my-[5.5rem] mx-[12rem]'>
-          <span className={`text transition-transform duration-[1000ms] ease-in-out ${aboutInView ? '' : "-translate-x-full"} ${aboutInView ? '' : 'right-96'} self-center relative`}>
+      <section className='flex about shadow-md mb-1  justify-center'>
+        <div ref={aboutRef} id='about' className='about lg:border-b-[1.5px] border-b-0 font-proxima text-[#333333] flex lg:flex-row flex-col justify-between xsm:my-[5.5rem] w-8/12 my-16 items-center'>
+          <span className='flex flex-col self-center'>
             <h1 className='text-8xl relative font-bold mb-6'>about.</h1>
-            <div className='text-2xl w-[29ch] mb-6 font-light text-[#7B7B7B]'>I'm a Software Developer based in Los Angeles, California.</div>
-            <div className='text-lg w-[45ch] font-light'>I'm a tech enthusiast with a keen eye for design and create intricate websites.  When I'm not coding, you can find me doing activities that gets my heart racing!</div>
+            <div className='text-2xl lg:w-[29ch] mb-6 font-light text-[#7B7B7B]'>I'm a Software Developer based in Los Angeles, California.</div>
+            <div className='text-lg lg:w-[43ch]  font-light'>I'm a tech enthusiast with a keen eye for design and create intricate websites.  When I'm not coding, you can find me doing activities that gets my heart racing!</div>
           </span>
-          <img className={`relative transition-transform duration-[1000ms] ease-in-out ${aboutInView ? '' : "translate-x-full"} w-5/12 h-5/12 object-cover mr-10`} src='../../images/1.JPG'/>
+
+          <img className='relative transition-transform duration-[1000ms] ease-in-out lg:w-5/12 lg:h-5/12 sm:w-9/12 sm:h-9/12 object-contain border-b-[1.5px] lg:border-b-0 xsm:mt-0 mt-7' src='../../images/1.JPG'/>
+
         </div>
       </section>
 
