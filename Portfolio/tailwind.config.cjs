@@ -14,6 +14,10 @@ module.exports = {
       backgroundColor: {
         'black-70': 'rgba(0, 0, 0, 0.85)',
       },
+      screens: {
+        'xsm': '560px',
+        //=> @media (min-width: 560px) aka smallest browser screen
+      }
     },
   },
 }
