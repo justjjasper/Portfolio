@@ -48,6 +48,19 @@ export default function Projects () {
 
   return (
     <div className='flex flex-col'>
+      {/* Projects Intro */}
+      <section className='flex shadow-md mb-1 justify-center py-24'>
+        <div className='ProjectsIntoContainer flex lg:flex-row flex-col justify-between items-center w-9/12 gap-10'>
+          <div className='contentContainer flex flex-col font-proxima text-[#333333] gap-8'>
+            <span className='text-8xl font-bold tracking-tighter'>projects.</span>
+            <span className='text-[#7B7B7B] text-2xl font-light lg:w-[30ch]'>Checkout some of my latest coding projects.</span>
+            <span className='lg:w-[50ch] tracking-wide font-light text-lg'>I have experience in collaborating with other software engineers to create applications and also worked on personal side projects such as UI and mobile applications.</span>
+          </div>
+          <img className='lg:h-6/12 lg:w-6/12' src='../../images/projectPic.png' alt='Picture of projects'/>
+        </div>
+      </section>
+
+      {/* List of Projects */}
       <section className='projects flex h-[32rem] shadow-md mb-1 bg-[#FAFAFA] justify-center items-center gap-8'>
 
         {/* FitLog+ Project */}
