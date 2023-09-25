@@ -24,7 +24,7 @@ export default function NavBar () {
   }
 
   return (
-    <div className= {`bg-black text-white h-24 font-proxima text-lg flex justify-center items-center transform transition-transform duration-[400ms] ease-in ${showNav ? '' : "-translate-y-full"} w-full`}>
+    <div className= {`bg-black text-white xsm:h-24 h-20 font-proxima text-lg flex justify-center items-center transform transition-transform duration-[400ms] ease-in ${showNav ? '' : "-translate-y-full"} w-full`}>
        {/* <div className='flex absolute'>
         <div className='relative naruto run'/>
         <div className='relative naruto-standing stand right-4 bottom-2'/>
@@ -33,8 +33,8 @@ export default function NavBar () {
       <nav className='sm:w-9/12 w-11/12 flex justify-between items-center'>
         <span>
           <a href='/' onClick={reload}>
-            <div className="relative inline-flex items-center justify-center w-14 h-14 overflow-hidden bg-gray-100 rounded-full hover:bg-gray-600 ">
-               <span className="font-medium text-3xl text-gray-600 dark:text-black">JB</span>
+            <div className="relative inline-flex items-center justify-center xsm:w-14 xsm:h-14 w-12 h-12 overflow-hidden bg-gray-100 rounded-full hover:bg-gray-600 ">
+               <span className="font-medium xsm:text-3xl  text-2xl text-gray-600 dark:text-black">JB</span>
             </div>
           </a>
         </span>
