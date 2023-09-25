@@ -68,7 +68,7 @@ export default function About () {
       </section>
 
       {/* Chart */}
-      <section ref={chartRef} id='chart' className='bg-[#FAFAFA] flex shadow-sm mt-0.5 w-full justify-center font-light py-8
+      <section ref={chartRef} id='chart' className='bg-[#FAFAFA] flex shadow-sm mt-0.5 w-full justify-center font-light lg:py-8 py-20
         px-10 border-b-[1.5px] flex-col lg:flex-row items-center'>
           <div className='text-xl self-center flex flex-col text-gray-600 lg:text-left text-center mb-10 lg:mb-0'>
             <span className='text-3xl text-black pb-4 '>Part Weekend Warrior</span>
@@ -108,13 +108,13 @@ export default function About () {
       </section> */}
 
       {/* MySkills */}
-      <section className='mySkills flex shadow-md mb-1 flex-col h-[30rem] w-full items-center p-10'>
+      <section className='mySkills flex shadow-md mb-1 flex-col  w-full items-center p-10'>
         <span className='text-3xl mb-6'>My Skills</span>
 
 
-        <div className= 'skillsContentContainer flex flex-row font-light justify-around w-full mb-10'>
+        <div className= 'skillsContentContainer flex flex-col font-light justify-around w-full mb-10 md:flex-row items-center'>
 
-          <div className='iconContainer flex flex-col w-96 h-72 justify-center gap-16'>
+          <div className='iconContainer flex flex-col xsm:w-96 h-72 w-80 justify-center gap-16'>
             <span className= 'flex flex-row justify-between'>
               <img src='../../images/reactIcon.png' className='h-24 w-30 transition-transform transform-gpu hover:scale-110'
                 alt='React Icon'
@@ -140,7 +140,7 @@ export default function About () {
             </span>
            </div>
 
-          <div className='skillBars flex flex-col justify-between w-5/12'>
+          <div className='skillBars flex flex-col justify-between w-full sm:w-9/12 md:w-5/12 lg:py-0 py-10'>
             <div className='reactSkillBar'>
               <div className='topPortion flex flex-row justify-between' style={{ width: '90%' }}>
                 <div>React JS</div>
