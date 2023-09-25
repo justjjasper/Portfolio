@@ -54,190 +54,195 @@ export default function Projects () {
           <div className='contentContainer flex flex-col font-proxima text-[#333333] gap-8'>
             <span className='text-8xl font-bold tracking-tighter'>projects.</span>
             <span className='text-[#7B7B7B] text-2xl font-light lg:w-[30ch]'>Checkout some of my latest coding projects.</span>
-            <span className='lg:w-[50ch] tracking-wide font-light text-lg'>I have experience in collaborating with other software engineers to create applications and also worked on personal side projects such as UI and mobile applications.</span>
+            <span className='lg:w-[50ch] tracking-wide font-light text-lg'>I have experience in collaborating with other software engineers to create applications and also worked on personal side projects such as UI Design and mobile applications.</span>
           </div>
           <img className='lg:h-6/12 lg:w-6/12' src='../../images/projectPic.png' alt='Picture of projects'/>
         </div>
       </section>
 
       {/* List of Projects */}
-      <section className='projects flex h-[32rem] shadow-md mb-1 bg-[#FAFAFA] justify-center items-center gap-8'>
+      <section className='projects flex shadow-md mb-1 bg-[#FAFAFA] justify-center items-center py-16'>
 
-        {/* FitLog+ Project */}
-        <div className='project FitLog relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
-            onMouseEnter={handleFitLogMouseEnter}
-            onMouseLeave={handleFitLogMouseLeave}>
-              <span className='p-3'>
-                <img className={`h-[200px] w-[305px] rounded shadow-sm ${fitLogHovered ? 'blur-sm' : ''}`} src='../../images/fitLogHorizontalLogo.png' alt='FitLog+ Image'/>
-              </span>
-              <p className='pl-3 text-xl text-black'>FitLog+</p>
-              <p className='pl-3'>Fitness Mobile Application</p>
+        <div className='listOfProjectsContainer flex flex-row justify-center items-center gap-8 w-9/12 flex-wrap'>
 
-              <div
-              className={`FitLogDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
-              ${fitLogHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
-                <div className='p-7 text-white flex flex-col justify-around h-full'>
-                  <div>
-                    <p className='text-xl font-semibold'>FitLog+</p>
-                    <p className='font-thin'>Developed a bite-sized fitness mobile application where users can track and log their workout sets.
-                    </p>
+
+          {/* FitLog+ Project */}
+          <div className='project FitLog relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
+              onMouseEnter={handleFitLogMouseEnter}
+              onMouseLeave={handleFitLogMouseLeave}>
+                <span className='p-3'>
+                  <img className={`h-[200px] w-[305px] rounded shadow-sm ${fitLogHovered ? 'blur-sm' : ''}`} src='../../images/fitLogHorizontalLogo.png' alt='FitLog+ Image'/>
+                </span>
+                <p className='pl-3 text-xl text-black'>FitLog+</p>
+                <p className='pl-3'>Fitness Mobile Application</p>
+
+                <div
+                className={`FitLogDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
+                ${fitLogHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
+                  <div className='p-7 text-white flex flex-col justify-around h-full'>
+                    <div>
+                      <p className='text-xl font-semibold'>FitLog+</p>
+                      <p className='font-thin'>Developed a bite-sized fitness mobile application where users can track and log their workout sets.
+                      </p>
+                    </div>
+
+                    <div>
+                      <p className='text-l font-semibold'>Technology</p>
+                      <span className='techIcons flex justify-between'>
+                        {reactNativeIcon}
+                        {typeScriptIcon}
+                        {reduxIcon}
+                        {nodeJSIcon}
+                        {expressJSIcon}
+                        {figmaIcon}
+                      </span>
+                    </div>
+
+                  <div className='font-bold relative group w-48'>
+                    <a
+                      href='https://www.figma.com/proto/x4fC1slppUfi90Xu3fFvlK/Mobile-Projects?type=design&node-id=1-13&t=at4T8GQ59i5dhzfS-1&scaling=scale-down&page-id=0%3A1'
+                      target='_blank'
+                      className='relative z-10 py-2  justify-center text-white transition duration-300 ease-in-out flex items-center'
+                      >
+                      <div className='relative z-10 flex px-4'>Figma Presentation</div>
+                      <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
+                    </a>
                   </div>
+                </div>
+              </div>
+          </div>
 
-                  <div>
-                    <p className='text-l font-semibold'>Technology</p>
-                    <span className='techIcons flex justify-between'>
-                      {reactNativeIcon}
-                      {typeScriptIcon}
-                      {reduxIcon}
-                      {nodeJSIcon}
-                      {expressJSIcon}
-                      {figmaIcon}
-                    </span>
-                  </div>
+          {/* Strings Project */}
+          <div className='latestWork Strings relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform  hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
+            onMouseEnter={handleStringsMouseEnter}
+            onMouseLeave={handleStringsMouseLeave}>
+            <span className='p-3'>
+              <img className={`h-[200px] w-[305px] object-cover rounded shadow-sm ${stringsHovered ? 'blur-sm' : ''}`} src='../../images/fecLandingPage.png' alt='Strings Image'/>
+            </span>
+            <p className='pl-3 text-xl text-black'>Strings</p>
+            <p className='pl-3'>Mock e-Commerce Web Page</p>
 
-                <div className='font-bold relative group w-48'>
+            <div className={`StringsDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
+            ${stringsHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
+              <div className='p-7 text-white flex flex-col justify-around h-full'>
+                <div>
+                  <p className='text-xl font-semibold'>Strings</p>
+                  <p className='font-thin'>Created a mock e-commerce website where users can add reviews, questions and items into cart.
+                  </p>
+                </div>
+
+                <div>
+                  <p className='text-l font-semibold'>Technology</p>
+                  <span className='techIcons flex justify-between w-10/12'>
+                    {reactNativeIcon}
+                    {nodeJSIcon}
+                    {expressJSIcon}
+                    {awsIcon}
+                  </span>
+                </div>
+
+                <div className='font-bold relative group w-16'>
                   <a
-                    href='https://www.figma.com/proto/x4fC1slppUfi90Xu3fFvlK/Mobile-Projects?type=design&node-id=1-13&t=at4T8GQ59i5dhzfS-1&scaling=scale-down&page-id=0%3A1'
+                    href='http://ec2-54-227-152-111.compute-1.amazonaws.com:3000/'
                     target='_blank'
-                    className='relative z-10 py-2  justify-center text-white transition duration-300 ease-in-out flex items-center'
+                    className='relative z-10 py-2 justify-center text-white transition duration-300 ease-in-out flex items-center'
                     >
-                    <div className='relative z-10 flex px-4'>Figma Presentation</div>
+                    <div className='relative z-10 flex px-4'>Demo</div>
                     <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
                   </a>
                 </div>
+
               </div>
-            </div>
-        </div>
-
-        {/* Strings Project */}
-        <div className='latestWork Strings relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform  hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
-          onMouseEnter={handleStringsMouseEnter}
-          onMouseLeave={handleStringsMouseLeave}>
-          <span className='p-3'>
-            <img className={`h-[200px] w-[305px] object-cover rounded shadow-sm ${stringsHovered ? 'blur-sm' : ''}`} src='../../images/fecLandingPage.png' alt='Strings Image'/>
-          </span>
-          <p className='pl-3 text-xl text-black'>Strings</p>
-          <p className='pl-3'>Mock e-Commerce Web Page</p>
-
-          <div className={`StringsDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
-          ${stringsHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
-            <div className='p-7 text-white flex flex-col justify-around h-full'>
-              <div>
-                <p className='text-xl font-semibold'>Strings</p>
-                <p className='font-thin'>Created a mock e-commerce website where users can add reviews, questions and items into cart.
-                </p>
-              </div>
-
-              <div>
-                <p className='text-l font-semibold'>Technology</p>
-                <span className='techIcons flex justify-between w-10/12'>
-                  {reactNativeIcon}
-                  {nodeJSIcon}
-                  {expressJSIcon}
-                  {awsIcon}
-                </span>
-              </div>
-
-              <div className='font-bold relative group w-16'>
-                <a
-                  href='http://ec2-54-227-152-111.compute-1.amazonaws.com:3000/'
-                  target='_blank'
-                  className='relative z-10 py-2 justify-center text-white transition duration-300 ease-in-out flex items-center'
-                  >
-                  <div className='relative z-10 flex px-4'>Demo</div>
-                  <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
-                </a>
-              </div>
-
             </div>
           </div>
-        </div>
 
-        {/* System Design Project */}
-        <div className='latestWork SystemDesign relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
-        onMouseEnter={handleSystemDesignMouseEnter}
-        onMouseLeave={handleSystemDesignMouseLeave}
-        >
-          <span className='p-3'>
-            <img className={`h-[200px] w-[305px] object-fit rounded shadow-sm ${systemDesignHovered ? 'blur-sm' : ''}`} src='../../images/loadBalancer.png' alt='System Design Image'/>
-          </span>
-          <p className='pl-3 text-xl text-black'>System Design</p>
-          <p className='pl-3'>Optimized a Legacy System</p>
+          {/* System Design Project */}
+          <div className='latestWork SystemDesign relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
+          onMouseEnter={handleSystemDesignMouseEnter}
+          onMouseLeave={handleSystemDesignMouseLeave}
+          >
+            <span className='p-3'>
+              <img className={`h-[200px] w-[305px] object-fit rounded shadow-sm ${systemDesignHovered ? 'blur-sm' : ''}`} src='../../images/loadBalancer.png' alt='System Design Image'/>
+            </span>
+            <p className='pl-3 text-xl text-black'>System Design</p>
+            <p className='pl-3'>Optimized a Legacy System</p>
 
-          <div className={`SystemDesignDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
-          ${systemDesignHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
-            <div className='p-7 text-white flex flex-col justify-around h-full'>
-              <div>
-                <p className='text-xl font-semibold'>System Design</p>
-                <p className='font-thin'>Replaced a legacy system/ API  from an E-commerce web application with a PostgreSQL Database.
-                </p>
-              </div>
+            <div className={`SystemDesignDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
+            ${systemDesignHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
+              <div className='p-7 text-white flex flex-col justify-around h-full'>
+                <div>
+                  <p className='text-xl font-semibold'>System Design</p>
+                  <p className='font-thin'>Replaced a legacy system/ API  from an E-commerce web application with a PostgreSQL Database.
+                  </p>
+                </div>
 
-              <div className='py-4'>
-                <p className='text-l font-semibold'>Technology</p>
-                <span className='techIcons flex justify-between w-10/12'>
-                  {psqlIcon}
-                  {reactNativeIcon}
-                  {nodeJSIcon}
-                  {expressJSIcon}
-                </span>
-              </div>
+                <div className='py-4'>
+                  <p className='text-l font-semibold'>Technology</p>
+                  <span className='techIcons flex justify-between w-10/12'>
+                    {psqlIcon}
+                    {reactNativeIcon}
+                    {nodeJSIcon}
+                    {expressJSIcon}
+                  </span>
+                </div>
 
-              <div className='font-bold relative group w-32'>
-                <a
-                  href='https://github.com/PickleRick-SDC/Products'
-                  target='_blank'
-                  className='relative z-10 justify-center text-white transition duration-300 ease-in-out flex items-center'>
-                  <div className='relative z-10 flex px-4'>Github Link</div>
-                  <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
-                  </a>
+                <div className='font-bold relative group w-32'>
+                  <a
+                    href='https://github.com/PickleRick-SDC/Products'
+                    target='_blank'
+                    className='relative z-10 justify-center text-white transition duration-300 ease-in-out flex items-center'>
+                    <div className='relative z-10 flex px-4'>Github Link</div>
+                    <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-        </div>
+          </div>
 
-        {/* RoadTrip Project */}
-        <div className='latestWork RoadTrip relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
-        onMouseEnter={handleRoadTripMouseEnter}
-        onMouseLeave={handleRoadTripMouseLeave}
-        >
-          <span className='p-3'>
-            <img className={`h-[200px] w-[305px] object-cover rounded shadow-sm ${roadTripHovered ? 'blur-sm' : ''}`} src='../../images/roadTripSplash-removebg-preview.png' alt='Road Trip Image'/>
-          </span>
-          <p className='pl-3 text-xl text-black'>Road Trip</p>
-          <p className='pl-3'>Destination Planner Mobile Application.</p>
+          {/* RoadTrip Project */}
+          <div className='latestWork RoadTrip relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
+          onMouseEnter={handleRoadTripMouseEnter}
+          onMouseLeave={handleRoadTripMouseLeave}
+          >
+            <span className='p-3'>
+              <img className={`h-[200px] w-[305px] object-cover rounded shadow-sm ${roadTripHovered ? 'blur-sm' : ''}`} src='../../images/roadTripSplash-removebg-preview.png' alt='Road Trip Image'/>
+            </span>
+            <p className='pl-3 text-xl text-black'>Road Trip</p>
+            <p className='pl-3'>Destination Planner Mobile Application.</p>
 
-          <div className={`RoadTripDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
-          ${roadTripHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
-            <div className='p-7 text-white flex flex-col justify-around h-full'>
-              <div>
-                <p className='text-xl font-semibold'>Road Trip</p>
-                <p className='font-thin'>Built a mobile iOS application that allows users to plan stops and other point of interests for their road trip
-                </p>
-              </div>
+            <div className={`RoadTripDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
+            ${roadTripHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
+              <div className='p-7 text-white flex flex-col justify-around h-full'>
+                <div>
+                  <p className='text-xl font-semibold'>Road Trip</p>
+                  <p className='font-thin'>Built a mobile iOS application that allows users to plan stops and other point of interests for their road trip
+                  </p>
+                </div>
 
-              <div className='py-4'>
-                <p className='text-l font-semibold'>Technology</p>
-                <span className='techIcons flex justify-between w-10/12'>
-                  {reactNativeIcon}
-                  {psqlIcon}
-                  {typeScriptIcon}
-                  {nodeJSIcon}
-                  {expressJSIcon}
-                </span>
-              </div>
+                <div className='py-4'>
+                  <p className='text-l font-semibold'>Technology</p>
+                  <span className='techIcons flex justify-between w-10/12'>
+                    {reactNativeIcon}
+                    {psqlIcon}
+                    {typeScriptIcon}
+                    {nodeJSIcon}
+                    {expressJSIcon}
+                  </span>
+                </div>
 
-              <div className='font-bold relative group w-32'>
-                <a
-                  href='https://github.com/naruto-blue-ocean'
-                  target='_blank'
-                  className='relative justify-center z-10 text-white transition duration-300 ease-in-out flex items-center'>
-                  <div className='relative z-10 flex px-4'>Github Link</div>
-                  <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
-                  </a>
+                <div className='font-bold relative group w-32'>
+                  <a
+                    href='https://github.com/naruto-blue-ocean'
+                    target='_blank'
+                    className='relative justify-center z-10 text-white transition duration-300 ease-in-out flex items-center'>
+                    <div className='relative z-10 flex px-4'>Github Link</div>
+                    <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
+          </div>
+
         </div>
       </section>
       <LazyFooter/>
