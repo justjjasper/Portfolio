@@ -98,7 +98,7 @@ export default function Projects () {
                       </span>
                     </div>
 
-                  <div className='font-bold relative group w-48'>
+                  <div className='font-bold relative group xsm:w-48 w-52'>
                     <a
                       href='https://www.figma.com/proto/x4fC1slppUfi90Xu3fFvlK/Mobile-Projects?type=design&node-id=1-13&t=at4T8GQ59i5dhzfS-1&scaling=scale-down&page-id=0%3A1'
                       target='_blank'
