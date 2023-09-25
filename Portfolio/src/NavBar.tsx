@@ -30,7 +30,7 @@ export default function NavBar () {
         <div className='relative naruto-standing stand right-4 bottom-2'/>
       </div> */}
 
-      <nav className=' w-9/12 flex justify-between items-center'>
+      <nav className='sm:w-9/12 w-11/12 flex justify-between items-center'>
         <span>
           <a href='/' onClick={reload}>
             <div className="relative inline-flex items-center justify-center w-14 h-14 overflow-hidden bg-gray-100 rounded-full hover:bg-gray-600 ">
@@ -39,7 +39,7 @@ export default function NavBar () {
           </a>
         </span>
 
-        <ul className='hidden md:flex ml-48'>
+        <ul className='md:flex hidden ml-48'>
           {menuItem.map(item => (
             <li className='px-4 relative top-1'key={item.path}>
               <Link onClick={reload} className={`${item.path === pathname ? 'text-gray-600' : 'text-white'} hover:text-gray-600`}to={item.path}>
