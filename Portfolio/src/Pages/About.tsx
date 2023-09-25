@@ -57,7 +57,7 @@ export default function About () {
       <section className='flex about shadow-md mb-1 justify-center'>
         <div ref={aboutRef} id='about' className='about lg:border-b-[1.5px] border-b-0 font-proxima text-[#333333] flex lg:flex-row flex-col justify-between xsm:my-[5.5rem] w-9/12 my-16 items-center'>
           <span className='flex flex-col self-center'>
-            <h1 className='text-8xl relative font-bold mb-6'>about.</h1>
+            <h1 className='text-8xl font-bold mb-6'>about.</h1>
             <div className='text-2xl lg:w-[29ch] mb-6 font-light text-[#7B7B7B]'>I'm a Software Developer based in Los Angeles, California.</div>
             <div className='text-lg lg:w-[43ch] font-light tracking-wide'>I'm a tech enthusiast with a keen eye for design and create intricate websites.  When I'm not coding, you can find me doing activities that gets my heart racing!</div>
           </span>

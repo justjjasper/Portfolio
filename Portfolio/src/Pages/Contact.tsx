@@ -66,11 +66,11 @@ export default function Contact () {
   return (
     <div className='flex flex-col'>
       <section className='flex flex-col md:flex-row h-[36rem] shadow-md mb-1 items-center justify-center'>
-        <div className='content pt-12 md:pt-0 font-proxima text-[#333333] flex flex-col h-[20rem] justify-around'>
-          <p className='text-8xl relative font-bold tracking-tighter'>contact.</p>
-          <p className='text-[#7B7B7B] text-2xl font-light w-[27ch]'>Get in touch with me via social media or email.</p>
+        <div className='content pt-12 md:pt-0 font-proxima text-[#333333] flex flex-col h-[20rem] justify-around items-center'>
+          <p className='text-8xl font-bold tracking-tighter'>contact.</p>
+          <p className='text-[#7B7B7B] text-2xl font-light  w-[20ch] xsm:w-[27ch] py-3'>Get in touch with me via social media or email.</p>
 
-          <div className='flex relative right-5'>
+          <div className='flex flex-wrap items-center justify-center py-6 right-5'>
             <a href='https://www.linkedin.com/in/jasper-bucad' target='_blank' title='Connect with me on Linkedin'
             className='flex flex-row items-center hover:opacity-70 pr-2'>
               <div className='flex h-12 w-12 bg-[#347CB9] justify-center items-center rounded-full'>
@@ -102,7 +102,7 @@ export default function Contact () {
         </div>
 
 
-        <img className='w-4/12 h-4/12 object-cover' src='../../images/1.JPG' alt='Self Image'/>
+        <img className='w-4/12 h-4/12 object-cover mt-2' src='../../images/1.JPG' alt='Self Image'/>
 
       </section>
 
