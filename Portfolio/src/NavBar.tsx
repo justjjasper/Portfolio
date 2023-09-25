@@ -104,9 +104,17 @@ export default function NavBar () {
 
             </ul>
             <ul className='flex flex-row w-full items-center justify-center border-gray-500 bg-[#222222] py-4 text-white'>
-              <li>linked</li>
-              <li>github</li>
-              <li>ig</li>
+              <li className='inline hover:text-gray-600 px-6'> <a href='https://www.linkedin.com/in/jasper-bucad' title='Connect with me on Linkedin' target='_blank'>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-8 h-8 inline"><path fill="currentColor"
+              d={linkedInIcon}/></svg>
+                </a></li>
+              <li className='inline hover:text-gray-600 px-6'> <a href='https://github.com/justjjasper' title='View my code on Github' target='_blank'>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" className="w-8 h-8 inline"><path fill="currentColor" d={githubIcon}/></svg>
+                </a></li>
+              <li className='inline hover:text-gray-600 px-6'> <a href='https://www.instagram.com/onlywithjasper/' title='Follow me on Instagram' target='_blank'>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-8 h-8 inline"><path fill="currentColor"
+              d= {igIcon}/></svg>
+                </a></li>
             </ul>
 
           </nav>
