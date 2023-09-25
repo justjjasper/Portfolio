@@ -63,7 +63,7 @@ export default function Projects () {
       {/* List of Projects */}
       <section className='projects flex shadow-md mb-1 bg-[#FAFAFA] justify-center items-center py-24'>
 
-        <div className='listOfProjectsContainer flex flex-row justify-center items-center gap-8 w-9/12 flex-wrap'>
+        <div className='listOfProjectsContainer flex flex-row justify-center items-center gap-8 xsm:w-9/12 w-full flex-wrap'>
 
 
           {/* FitLog+ Project */}

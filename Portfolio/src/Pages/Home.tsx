@@ -72,6 +72,7 @@ export default function Home () {
         </div>
 
         <div className='flex gap-7 flex-col xsm:flex-row justify-center items-center'>
+
           {/* FitLog+ Project */}
           <div className='latestWork FitLog relative shadow-latestWorksShadow-md md:w-[330px] md:h-[275px] xsm:w-[230px] xsm:h-[210px] w-[330px]  h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
           onMouseEnter={handleFitLogMouseEnter}
