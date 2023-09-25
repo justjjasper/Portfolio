@@ -38,7 +38,7 @@ export default function Home () {
     // For example, you can use a timer or some other event to trigger it
     const timer = setTimeout(() => {
       setShowSection(true);
-    }, 700);
+    }, 375);
 
     // Clean up the timer when the component unmounts
     return () => clearTimeout(timer);
