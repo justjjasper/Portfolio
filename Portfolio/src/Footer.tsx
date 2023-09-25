@@ -4,8 +4,6 @@ import './Footer.css'
 
 export default function Footer() {
 
-  const { pathname } = useLocation();
-
   const menuItem = [
     { path: '/about', label: 'about' },
     // { path: '/experience', label: 'experience' },
@@ -23,14 +21,14 @@ export default function Footer() {
   return (
     <section className= 'text-[#8E8E8E] flex items-center justify-around bg-[#F4F4F4] h-24'>
 
-      { pathname === '/projects' ? null : (<div className='fakeBackGroundButton bg-[#F4F4F4] flex self-start h-[70px] w-32 absolute -mt-16 rounded-t-full'></div>) }
+      <div className='fakeBackGroundButton bg-[#F4F4F4] flex self-start h-[70px] w-32 absolute -mt-16 rounded-t-full'></div>
 
-      { pathname === '/projects' ? null : ( <div className='topScrollButtonBg inset-shadow h-16 w-32 bg-[#F4F4F4] rounded-t-full flex self-start absolute -mt-16 justify-center'
+      <div className='topScrollButtonBg inset-shadow h-16 w-32 bg-[#F4F4F4] rounded-t-full flex self-start absolute -mt-16 justify-center'
       onClick={scrollToTop}>
         <div className= 'flex self-end'>
           {upArrow}
         </div>
-      </div> ) }
+      </div>
 
       <div className='w-9/12 flex justify-center lg:justify-between'>
 

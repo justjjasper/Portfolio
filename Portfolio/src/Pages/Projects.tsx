@@ -61,7 +61,7 @@ export default function Projects () {
       </section>
 
       {/* List of Projects */}
-      <section className='projects flex shadow-md mb-1 bg-[#FAFAFA] justify-center items-center py-16'>
+      <section className='projects flex shadow-md mb-1 bg-[#FAFAFA] justify-center items-center py-24'>
 
         <div className='listOfProjectsContainer flex flex-row justify-center items-center gap-8 w-9/12 flex-wrap'>
 

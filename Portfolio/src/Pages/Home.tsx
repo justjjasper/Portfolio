@@ -64,7 +64,7 @@ export default function Home () {
 
       {/* Collection of Project */}
       <section className= 'latestWorks flex shadow-md mb-1 bg-[#FAFAFA] text-[#7B7B7B] w-full md:py-28 pb-24 pt-16 items-center flex-col'>
-        <div className='w-9/12 flex justify-between mb-5'>
+        <div className='xsm:w-9/12 w-10/12 flex justify-between mb-5'>
           <div className='w-4/12 border-b-[1px] sm:mb-3 mb-2 border-[#7B7B7B]'></div>
           <div className='font-proxima-semibold tracking-wide hidden lg:block'>SOME OF MY LATEST WORKS</div>
           <div className='font-proxima-semibold tracking-wide lg:hidden text-xs sm:text-base'>LATEST WORKS</div>
