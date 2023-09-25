@@ -13,6 +13,7 @@ export default function NavBar () {
   }, []);
 
   const menuItem = [
+    { path: '/', label: 'home'},
     { path: '/about', label: 'about' },
     // { path: '/experience', label: 'experience' },
     { path: '/projects', label: 'projects' },
@@ -50,7 +51,7 @@ export default function NavBar () {
             ))}
           </ul>
 
-          <ul className='hidden md:flex w-60 justify-evenly'>
+          <ul className='hidden md:flex w-60 justify-evenly items-center'>
             <li className='inline hover:text-gray-600 px-2'> <a href='https://www.linkedin.com/in/jasper-bucad' title='Connect with me on Linkedin' target='_blank'>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-8 h-8 inline"><path fill="currentColor"
             d={linkedInIcon}/></svg>
@@ -75,6 +76,15 @@ export default function NavBar () {
         <div className={`mobileMenu top-[64px] xsm:top-[4rem] text-black absolute ${mobileMenu ? 'block' : 'hidden'} md:hidden transform transition-transform duration-300 ease-in-out ${mobileMenu ? 'translate-y-0' : 'translate-y-full'} w-full flex justify-center items-center`}>
           <nav className='text-3xl font-light w-full flex flex-col items-center justify-center'>
             <ul className='flex flex-col items-center justify-center w-full'>
+              <li className='flex border-b-[0.5px] border-gray-500 py-4 w-full items-center justify-center bg-[#222222]'>
+                <a
+                  onClick={reload}
+                  href='/'
+                  className='text-white hover:text-gray-600'
+                >
+                  home
+                </a>
+              </li>
               <li className='flex border-b-[0.5px] border-gray-500 py-4 w-full items-center justify-center bg-[#222222]'>
                 <a
                   onClick={reload}
