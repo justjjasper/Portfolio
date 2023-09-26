@@ -83,7 +83,7 @@ export default function About () {
           <div className='text-xl self-center flex flex-col text-gray-600 lg:text-left text-center mb-10 lg:mb-0'>
             <span className='text-3xl text-black pb-4'>Part Coder</span>
             <span className='py-2'>Front End Developer</span>
-            <span className='py-2'>React</span>
+            <span className='py-2'>React JS / TypeScript</span>
             <span className='py-2'>UI Design</span>
             <span className='py-2'>Squashing Bugs</span>
           </div>
