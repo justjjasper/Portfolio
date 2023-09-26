@@ -84,7 +84,7 @@ export default function About () {
             <span className='text-3xl text-black pb-4'>Part Coder</span>
             <span className='py-2'>Front End Developer</span>
             <span className='py-2'>React</span>
-            <span className='py-2'>UI / UX Design</span>
+            <span className='py-2'>UI Design</span>
             <span className='py-2'>Squashing Bugs</span>
           </div>
           <div className={`md:w-[45%] object-contain md:h-6/12 transition-transform duration-[3000ms] ease-in-out ${chart ? '' : "opacity-50"} block lg:hidden`}>
