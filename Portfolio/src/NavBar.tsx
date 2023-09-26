@@ -32,7 +32,7 @@ export default function NavBar () {
         <div className='relative naruto-standing stand right-4 bottom-2'/>
       </div> */}
       <div className='flex justify-center items-center  w-full flex-col'>
-        <nav className='sm:w-9/12 w-11/12 flex justify-between items-center'>
+        <nav className='sm:w-9/12 w-11/12 flex justify-between items-center z-40'>
           <span>
             <a href='/' onClick={reload}>
               <div className="relative inline-flex items-center justify-center md:w-14 md:h-14 w-11 h-11 overflow-hidden bg-gray-100 rounded-full hover:bg-gray-600 ">
@@ -73,7 +73,8 @@ export default function NavBar () {
           </button>
         </nav>
 
-        <div className={`mobileMenu top-[64px] xsm:top-[4rem] text-black absolute ${mobileMenu ? 'block' : 'hidden'} md:hidden transform transition-transform duration-300 ease-in-out ${mobileMenu ? 'translate-y-0' : 'translate-y-full'} w-full flex justify-center items-center`}>
+
+        <div className={`z-20 mobileMenu ${mobileMenu ? 'top-[64px]' : 'top-0'} ${mobileMenu ? 'xsm:top-[4rem]' : 'xsm:top-[0rem]'} mb-[128px] text-black absolute  md:hidden transform transition-all duration-[750ms] ease-in-out ${mobileMenu ? 'translate-y-0' : '-translate-y-full'} w-full flex justify-center items-center`}>
           <nav className='text-3xl font-light w-full flex flex-col items-center justify-center'>
             <ul className='flex flex-col items-center justify-center w-full'>
               <li className='flex border-b-[0.5px] border-gray-500 py-4 w-full items-center justify-center bg-[#222222]'>
