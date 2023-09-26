@@ -73,8 +73,9 @@ export default function NavBar () {
           </button>
         </nav>
 
+        <div className={`mobileMenu top-[64px] xsm:top-[4rem] text-black absolute ${mobileMenu ? 'block' : 'hidden'} md:hidden transform transition-all duration-1000 ease-in-out ${mobileMenu ? '' : '-translate-y-full'} w-full flex justify-center items-center`}>
+        {/* <div className={`z-20 mobileMenu ${mobileMenu ? 'top-[64px]' : 'top-0'} ${mobileMenu ? 'xsm:top-[4rem]' : 'xsm:top-[0rem]'} mb-[128px] text-black absolute  md:hidden transform transition-all duration-[750ms] ease-in-out ${mobileMenu ? 'translate-y-0' : '-translate-y-full'} w-full flex justify-center items-center`}> */}
 
-        <div className={`z-20 mobileMenu ${mobileMenu ? 'top-[64px]' : 'top-0'} ${mobileMenu ? 'xsm:top-[4rem]' : 'xsm:top-[0rem]'} mb-[128px] text-black absolute  md:hidden transform transition-all duration-[750ms] ease-in-out ${mobileMenu ? 'translate-y-0' : '-translate-y-full'} w-full flex justify-center items-center`}>
           <nav className='text-3xl font-light w-full flex flex-col items-center justify-center'>
             <ul className='flex flex-col items-center justify-center w-full'>
               <li className='flex border-b-[0.5px] border-gray-500 py-4 w-full items-center justify-center bg-[#222222]'>
