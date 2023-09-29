@@ -62,7 +62,7 @@ export default function About () {
             <div className='text-lg lg:w-[43ch] font-light tracking-wide'>I'm a tech enthusiast with a keen eye for design and create intricate websites.  When I'm not coding, you can find me doing activities that gets my heart racing!</div>
           </span>
 
-          <img className='relative transition-transform duration-[1000ms] ease-in-out lg:w-5/12 lg:h-5/12 sm:w-9/12 sm:h-9/12 object-contain border-b-[1.5px] lg:border-b-0 xsm:mt-0 mt-7 pr-0 lg:pr-10' src='../../images/1.JPG'/>
+          <img className='relative transition-transform duration-[1000ms] ease-in-out lg:w-5/12 lg:h-5/12 sm:w-9/12 sm:h-9/12 object-contain border-b-[1.5px] lg:border-b-0 xsm:mt-0 mt-7 pr-0 lg:pr-10' src='../../images/1.JPG' alt='Self Image'/>
 
         </div>
       </section>
@@ -78,7 +78,7 @@ export default function About () {
             <span className='py-2'>Professional Eater</span>
            </div>
           <div className={`w-[45%] object-contain h-6/12 pr-16 transition-transform duration-[3000ms] ease-in-out ${chart ? '' : "opacity-50"} hidden lg:block`}>
-            <img src='../../images/pieChart.png'/>
+            <img src='../../images/pieChart.png' alt='Pie Chart of Skills'/>
           </div>
           <div className='text-xl self-center flex flex-col text-gray-600 lg:text-left text-center mb-10 lg:mb-0'>
             <span className='text-3xl text-black pb-4'>Part Coder</span>

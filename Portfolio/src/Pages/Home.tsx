@@ -54,7 +54,7 @@ export default function Home () {
           <span className='text-[#7B7B7B] hidden md:block'>Athlete that enjoys physical activities.</span>
         </div>
 
-        <img className='lg:w-96 lg:h-96 md:w-80 md:h-80 sm:h-60 sm:w-60 h-48 w-48 object-cover'src='../../images/1.JPG'/>
+        <img className='lg:w-96 lg:h-96 md:w-80 md:h-80 sm:h-60 sm:w-60 h-48 w-48 object-cover'src='../../images/1.JPG' alt='Self Image'/>
 
         <div className='flex flex-col font-proxima justify-center items-center'>
           <h1 className='lg:text-6xl md:text-5xl sm:text-3xl  text-xl pb-4 bottom-16 font-bold tracking-tight'>&lt;coder&gt;</h1>
