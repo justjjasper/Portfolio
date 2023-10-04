@@ -5,8 +5,8 @@ import './Footer.css'
 export default function Footer() {
 
   const menuItem = [
-    { path: '/', label: 'home' },
-    { path: '/about', label: 'about' },
+    // { path: '/', label: 'home' },
+    { path: '/', label: 'about' },
     // { path: '/experience', label: 'experience' },
     { path: '/projects', label: 'projects' },
     { path: '/contact', label: 'contact' },

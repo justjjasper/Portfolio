@@ -13,8 +13,8 @@ export default function NavBar () {
   }, []);
 
   const menuItem = [
-    { path: '/', label: 'home'},
-    { path: '/about', label: 'about' },
+    // { path: '/', label: 'home'},
+    { path: '/', label: 'about' },
     // { path: '/experience', label: 'experience' },
     { path: '/projects', label: 'projects' },
     { path: '/contact', label: 'contact' },
@@ -78,7 +78,7 @@ export default function NavBar () {
 
           <nav className='text-3xl font-light w-full flex flex-col items-center justify-center'>
             <ul className='flex flex-col items-center justify-center w-full'>
-              <li className='flex border-b-[0.5px] border-gray-500 py-4 w-full items-center justify-center bg-[#222222]'>
+              {/* <li className='flex border-b-[0.5px] border-gray-500 py-4 w-full items-center justify-center bg-[#222222]'>
                 <a
                   onClick={reload}
                   href='/'
@@ -86,11 +86,11 @@ export default function NavBar () {
                 >
                   home
                 </a>
-              </li>
+              </li> */}
               <li className='flex border-b-[0.5px] border-gray-500 py-4 w-full items-center justify-center bg-[#222222]'>
                 <a
                   onClick={reload}
-                  href='/about'
+                  href='/'
                   className='text-white hover:text-gray-600'
                 >
                   about

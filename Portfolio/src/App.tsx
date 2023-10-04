@@ -23,15 +23,15 @@ function App() {
 
     <div className='flex-1'>
       <Routes>
-        <Route
+        {/* <Route
           path='/'
           element={
             <Suspense>
               <LazyHome/>
             </Suspense>
-          }/>
+          }/> */}
         <Route
-          path='/about'
+          path='/'
           element={
             <Suspense>
               <LazyAbout/>
