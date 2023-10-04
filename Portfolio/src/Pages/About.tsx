@@ -78,7 +78,7 @@ export default function About () {
             <span className='py-2'>Professional Eater</span>
            </div>
           <div className={`w-[45%] object-contain h-6/12 pr-16 transition-transform duration-[3000ms] ease-in-out ${chart ? '' : "opacity-50"} hidden lg:block`}>
-            <img src='../../images/pieChart.png' alt='Pie Chart of Skills'/>
+            <img src='../../images/pieChart.png' alt='Pie Chart of Skills' loading='lazy'/>
           </div>
           <div className='text-xl self-center flex flex-col text-gray-600 lg:text-left text-center mb-10 lg:mb-0'>
             <span className='text-3xl text-black pb-4'>Part Coder</span>
@@ -88,13 +88,13 @@ export default function About () {
             <span className='py-2'>Squashing Bugs</span>
           </div>
           <div className={`md:w-[45%] object-contain md:h-6/12 transition-transform duration-[3000ms] ease-in-out ${chart ? '' : "opacity-50"} block lg:hidden`}>
-            <img src='../../images/pieChart.png'/>
+            <img src='../../images/pieChart.png' loading='lazy'/>
           </div>
       </section>
 
       {/* <section className='randomFacts flex justify-center font-light py-2 w-full border-b-[1.5px]'>
         <div ref={narutoRef} id='naruto' className={`h-4/12 w-4/12 transition-transform duration-[1000ms] ease-in-out ${naruto ? '' : "-translate-x-full"}`}>
-          <img src='../../images/epicNaruto.png'/>
+          <img src='../../images/epicNaruto.png' loading='lazy'/>
         </div>
 
         <div className='text-xl flex flex-col text-gray-600 self-center'>
@@ -117,24 +117,24 @@ export default function About () {
           <div className='iconContainer flex flex-col xsm:w-96 h-72 w-80 justify-center gap-16'>
             <span className= 'flex flex-row justify-between'>
               <img src='../../images/reactIcon.png' className='h-24 w-30 transition-transform transform-gpu hover:scale-110'
-                alt='React Icon'
+                alt='React Icon' loading='lazy'
               />
               <img src='../../images/tailwindIcon.png' className='h-16 w-24 transition-transform transform-gpu hover:scale-110'
-                alt='Tailwind Icon'/>
+                alt='Tailwind Icon' loading='lazy'/>
               <img src='../../images/htmlAndCSSIcon.png' className='h-24 w-24 transition-transform transform-gpu hover:scale-110'
-                alt='Html Icon'
+                alt='Html Icon' loading='lazy'
               />
             </span>
             <span className= 'flex flex-row justify-between'>
               <img src='../../images/typescriptIcon.png' className='h-24 w-24 transition-transform transform-gpu hover:scale-110'
-                alt='Typescript Icon'
+                alt='Typescript Icon' loading='lazy'
               />
               <img src='../../images/figmaIcon.png'className='h-24 w-16 transition-transform transform-gpu hover:scale-110'
-                alt='Figma Icon'
+                alt='Figma Icon' loading='lazy'
               />
               <a href='https://www.tiktok.com/@jasperswrld.com/video/7245148001432390954' target='_blank'>
                 <img src='../../images/snowboardIcon.png' className='h-24 w-24 transition-transform transform-gpu hover:scale-110'
-                  alt='Snowboarding Icon'
+                  alt='Snowboarding Icon' loading='lazy'
                 />
               </a>
             </span>

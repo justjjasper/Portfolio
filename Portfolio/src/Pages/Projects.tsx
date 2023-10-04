@@ -71,7 +71,7 @@ export default function Projects () {
               onMouseEnter={handleFitLogMouseEnter}
               onMouseLeave={handleFitLogMouseLeave}>
                 <span className='p-3'>
-                  <img className={`h-[200px] w-[305px] rounded shadow-sm ${fitLogHovered ? 'blur-sm' : ''}`} src='../../images/fitLogHorizontalLogo.png' alt='FitLog+ Image'/>
+                  <img className={`h-[200px] w-[305px] rounded shadow-sm ${fitLogHovered ? 'blur-sm' : ''}`} src='../../images/fitLogHorizontalLogo.png' alt='FitLog+ Image' loading='lazy'/>
                 </span>
                 <p className='pl-3 text-xl text-black'>FitLog+</p>
                 <p className='pl-3'>Fitness Mobile Application</p>
@@ -117,7 +117,7 @@ export default function Projects () {
             onMouseEnter={handleStringsMouseEnter}
             onMouseLeave={handleStringsMouseLeave}>
             <span className='p-3'>
-              <img className={`h-[200px] w-[305px] object-cover rounded shadow-sm ${stringsHovered ? 'blur-sm' : ''}`} src='../../images/fecLandingPage.png' alt='Strings Image'/>
+              <img className={`h-[200px] w-[305px] object-cover rounded shadow-sm ${stringsHovered ? 'blur-sm' : ''}`} src='../../images/fecLandingPage.png' alt='Strings Image' loading='lazy'/>
             </span>
             <p className='pl-3 text-xl text-black'>Strings</p>
             <p className='pl-3'>Mock e-Commerce Web Page</p>
@@ -162,7 +162,7 @@ export default function Projects () {
           onMouseLeave={handleSystemDesignMouseLeave}
           >
             <span className='p-3'>
-              <img className={`h-[200px] w-[305px] object-fit rounded shadow-sm ${systemDesignHovered ? 'blur-sm' : ''}`} src='../../images/loadBalancer.png' alt='System Design Image'/>
+              <img className={`h-[200px] w-[305px] object-fit rounded shadow-sm ${systemDesignHovered ? 'blur-sm' : ''}`} src='../../images/loadBalancer.png' alt='System Design Image' loading='lazy'/>
             </span>
             <p className='pl-3 text-xl text-black'>System Design</p>
             <p className='pl-3'>Optimized a Legacy System</p>
@@ -205,7 +205,7 @@ export default function Projects () {
           onMouseLeave={handleRoadTripMouseLeave}
           >
             <span className='p-3'>
-              <img className={`h-[200px] w-[305px] object-cover rounded shadow-sm ${roadTripHovered ? 'blur-sm' : ''}`} src='../../images/roadTripSplash-removebg-preview.png' alt='Road Trip Image'/>
+              <img className={`h-[200px] w-[305px] object-cover rounded shadow-sm ${roadTripHovered ? 'blur-sm' : ''}`} src='../../images/roadTripSplash-removebg-preview.png' alt='Road Trip Image' loading='lazy'/>
             </span>
             <p className='pl-3 text-xl text-black'>Road Trip</p>
             <p className='pl-3'>Destination Planner Mobile Application.</p>

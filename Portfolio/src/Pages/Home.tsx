@@ -78,7 +78,7 @@ export default function Home () {
           onMouseEnter={handleFitLogMouseEnter}
           onMouseLeave={handleFitLogMouseLeave}>
             <span className='p-3'>
-              <img className={`md:h-[200px] md:w-[305px] xsm:h-[130px] xsm:w-[210px] h-[200px] w-[305px] rounded shadow-sm ${fitLogHovered ? 'blur-sm' : ''}`} src='../../images/fitLogHorizontalLogo.png' alt='FitLog+ Image'/>
+              <img className={`md:h-[200px] md:w-[305px] xsm:h-[130px] xsm:w-[210px] h-[200px] w-[305px] rounded shadow-sm ${fitLogHovered ? 'blur-sm' : ''}`} src='../../images/fitLogHorizontalLogo.png' alt='FitLog+ Image' loading='lazy'/>
             </span>
             <p className='pl-3 text-xl text-black'>FitLog+</p>
             <p className='pl-3'>Fitness Mobile Application</p>
@@ -123,7 +123,7 @@ export default function Home () {
             onMouseEnter={handleStringsMouseEnter}
             onMouseLeave={handleStringsMouseLeave}>
             <span className='p-3'>
-              <img className={`md:h-[200px] md:w-[305px] xsm:h-[130px] xsm:w-[210px] h-[200px] w-[305px] object-cover rounded shadow-sm ${stringsHovered ? 'blur-sm' : ''}`} src='../../images/fecLandingPage.png' alt='Strings Image'/>
+              <img className={`md:h-[200px] md:w-[305px] xsm:h-[130px] xsm:w-[210px] h-[200px] w-[305px] object-cover rounded shadow-sm ${stringsHovered ? 'blur-sm' : ''}`} src='../../images/fecLandingPage.png' alt='Strings Image' loading='lazy'/>
             </span>
             <p className='pl-3 text-xl text-black'>Strings</p>
             <p className='pl-3 md:block xsm:hidden block'>Mock e-Commerce Web Page</p>
@@ -169,7 +169,7 @@ export default function Home () {
         onMouseLeave={handleSystemDesignMouseLeave}
         >
           <span className='p-3'>
-            <img className={`h-[200px] w-[305px] object-fit rounded shadow-sm ${systemDesignHovered ? 'blur-sm' : ''}`} src='../../images/loadBalancer.png' alt='System Design Image'/>
+            <img className={`h-[200px] w-[305px] object-fit rounded shadow-sm ${systemDesignHovered ? 'blur-sm' : ''}`} src='../../images/loadBalancer.png' alt='System Design Image' loading='lazy'/>
           </span>
           <p className='pl-3 text-xl text-black'>System Design</p>
           <p className='pl-3'>Optimized a Legacy System</p>
