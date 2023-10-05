@@ -1,6 +1,7 @@
 import { linkedInIcon, githubIcon, igIcon, loadingSVG } from "../../images/icons";
 import { FormEvent, useRef, useState, lazy } from "react";
 import { throttle } from '../helperFunctions/throttleUtil';
+import { serverURL } from "./config";
 const LazyFooter = lazy(() => import('../Footer'));
 import axios from 'axios';
 
@@ -44,7 +45,7 @@ export default function Contact () {
       };
 
       try {
-        const response = await axios.post('http://jasperbucad.com:3000/contact', payload);
+        const response = await axios.post(`${serverURL}/contact`, payload);
         setLoading(false);
         setErrorStatus(false);
         setSuccessStatus(true);
