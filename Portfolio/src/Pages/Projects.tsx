@@ -1,6 +1,6 @@
 import { useEffect, useState, lazy } from "react";
 import { reactNativeIcon, typeScriptIcon, reduxIcon, figmaIcon, nodeJSIcon,expressJSIcon, awsIcon, psqlIcon} from "../../images/icons";
-import { projectImage } from "../../images/images";
+import { projectImage, fecLandingImage } from "../../images/images";
 const LazyFooter = lazy(() => import('../Footer'));
 
 export default function Projects () {
@@ -118,7 +118,7 @@ export default function Projects () {
             onMouseEnter={handleStringsMouseEnter}
             onMouseLeave={handleStringsMouseLeave}>
             <span className='p-3'>
-              <img className={`h-[200px] w-[305px] object-cover rounded shadow-sm ${stringsHovered ? 'blur-sm' : ''}`} src='../../images/fecLandingPage.png' alt='Strings Image' loading='lazy'/>
+              <img className={`h-[200px] w-[305px] object-cover rounded shadow-sm ${stringsHovered ? 'blur-sm' : ''}`} src={fecLandingImage} alt='Strings Image' loading='lazy'/>
             </span>
             <p className='pl-3 text-xl text-black'>Strings</p>
             <p className='pl-3'>Mock e-Commerce Web Page</p>
