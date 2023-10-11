@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, lazy } from 'react';
 const LazyFooter = lazy(() => import('../Footer'));
+import { selfImage } from '../../images/images'
 
 export default function About () {
   const [aboutInView, setAboutInView] = useState<boolean>(false);
@@ -62,7 +63,7 @@ export default function About () {
             <div className='text-lg lg:w-[43ch] font-light tracking-wide'>I'm a tech enthusiast with a keen eye for design and create intricate websites.  When I'm not coding, you can find me doing activities that gets my heart racing!</div>
           </span>
 
-          <img className='relative transition-transform duration-[1000ms] ease-in-out lg:w-5/12 lg:h-5/12 sm:w-9/12 sm:h-9/12 object-contain border-b-[1.5px] lg:border-b-0 xsm:mt-0 mt-7 pr-0 lg:pr-10' src='../../images/1.JPG' alt='Self Image'/>
+          <img className='relative transition-transform duration-[1000ms] ease-in-out lg:w-5/12 lg:h-5/12 sm:w-9/12 sm:h-9/12 object-contain border-b-[1.5px] lg:border-b-0 xsm:mt-0 mt-7 pr-0 lg:pr-10' src={selfImage} alt='Self Image'/>
 
         </div>
       </section>

@@ -1,0 +1,1 @@
+export const selfImage: string = 'https://res.cloudinary.com/jasjasper/image/upload/v1697055493/1_vyyslz.jpg'

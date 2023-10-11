@@ -4,6 +4,7 @@ import { throttle } from '../helperFunctions/throttleUtil';
 import { serverURL } from "../Config";
 const LazyFooter = lazy(() => import('../Footer'));
 import axios from 'axios';
+import { selfImage } from "../../images/images";
 
 export default function Contact () {
   const nameRef = useRef<HTMLInputElement | null>(null);
@@ -103,7 +104,7 @@ export default function Contact () {
         </div>
 
 
-        <img className='w-4/12 h-4/12 object-cover mt-2' src='../../images/1.JPG' alt='Self Image'/>
+        <img className='w-4/12 h-4/12 object-cover mt-2' src={selfImage} alt='Self Image'/>
 
       </section>
 
