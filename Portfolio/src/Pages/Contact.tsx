@@ -1,7 +1,7 @@
 import { linkedInIcon, githubIcon, igIcon, loadingSVG } from "../../images/icons";
 import { FormEvent, useRef, useState, lazy } from "react";
 import { throttle } from '../helperFunctions/throttleUtil';
-import { serverURL } from "./config";
+import { serverURL } from "../Config";
 const LazyFooter = lazy(() => import('../Footer'));
 import axios from 'axios';
 
