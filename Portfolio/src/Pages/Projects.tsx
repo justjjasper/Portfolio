@@ -1,5 +1,6 @@
 import { useEffect, useState, lazy } from "react";
 import { reactNativeIcon, typeScriptIcon, reduxIcon, figmaIcon, nodeJSIcon,expressJSIcon, awsIcon, psqlIcon} from "../../images/icons";
+import { projectImage } from "../../images/images";
 const LazyFooter = lazy(() => import('../Footer'));
 
 export default function Projects () {
@@ -56,7 +57,7 @@ export default function Projects () {
             <span className='text-[#7B7B7B] text-2xl font-light lg:w-[30ch]'>Checkout some of my latest coding projects.</span>
             <span className='lg:w-[50ch] tracking-wide font-light text-lg'>I have experience in collaborating with other software engineers to create applications and also worked on personal side projects such as UI Design and mobile applications.</span>
           </div>
-          <img className='lg:h-6/12 lg:w-6/12 xsm:w-8/12 xsm:h-8/12' src='../../images/projectPic.png' alt='Picture of projects'/>
+          <img className='lg:h-6/12 lg:w-6/12 xsm:w-8/12 xsm:h-8/12' src={projectImage} alt='Picture of projects'/>
         </div>
       </section>
 
