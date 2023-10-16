@@ -1,3 +1,4 @@
+import './NavBar.css'
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { githubIcon, linkedInIcon, igIcon, mobileMenuSVG } from '../images/icons';
@@ -66,18 +67,22 @@ export default function NavBar () {
           </ul>
 
           <button
-            onClick={() => setMobileMenu(!mobileMenu)}
+            onClick={() => {
+              setMobileMenu(!mobileMenu)}}
             className='lg:hidden'
           >
           <svg xmlns="http://www.w3.org/2000/svg" className='h-8 w-8 md:h-10 md:w-10 md:hidden block' x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50" fill={`${mobileMenu ? 'gray' : 'white'}`}>{mobileMenuSVG}</svg>
           </button>
         </nav>
 
-        <div className={`mobileMenu top-[64px] xsm:top-[4rem] text-black absolute ${mobileMenu ? 'block' : 'hidden'} md:hidden transform transition-all duration-1000 ease-in-out ${mobileMenu ? '' : '-translate-y-full'} w-full flex justify-center items-center`}>
+        <div className={`mobile-dropdown-menu-toggle top-[64px] xsm:top-[4rem] text-black absolute md:hidden transform transition-all duration-1000 ease-in-out w-full flex justify-center items-center ${mobileMenu ? 'active' : ''}`}
+        >
         {/* <div className={`z-20 mobileMenu ${mobileMenu ? 'top-[64px]' : 'top-0'} ${mobileMenu ? 'xsm:top-[4rem]' : 'xsm:top-[0rem]'} mb-[128px] text-black absolute  md:hidden transform transition-all duration-[750ms] ease-in-out ${mobileMenu ? 'translate-y-0' : '-translate-y-full'} w-full flex justify-center items-center`}> */}
 
-          <nav className='text-3xl font-light w-full flex flex-col items-center justify-center'>
-            <ul className='flex flex-col items-center justify-center w-full'>
+          <nav className={`text-3xl font-light w-full flex flex-col items-center justify-center`}
+
+          >
+            <ul className='mobile-dropdown-menu flex flex-col items-center justify-center w-full'>
               {/* <li className='flex border-b-[0.5px] border-gray-500 py-4 w-full items-center justify-center bg-[#222222]'>
                 <a
                   onClick={reload}
@@ -115,18 +120,18 @@ export default function NavBar () {
               </li>
 
             </ul>
-            <ul className='flex flex-row w-full items-center justify-center border-gray-500 bg-[#222222] py-4 text-white'>
-              <li className='inline hover:text-gray-600 px-6'> <a href='https://www.linkedin.com/in/jasper-bucad' title='Connect with me on Linkedin' target='_blank'>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-8 h-8 inline"><path fill="currentColor"
-              d={linkedInIcon}/></svg>
-                </a></li>
-              <li className='inline hover:text-gray-600 px-6'> <a href='https://github.com/justjjasper' title='View my code on Github' target='_blank'>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" className="w-8 h-8 inline"><path fill="currentColor" d={githubIcon}/></svg>
-                </a></li>
-              <li className='inline hover:text-gray-600 px-6'> <a href='https://www.instagram.com/onlywithjasper/' title='Follow me on Instagram' target='_blank'>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-8 h-8 inline"><path fill="currentColor"
-              d= {igIcon}/></svg>
-                </a></li>
+              <ul className='flex flex-row w-full items-center justify-center border-gray-500 bg-[#222222] py-4 text-white'>
+                <li className='inline hover:text-gray-600 px-6'> <a href='https://www.linkedin.com/in/jasper-bucad' title='Connect with me on Linkedin' target='_blank'>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-8 h-8 inline"><path fill="currentColor"
+                d={linkedInIcon}/></svg>
+                  </a></li>
+                <li className='inline hover:text-gray-600 px-6'> <a href='https://github.com/justjjasper' title='View my code on Github' target='_blank'>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" className="w-8 h-8 inline"><path fill="currentColor" d={githubIcon}/></svg>
+                  </a></li>
+                <li className='inline hover:text-gray-600 px-6'> <a href='https://www.instagram.com/onlywithjasper/' title='Follow me on Instagram' target='_blank'>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-8 h-8 inline"><path fill="currentColor"
+                d= {igIcon}/></svg>
+                  </a></li>
             </ul>
 
           </nav>
