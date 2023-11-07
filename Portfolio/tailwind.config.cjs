@@ -17,6 +17,9 @@ module.exports = {
       screens: {
         'xsm': '560px',
         //=> @media (min-width: 560px) aka smallest browser screen
+      },
+      colors: {
+        'orange': '#EF8432'
       }
     },
   },

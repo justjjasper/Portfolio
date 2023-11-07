@@ -75,7 +75,7 @@ export default function NavBar () {
           </button>
         </nav>
 
-        <div className={`mobile-dropdown-menu-toggle top-[64px] xsm:top-[4rem] text-black absolute md:hidden transform transition-all duration-1000 ease-in-out w-full flex justify-center items-center ${mobileMenu ? 'active' : ''}`}
+        <div className={`mobile-dropdown-menu-toggle top-[64px] xsm:top-[4rem] text-black absolute md:hidden w-full flex justify-center items-center ${mobileMenu ? 'active' : ''}`}
         >
         {/* <div className={`z-20 mobileMenu ${mobileMenu ? 'top-[64px]' : 'top-0'} ${mobileMenu ? 'xsm:top-[4rem]' : 'xsm:top-[0rem]'} mb-[128px] text-black absolute  md:hidden transform transition-all duration-[750ms] ease-in-out ${mobileMenu ? 'translate-y-0' : '-translate-y-full'} w-full flex justify-center items-center`}> */}
 

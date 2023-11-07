@@ -84,7 +84,7 @@ export default function About () {
           <div className='text-xl self-center flex flex-col text-gray-600 lg:text-left text-center mb-10 lg:mb-0'>
             <span className='text-3xl text-black pb-4'>Part Coder</span>
             <span className='py-2'>Front End Developer</span>
-            <span className='py-2'>React JS / TypeScript</span>
+            <span className='py-2'>React JS / Next.js</span>
             <span className='py-2'>UI Design</span>
             <span className='py-2'>Squashing Bugs</span>
           </div>
@@ -127,8 +127,8 @@ export default function About () {
               />
             </span>
             <span className= 'flex flex-row justify-between'>
-              <img src='../../images/typescriptIcon.png' className='h-24 w-24 transition-transform transform-gpu hover:scale-110'
-                alt='Typescript Icon' loading='lazy'
+              <img src='../../images/nextjsIcon.png' className='h-24 w-24 transition-transform transform-gpu hover:scale-110'
+                alt='Nextjs Icon' loading='lazy'
               />
               <img src='../../images/figmaIcon.png'className='h-24 w-16 transition-transform transform-gpu hover:scale-110'
                 alt='Figma Icon' loading='lazy'
@@ -150,7 +150,7 @@ export default function About () {
 
               <div className='bottomPortion'>
                 <div className='w-full h-4 bg-[#D9D9D9] rounded-md'>
-                  <div className='h-full bg-[#626368] rounded-md' style={{ width: '90%' }}></div>
+                  <div className='h-full bg-orange rounded-md' style={{ width: '90%' }}></div>
                 </div>
               </div>
             </div>
@@ -163,7 +163,7 @@ export default function About () {
 
               <div className='bottomPortion'>
                 <div className='w-full h-4 bg-[#D9D9D9] rounded-md'>
-                  <div className='h-full bg-[#626368] rounded-md' style={{ width: '80%' }}></div>
+                  <div className='h-full bg-orange rounded-md' style={{ width: '80%' }}></div>
                 </div>
               </div>
             </div>
@@ -176,20 +176,20 @@ export default function About () {
 
               <div className='bottomPortion'>
                 <div className='w-full h-4 bg-[#D9D9D9] rounded-md'>
-                  <div className='h-full bg-[#626368] rounded-md' style={{ width: '85%' }}></div>
+                  <div className='h-full bg-orange rounded-md' style={{ width: '85%' }}></div>
                 </div>
               </div>
             </div>
 
-            <div className='typeScriptSkillBar'>
+            <div className='nextjsSkillBar'>
             <div className='topPortion flex flex-row justify-between' style={{ width: '85%' }}>
-                <div>TypeScript</div>
+                <div>Next.js</div>
                 <div className='relative left-4'>85%</div>
               </div>
 
               <div className='bottomPortion'>
                 <div className='w-full h-4 bg-[#D9D9D9] rounded-md'>
-                  <div className='h-full bg-[#626368] rounded-md' style={{ width: '85%' }}></div>
+                  <div className='h-full bg-orange rounded-md' style={{ width: '85%' }}></div>
                 </div>
               </div>
             </div>
@@ -202,7 +202,7 @@ export default function About () {
 
               <div className='bottomPortion'>
                 <div className='w-full h-4 bg-[#D9D9D9] rounded-md'>
-                  <div className='h-full bg-[#626368] rounded-md' style={{ width: '80%' }}></div>
+                  <div className='h-full bg-orange rounded-md' style={{ width: '80%' }}></div>
                 </div>
               </div>
             </div>
@@ -215,7 +215,7 @@ export default function About () {
 
               <div className='bottomPortion'>
                 <div className='w-full h-4 bg-[#D9D9D9] rounded-md'>
-                  <div className='h-full bg-[#626368] rounded-md' style={{ width: '75%' }}></div>
+                  <div className='h-full bg-orange rounded-md' style={{ width: '75%' }}></div>
                 </div>
               </div>
             </div>
