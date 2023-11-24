@@ -1,4 +1,4 @@
-import { useEffect, useState, lazy } from "react";
+import { useState, lazy } from "react";
 import { reactNativeIcon, typeScriptIcon, reduxIcon, figmaIcon, nodeJSIcon,expressJSIcon, awsIcon, psqlIcon} from "../../images/icons";
 import { projectImage, fecLandingImage } from "../../images/images";
 const LazyFooter = lazy(() => import('../Footer'));

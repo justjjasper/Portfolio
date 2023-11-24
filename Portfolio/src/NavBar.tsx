@@ -6,12 +6,12 @@ import { githubIcon, linkedInIcon, igIcon, mobileMenuSVG } from '../images/icons
 export default function NavBar () {
   const { pathname } = useLocation();
 
-  const [showNav, setShowNav] = useState<boolean>(false);
+  // const [showNav, setShowNav] = useState<boolean>(false);
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
 
-  useEffect(() => {
-    setTimeout(() => setShowNav(true), 150)
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => setShowNav(true), 150)
+  // }, []);
 
   const menuItem = [
     // { path: '/', label: 'home'},
@@ -21,13 +21,13 @@ export default function NavBar () {
     { path: '/contact', label: 'contact' },
   ];
 
-  const reload = () => {
-    setShowNav(false);
-    setTimeout(() => setShowNav(true), 450);
-  }
+  // const reload = () => {
+  //   setShowNav(false);
+  //   setTimeout(() => setShowNav(true), 450);
+  // }
 
   return (
-    <section className= {`bg-black text-white font-proxima text-lg flex justify-center items-center transform transition-transform duration-[400ms] ease-in ${showNav ? '' : "-translate-y-full"} md:h-24 h-16 w-full`}>
+    <section className= {`bg-black text-white font-proxima text-lg flex justify-center items-center transform transition-transform duration-[400ms] ease-in md:h-24 h-16 w-full`}>
        {/* <div className='flex absolute'>
         <div className='relative naruto run'/>
         <div className='relative naruto-standing stand right-4 bottom-2'/>
@@ -35,7 +35,7 @@ export default function NavBar () {
       <div className='flex justify-center items-center  w-full flex-col'>
         <nav className='sm:w-9/12 w-11/12 flex justify-between items-center z-40'>
           <span>
-            <a href='/' onClick={reload}>
+            <a href='/'>
               <div className="relative inline-flex items-center justify-center md:w-14 md:h-14 w-11 h-11 overflow-hidden bg-gray-100 rounded-full hover:bg-gray-600 ">
                 <span className="font-medium md:text-3xl  text-2xl text-gray-600 dark:text-black">JB</span>
               </div>
@@ -45,7 +45,7 @@ export default function NavBar () {
           <ul className='md:flex hidden lg:ml-48'>
             {menuItem.map(item => (
               <li className='px-4 relative top-1'key={item.path}>
-                <Link onClick={reload} className={`${item.path === pathname ? 'text-gray-600' : 'text-white'} hover:text-gray-600`}to={item.path}>
+                <Link className={`${item.path === pathname ? 'text-gray-600' : 'text-white'} hover:text-gray-600`}to={item.path}>
                   {item.label}
                 </Link>
                 </li>
@@ -94,7 +94,6 @@ export default function NavBar () {
               </li> */}
               <li className='flex border-b-[0.5px] border-gray-500 py-4 w-full items-center justify-center bg-[#222222]'>
                 <a
-                  onClick={reload}
                   href='/'
                   className='text-white hover:text-gray-600'
                 >
@@ -103,7 +102,6 @@ export default function NavBar () {
               </li>
               <li className='flex border-b-[0.5px] border-gray-500 py-4 w-full items-center justify-center bg-[#222222]'>
                 <a
-                  onClick={reload}
                   href='/projects'
                   className='text-white hover:text-gray-600'
                 >
