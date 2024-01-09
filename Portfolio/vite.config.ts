@@ -12,6 +12,6 @@ export default defineConfig({
       cert: '/home/ubuntu/cert',
     },
     host: true,
-    port: 443
+    port: 80
   }
 })
