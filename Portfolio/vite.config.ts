@@ -8,8 +8,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     https: {
-      key: fs.readFileSync(path.resolve(__dirname, 'key')),
-      cert: fs.readFileSync(path.resolve(__dirname, 'cert')),
+      key: '/home/ubuntu/key',
+      cert: '/home/ubuntu/cert',
     },
     host: true,
     port: 443
