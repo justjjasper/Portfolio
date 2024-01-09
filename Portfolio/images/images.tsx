@@ -3,3 +3,5 @@ export const selfImage: string ='https://res.cloudinary.com/jasjasper/image/uplo
 export const projectImage: string ='https://res.cloudinary.com/jasjasper/image/upload/v1697055854/projectPic_dbxwou.png'
 
 export const fecLandingImage: string ='https://res.cloudinary.com/jasjasper/image/upload/v1697056290/fecLandingPage_ca6nqz.png'
+
+export const snowtumImage: string = 'https://res.cloudinary.com/jasjasper/image/upload/v1704763107/snowutmShreddersProject_fteyun.png'

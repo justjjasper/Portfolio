@@ -1,11 +1,40 @@
 import { useState, useEffect, useRef, lazy } from 'react';
 const LazyFooter = lazy(() => import('../Footer'));
-import { selfImage } from '../../images/images'
+import { fecLandingImage, selfImage, snowtumImage } from '../../images/images'
+import { reactNativeIcon, typeScriptIcon, reduxIcon, nodeJSIcon, expressJSIcon, figmaIcon, awsIcon, nextSVG } from '../../images/icons';
 
 export default function About () {
   const [aboutInView, setAboutInView] = useState<boolean>(false);
   const [chart, setChart] = useState<boolean>(false);
   // const [naruto, setNaruto] = useState<boolean>(false);
+
+  const [snowtumHovered, setSnowtumHovered] = useState(false)
+  const [fitLogHovered, setFitLogHovered] = useState(false);
+  const [stringsHovered, setStringsHovered] = useState(false);
+
+  const handleSnowtumMouseEnter = () => {
+    setSnowtumHovered(true);
+  };
+
+  const handleSnowtumMouseLeave = () => {
+    setSnowtumHovered(false);
+  };
+
+  const handleFitLogMouseEnter = () => {
+    setFitLogHovered(true);
+  };
+
+  const handleFitLogMouseLeave = () => {
+    setFitLogHovered(false);
+  };
+
+  const handleStringsMouseEnter = () => {
+    setStringsHovered(true);
+  };
+
+  const handleStringsMouseLeave = () => {
+    setStringsHovered(false);
+  };
 
   const aboutRef = useRef(null);
   const chartRef = useRef(null);
@@ -59,7 +88,7 @@ export default function About () {
         <div ref={aboutRef} id='about' className='about lg:border-b-[1.5px] border-b-0 font-proxima text-[#333333] flex lg:flex-row flex-col justify-between xsm:my-[5.5rem] w-9/12 my-16 items-center'>
           <span className='flex flex-col self-center'>
             <h1 className='text-8xl font-bold mb-6'>about.</h1>
-            <div className='text-2xl lg:w-[29ch] mb-6 font-light text-[#7B7B7B]'>I'm a Software Developer based in Los Angeles, California.</div>
+            <div className='text-2xl lg:w-[25ch] mb-6 font-light text-[#7B7B7B]'>I'm a Web Developer based in Los Angeles, California.</div>
             <div className='text-lg lg:w-[43ch] font-light tracking-wide'>I'm a tech enthusiast with a keen eye for design and create intricate websites.  When I'm not coding, you can find me doing activities that gets my heart racing!</div>
           </span>
 
@@ -69,8 +98,7 @@ export default function About () {
       </section>
 
       {/* Chart */}
-      <section ref={chartRef} id='chart' className='bg-[#FAFAFA] flex shadow-sm mt-0.5 w-full justify-center font-light lg:py-8 py-20
-        px-10 border-b-[1.5px] flex-col lg:flex-row items-center'>
+      <section ref={chartRef} id='chart' className='bg-[#FAFAFA] flex shadow-sm mt-0.5 w-full justify-center font-light lg:py-8 py-20 px-10 border-b-[1.5px] flex-col lg:flex-row items-center'>
           <div className='text-xl self-center flex flex-col text-gray-600 lg:text-left text-center mb-10 lg:mb-0'>
             <span className='text-3xl text-black pb-4 '>Part Weekend Warrior</span>
             <span className='py-2'>Runner</span>
@@ -108,8 +136,154 @@ export default function About () {
         </div>
       </section> */}
 
+      {/* Latest Works */}
+      <section className='latestWorks flex py-16 w-full border-b-[1.5px] shadow-md justify-center'>
+        <div className='contentContainer flex flex-col items-center border-t-[1.3px] border-gray relative w-9/12'>
+          <h3 className='header absolute text-center w-[320px] top-[-0.8rem] bg-white text-xl'>SOME OF MY LATEST WORK</h3>
+          <div className='projectContainer w-full py-5 flex justify-between md:flex-row flex-col items-center md:gap-0 gap-7'>
+
+            {/* Snowtum Shredders Project */}
+            <div className='project snowtumShredders relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
+                onMouseEnter={handleSnowtumMouseEnter}
+                onMouseLeave={handleSnowtumMouseLeave}>
+                  <span className='p-3'>
+                    <img className={`h-[200px] w-[305px] rounded shadow-sm ${snowtumHovered ? 'blur-sm' : ''}`} src={snowtumImage} alt='SnowtumShredders Image'/>
+                  </span>
+                  <p className='pl-3 text-xl text-black'>Snowtum Shredders</p>
+                  <p className='pl-3'>Snowboard e-Commerce Website</p>
+
+                  <div
+                  className={`SnowtumDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
+                  ${snowtumHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
+                    <div className='p-7 text-white flex flex-col justify-around h-full'>
+                      <div>
+                        <p className='text-xl font-semibold text-red-500'>Snowtum Shredders</p>
+                        <p className='font-thin'>A responsive web design e-Commerce website that sells snowgear. Users are able to purchase items through the STRIPE API.
+                        </p>
+                      </div>
+
+                      <div className='py-2'>
+                        <p className='text-l font-semibold text-red-500'>Technology</p>
+                        <span className='techIcons flex justify-between font-thin'>
+                          Next.js |
+                          TypeScript |
+                          Django |
+                          PostgreSQL |
+                          AWS |
+                          Stripe API
+                        </span>
+                      </div>
+
+                    <div className='font-bold relative group xsm:w-48 w-40'>
+                      <a
+                        href='http://ec2-18-144-111-12.us-west-1.compute.amazonaws.com/'
+                        target='_blank'
+                        className='relative z-10 py-2  justify-center text-white transition duration-300 ease-in-out flex items-center'
+                        >
+                        <div className='relative z-10 flex px-4'>Visit Website</div>
+                        <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            {/* FitLog+ Project */}
+            <div className='project FitLog relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
+                onMouseEnter={handleFitLogMouseEnter}
+                onMouseLeave={handleFitLogMouseLeave}>
+                  <span className='p-3'>
+                    <img className={`h-[200px] w-[305px] rounded shadow-sm ${fitLogHovered ? 'blur-sm' : ''}`} src='../../images/fitLogHorizontalLogo.png' alt='FitLog+ Image' loading='lazy'/>
+                  </span>
+                  <p className='pl-3 text-xl text-black'>FitLog+</p>
+                  <p className='pl-3'>Fitness Mobile Application</p>
+
+                  <div
+                  className={`FitLogDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
+                  ${fitLogHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
+                    <div className='p-7 text-white flex flex-col justify-around h-full'>
+                      <div>
+                        <p className='text-xl font-semibold text-red-500'>FitLog+</p>
+                        <p className='font-thin'>Developed a bite-sized fitness mobile application where users can track and log their workout sets.
+                        </p>
+                      </div>
+
+                      <div className='py-2'>
+                        <p className='text-l font-semibold text-red-500'>Technology</p>
+                        <span className='techIcons flex justify-between font-thin'>
+                          React Native |
+                          TypeScript |
+                          Redux |
+                          Node.js |
+                          Express.js |
+                          Figma
+                        </span>
+                      </div>
+
+                    <div className='font-bold relative group xsm:w-48 w-52'>
+                      <a
+                        href='https://www.figma.com/proto/x4fC1slppUfi90Xu3fFvlK/Mobile-Projects?type=design&node-id=1-13&t=at4T8GQ59i5dhzfS-1&scaling=scale-down&page-id=0%3A1'
+                        target='_blank'
+                        className='relative z-10 py-2  justify-center text-white transition duration-300 ease-in-out flex items-center'
+                        >
+                        <div className='relative z-10 flex px-4'>Figma Presentation</div>
+                        <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+            {/* Strings Project */}
+            <div className='latestWork Strings relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform  hover:shadow-latetstWorksShadow-lg flex md:hidden flex-col overflow-hidden xl:flex'
+              onMouseEnter={handleStringsMouseEnter}
+              onMouseLeave={handleStringsMouseLeave}>
+              <span className='p-3'>
+                <img className={`h-[200px] w-[305px] object-cover rounded shadow-sm ${stringsHovered ? 'blur-sm' : ''}`} src={fecLandingImage} alt='Strings Image' loading='lazy'/>
+              </span>
+              <p className='pl-3 text-xl text-black'>Strings</p>
+              <p className='pl-3'>Mock e-Commerce Web Page</p>
+
+              <div className={`StringsDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
+              ${stringsHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
+                <div className='p-7 text-white flex flex-col justify-around h-full'>
+                  <div>
+                    <p className='text-xl font-semibold text-red-500'>Strings</p>
+                    <p className='font-thin'>Created a mock e-commerce website where users can add reviews, questions and items into cart.
+                    </p>
+                  </div>
+
+                  <div className='py-2'>
+                    <p className='text-l font-semibold text-red-500'>Technology</p>
+                    <span className='techIcons flex justify-between w-10/12 font-thin'>
+                      React Native |
+                      Node.js |
+                      Express.js |
+                      AWS
+                    </span>
+                  </div>
+
+                  <div className='font-bold relative group w-40'>
+                    <a
+                      href='http://ec2-54-227-152-111.compute-1.amazonaws.com:3000/'
+                      target='_blank'
+                      className='relative z-10 py-2 justify-center text-white transition duration-300 ease-in-out flex items-center'
+                      >
+                      <div className='relative z-10 flex px-4 whitespace-no-wrap'>Visit Website</div>
+                      <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* MySkills */}
-      <section className='mySkills flex shadow-md mb-1 flex-col  w-full items-center p-10'>
+      <section className='mySkills flex shadow-md mb-1 flex-col bg-[#FAFAFA] w-full items-center p-10'>
         <span className='text-3xl mb-6'>My Skills</span>
 
 

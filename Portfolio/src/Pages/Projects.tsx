@@ -1,6 +1,6 @@
 import { useState, lazy } from "react";
-import { reactNativeIcon, typeScriptIcon, reduxIcon, figmaIcon, nodeJSIcon,expressJSIcon, awsIcon, psqlIcon} from "../../images/icons";
-import { projectImage, fecLandingImage } from "../../images/images";
+import { reactNativeIcon, typeScriptIcon, reduxIcon, figmaIcon, nodeJSIcon,expressJSIcon, awsIcon, psqlIcon, nextSVG} from "../../images/icons";
+import { projectImage, fecLandingImage, snowtumImage } from "../../images/images";
 const LazyFooter = lazy(() => import('../Footer'));
 
 export default function Projects () {
@@ -10,10 +10,19 @@ export default function Projects () {
   // System Design
   // RoadTripper
   // Object Tracking?
+  const [snowtumHovered, setSnowtumHovered] = useState(false)
   const [fitLogHovered, setFitLogHovered] = useState(false);
   const [stringsHovered, setStringsHovered] = useState(false);
   const [systemDesignHovered, setSystemDesignHovered] = useState(false);
   const [roadTripHovered, setRoadTripHovered] = useState(false);
+
+  const handleSnowtumMouseEnter = () => {
+    setSnowtumHovered(true);
+  };
+
+  const handleSnowtumMouseLeave = () => {
+    setSnowtumHovered(false);
+  };
 
   const handleFitLogMouseEnter = () => {
     setFitLogHovered(true);
@@ -66,6 +75,48 @@ export default function Projects () {
 
         <div className='listOfProjectsContainer flex flex-row justify-center items-center gap-8 xsm:w-9/12 w-full flex-wrap'>
 
+          {/* Snowtum Shredders Project */}
+          <div className='project snowtumShredders relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
+          onMouseEnter={handleSnowtumMouseEnter}
+          onMouseLeave={handleSnowtumMouseLeave}>
+            <span className='p-3'>
+              <img className={`h-[200px] w-[305px] rounded shadow-sm ${snowtumHovered ? 'blur-sm' : ''}`} src={snowtumImage} alt='SnowtumShredders Image'/>
+            </span>
+            <p className='pl-3 text-xl text-black'>Snowtum Shredders</p>
+            <p className='pl-3'>Snowboard e-Commerce Website</p>
+              <div className={`SnowtumDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
+              ${snowtumHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
+                <div className='p-7 text-white flex flex-col justify-around h-full'>
+                  <div>
+                    <p className='text-xl font-semibold text-red-500'>Snowtum Shredders</p>
+                    <p className='font-thin'>A responsive web design e-Commerce website that sells snowgear. Users are able to purchase items through the STRIPE API.
+                    </p>
+                  </div>
+                  <div className='py-2'>
+                    <p className='text-l font-semibold text-red-500'>Technology</p>
+                    <span className='techIcons flex justify-between font-thin'>
+                      Next.js |
+                      TypeScript |
+                      Django |
+                      PostgreSQL |
+                      AWS |
+                      Stripe API
+                    </span>
+                  </div>
+
+                  <div className='font-bold relative group xsm:w-48 w-40'>
+                    <a
+                      href='http://ec2-18-144-111-12.us-west-1.compute.amazonaws.com/'
+                      target='_blank'
+                      className='relative z-10 py-2  justify-center text-white transition duration-300 ease-in-out flex items-center'
+                      >
+                      <div className='relative z-10 flex px-4'>Visit Website</div>
+                      <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+          </div>
 
           {/* FitLog+ Project */}
           <div className='project FitLog relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
@@ -82,20 +133,20 @@ export default function Projects () {
                 ${fitLogHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
                   <div className='p-7 text-white flex flex-col justify-around h-full'>
                     <div>
-                      <p className='text-xl font-semibold'>FitLog+</p>
+                      <p className='text-xl font-semibold text-red-500'>FitLog+</p>
                       <p className='font-thin'>Developed a bite-sized fitness mobile application where users can track and log their workout sets.
                       </p>
                     </div>
 
                     <div>
-                      <p className='text-l font-semibold'>Technology</p>
-                      <span className='techIcons flex justify-between'>
-                        {reactNativeIcon}
-                        {typeScriptIcon}
-                        {reduxIcon}
-                        {nodeJSIcon}
-                        {expressJSIcon}
-                        {figmaIcon}
+                      <p className='text-l font-semibold text-red-500'>Technology</p>
+                      <span className='techIcons flex justify-between font-thin'>
+                        React Native |
+                        TypeScript |
+                        Redux |
+                        Node.js |
+                        Express.js |
+                        Figma
                       </span>
                     </div>
 
@@ -127,28 +178,28 @@ export default function Projects () {
             ${stringsHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
               <div className='p-7 text-white flex flex-col justify-around h-full'>
                 <div>
-                  <p className='text-xl font-semibold'>Strings</p>
+                  <p className='text-xl font-semibold text-red-500'>Strings</p>
                   <p className='font-thin'>Created a mock e-commerce website where users can add reviews, questions and items into cart.
                   </p>
                 </div>
 
                 <div>
-                  <p className='text-l font-semibold'>Technology</p>
-                  <span className='techIcons flex justify-between w-10/12'>
-                    {reactNativeIcon}
-                    {nodeJSIcon}
-                    {expressJSIcon}
-                    {awsIcon}
+                  <p className='text-l font-semibold text-red-500'>Technology</p>
+                  <span className='techIcons flex justify-between w-10/12 font-thin'>
+                    React |
+                    Node.js |
+                    Express.js |
+                    AWS
                   </span>
                 </div>
 
-                <div className='font-bold relative group w-16'>
+                <div className='font-bold relative group w-40'>
                   <a
                     href='http://ec2-54-227-152-111.compute-1.amazonaws.com:3000/'
                     target='_blank'
                     className='relative z-10 py-2 justify-center text-white transition duration-300 ease-in-out flex items-center'
                     >
-                    <div className='relative z-10 flex px-4'>Demo</div>
+                    <div className='relative z-10 flex px-4 whitespace-nowrap'>Visit Website</div>
                     <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
                   </a>
                 </div>
@@ -172,18 +223,18 @@ export default function Projects () {
             ${systemDesignHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
               <div className='p-7 text-white flex flex-col justify-around h-full'>
                 <div>
-                  <p className='text-xl font-semibold'>System Design</p>
+                  <p className='text-xl font-semibold text-red-500'>System Design</p>
                   <p className='font-thin'>Replaced a legacy system/ API  from an E-commerce web application with a PostgreSQL Database.
                   </p>
                 </div>
 
                 <div className='py-4'>
-                  <p className='text-l font-semibold'>Technology</p>
-                  <span className='techIcons flex justify-between w-10/12'>
-                    {psqlIcon}
-                    {reactNativeIcon}
-                    {nodeJSIcon}
-                    {expressJSIcon}
+                  <p className='text-l font-semibold text-red-500'>Technology</p>
+                  <span className='techIcons flex justify-between w-10/12 font-thin'>
+                    PostgreSQL |
+                    React |
+                    Node.js |
+                    Express.js
                   </span>
                 </div>
 
@@ -215,19 +266,19 @@ export default function Projects () {
             ${roadTripHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
               <div className='p-7 text-white flex flex-col justify-around h-full'>
                 <div>
-                  <p className='text-xl font-semibold'>Road Trip</p>
+                  <p className='text-xl font-semibold text-red-500'>Road Trip</p>
                   <p className='font-thin'>Built a mobile iOS application that allows users to plan stops and other point of interests for their road trip
                   </p>
                 </div>
 
                 <div className='py-4'>
-                  <p className='text-l font-semibold'>Technology</p>
-                  <span className='techIcons flex justify-between w-10/12'>
-                    {reactNativeIcon}
-                    {psqlIcon}
-                    {typeScriptIcon}
-                    {nodeJSIcon}
-                    {expressJSIcon}
+                  <p className='text-l font-semibold text-red-500'>Technology</p>
+                  <span className='techIcons flex justify-between w-10/12 font-thin'>
+                    React Native |
+                    PostgreSQL |
+                    TypeScript |
+                    Node.js |
+                    Express.js
                   </span>
                 </div>
 
