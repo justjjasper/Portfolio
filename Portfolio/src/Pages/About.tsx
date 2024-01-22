@@ -176,7 +176,7 @@ export default function About () {
 
                     <div className='font-bold relative group xsm:w-48 w-40'>
                       <a
-                        href='http://ec2-18-144-111-12.us-west-1.compute.amazonaws.com/'
+                        href='http://snowtumshredders.com'
                         target='_blank'
                         className='relative z-10 py-2  justify-center text-white transition duration-300 ease-in-out flex items-center'
                         >
