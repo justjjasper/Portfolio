@@ -97,30 +97,6 @@ export default function About () {
         </div>
       </section>
 
-      {/* Chart */}
-      <section ref={chartRef} id='chart' className='bg-[#FAFAFA] flex shadow-sm mt-0.5 w-full justify-center font-light lg:py-8 py-20 px-10 border-b-[1.5px] flex-col lg:flex-row items-center'>
-          <div className='text-xl self-center flex flex-col text-gray-600 lg:text-left text-center mb-10 lg:mb-0'>
-            <span className='text-3xl text-black pb-4 '>Part Weekend Warrior</span>
-            <span className='py-2'>Runner</span>
-            <span className='py-2'>Snowboarder</span>
-            <span className='py-2'>Weightlifter</span>
-            <span className='py-2'>Professional Eater</span>
-           </div>
-          <div className={`w-[45%] object-contain h-6/12 pr-16 transition-transform duration-[3000ms] ease-in-out ${chart ? '' : "opacity-50"} hidden lg:block`}>
-            <img src='../../images/pieChart.png' alt='Pie Chart of Skills' loading='lazy'/>
-          </div>
-          <div className='text-xl self-center flex flex-col text-gray-600 lg:text-left text-center mb-10 lg:mb-0'>
-            <span className='text-3xl text-black pb-4'>Part Coder</span>
-            <span className='py-2'>Front End Developer</span>
-            <span className='py-2'>React JS / Next.js</span>
-            <span className='py-2'>UI Design</span>
-            <span className='py-2'>Squashing Bugs</span>
-          </div>
-          <div className={`md:w-[45%] object-contain md:h-6/12 transition-transform duration-[3000ms] ease-in-out ${chart ? '' : "opacity-50"} block lg:hidden`}>
-            <img src='../../images/pieChart.png' loading='lazy'/>
-          </div>
-      </section>
-
       {/* <section className='randomFacts flex justify-center font-light py-2 w-full border-b-[1.5px]'>
         <div ref={narutoRef} id='naruto' className={`h-4/12 w-4/12 transition-transform duration-[1000ms] ease-in-out ${naruto ? '' : "-translate-x-full"}`}>
           <img src='../../images/epicNaruto.png' loading='lazy'/>
@@ -280,6 +256,30 @@ export default function About () {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Chart */}
+      <section ref={chartRef} id='chart' className='bg-[#FAFAFA] flex shadow-sm mt-0.5 w-full justify-center font-light lg:py-8 py-20 px-10 border-b-[1.5px] flex-col lg:flex-row items-center'>
+          <div className='text-xl self-center flex flex-col text-gray-600 lg:text-left text-center mb-10 lg:mb-0'>
+            <span className='text-3xl text-black pb-4 '>Part Weekend Warrior</span>
+            <span className='py-2'>Runner</span>
+            <span className='py-2'>Snowboarder</span>
+            <span className='py-2'>Weightlifter</span>
+            <span className='py-2'>Professional Eater</span>
+           </div>
+          <div className={`w-[45%] object-contain h-6/12 pr-16 transition-transform duration-[3000ms] ease-in-out ${chart ? '' : "opacity-50"} hidden lg:block`}>
+            <img src='../../images/pieChart.png' alt='Pie Chart of Skills' loading='lazy'/>
+          </div>
+          <div className='text-xl self-center flex flex-col text-gray-600 lg:text-left text-center mb-10 lg:mb-0'>
+            <span className='text-3xl text-black pb-4'>Part Coder</span>
+            <span className='py-2'>Front End Developer</span>
+            <span className='py-2'>React JS / Next.js</span>
+            <span className='py-2'>UI Design</span>
+            <span className='py-2'>Squashing Bugs</span>
+          </div>
+          <div className={`md:w-[45%] object-contain md:h-6/12 transition-transform duration-[3000ms] ease-in-out ${chart ? '' : "opacity-50"} block lg:hidden`}>
+            <img src='../../images/pieChart.png' loading='lazy'/>
+          </div>
       </section>
 
       {/* MySkills */}
