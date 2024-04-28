@@ -113,7 +113,7 @@ export default function About () {
       </section> */}
 
       {/* Latest Works */}
-      <section className='latestWorks flex py-16 w-full border-b-[1.5px] shadow-md justify-center'>
+      <section className='latestWorks flex py-16 w-full border-b-[1.5px] shadow-md justify-center bg-[#FAFAFA]'>
         <div className='contentContainer flex flex-col items-center border-t-[1.3px] border-gray relative w-9/12'>
           <h3 className='header absolute text-center w-[320px] top-[-0.8rem] bg-white text-xl'>SOME OF MY LATEST WORK</h3>
           <div className='projectContainer w-full py-5 flex justify-between md:flex-row flex-col items-center md:gap-0 gap-7'>
@@ -259,7 +259,7 @@ export default function About () {
       </section>
 
       {/* Chart */}
-      <section ref={chartRef} id='chart' className='bg-[#FAFAFA] flex shadow-sm mt-0.5 w-full justify-center font-light lg:py-8 py-20 px-10 border-b-[1.5px] flex-col lg:flex-row items-center'>
+      <section ref={chartRef} id='chart' className='flex shadow-sm mt-0.5 w-full justify-center font-light lg:py-8 py-20 px-10 border-b-[1.5px] flex-col lg:flex-row items-center'>
           <div className='text-xl self-center flex flex-col text-gray-600 lg:text-left text-center mb-10 lg:mb-0'>
             <span className='text-3xl text-black pb-4 '>Part Weekend Warrior</span>
             <span className='py-2'>Runner</span>
