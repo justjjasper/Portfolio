@@ -115,7 +115,7 @@ export default function About () {
       {/* Latest Works */}
       <section className='latestWorks flex py-16 w-full border-b-[1.5px] shadow-md justify-center bg-[#FAFAFA]'>
         <div className='contentContainer flex flex-col items-center border-t-[1.3px] border-gray relative w-9/12'>
-          <h3 className='header absolute text-center w-[320px] top-[-0.8rem] bg-white text-xl'>SOME OF MY LATEST WORK</h3>
+          <h3 className='header absolute text-center w-[320px] top-[-0.8rem] bg-[#FAFAFA] text-xl'>SOME OF MY LATEST WORK</h3>
           <div className='projectContainer w-full py-5 flex justify-between md:flex-row flex-col items-center md:gap-0 gap-7'>
 
             {/* Snowtum Shredders Project */}
