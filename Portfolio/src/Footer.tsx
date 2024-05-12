@@ -35,7 +35,7 @@ export default function Footer() {
 
 
         <div className='@JasperBucad hover:text-black'>
-          <a href= '/'> © 2023 Jasper Bucad</a>
+          <a href= '/'> © 2024 Jasper Bucad</a>
         </div>
 
         <nav className= 'FooterMenu hidden lg:block'>
