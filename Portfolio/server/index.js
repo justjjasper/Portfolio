@@ -2,7 +2,9 @@ import express from 'express'
 import cors from 'cors'
 import  { postContact }  from './controllers.js';
 import dotenv from 'dotenv';
+import { readFileSync } from 'fs';
 import https from 'https'
+import path from 'path';
 dotenv.config();
 
 var app = express();
@@ -13,8 +15,8 @@ app.post('/contact', postContact)
 
 // Paths to your SSL certificate and key files from environment variables
 const sslOptions = {
-  key: process.env.CERT,
-  cert: process.env.KEY,
+  key: readFileSync(path.resolve(__dirname, '/home/ubuntu/key')),
+  cert: readFileSync(path.resolve(__dirname, '/home/ubuntu/cert')),
 };
 
 // app.listen(process.env.PORT, () => {
