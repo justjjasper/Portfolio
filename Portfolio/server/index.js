@@ -15,8 +15,8 @@ app.post('/contact', postContact)
 
 // Paths to your SSL certificate and key files from environment variables
 const sslOptions = {
-  key: readFileSync(path.resolve(__dirname, '/home/ubuntu/key')),
-  cert: readFileSync(path.resolve(__dirname, '/home/ubuntu/cert')),
+  key: readFileSync('/home/ubuntu/key'),
+  cert: readFileSync('/home/ubuntu/cert'),
 };
 
 // app.listen(process.env.PORT, () => {
