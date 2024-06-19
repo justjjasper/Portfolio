@@ -9,7 +9,7 @@
     "sudo npm run dev": "vite",
     "preview": "vite preview",
     "tailwind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "server": "nodemon server/index.js",
+    "server": "nodemon /home/ubuntu/Portfolio/Portfolio/server/index.js",
     "pm2-start": "pm2 start 'sudo npm run dev' && pm2 start 'npm run server'",
     "pm2-stop": "pm2 stop 'sudo npm run dev' && pm2 stop 'npm run server'"
   },
