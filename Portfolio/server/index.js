@@ -2,7 +2,6 @@ import express from 'express'
 import cors from 'cors'
 import  { postContact }  from './controllers.js';
 import dotenv from 'dotenv';
-import { readFileSync } from 'fs';
 import https from 'https'
 dotenv.config();
 
@@ -14,8 +13,8 @@ app.post('/contact', postContact)
 
 // Paths to your SSL certificate and key files from environment variables
 const sslOptions = {
-  key: readFileSync(process.env.CERT),
-  cert: readFileSync(process.env.KEY),
+  key: process.env.CERT,
+  cert: process.env.KEY,
 };
 
 // app.listen(process.env.PORT, () => {
