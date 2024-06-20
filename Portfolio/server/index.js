@@ -23,8 +23,8 @@ app.get('/test', async (req, res) => {
 
 // Paths to your SSL certificate and key files from environment variables
 const sslOptions = {
-  key: readFileSync('/home/ubuntu/key'),
-  cert: readFileSync('/home/ubuntu/cert'),
+  key: readFileSync('/home/ubuntu/key.pem'),
+  cert: readFileSync('/home/ubuntu/cert.pem'),
 };
 
 // app.listen(process.env.PORT, () => {
