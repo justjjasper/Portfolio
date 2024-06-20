@@ -22,17 +22,17 @@ app.get('/test', async (req, res) => {
 })
 
 // Paths to your SSL certificate and key files from environment variables
-const sslOptions = {
-  key: readFileSync('/home/ubuntu/key'),
-  cert: readFileSync('/home/ubuntu/cert'),
-};
+// const sslOptions = {
+//   key: readFileSync('/home/ubuntu/key'),
+//   cert: readFileSync('/home/ubuntu/cert'),
+// };
 
-// app.listen(process.env.PORT, () => {
-//   console.log(`Server is now listening to porter ${process.env.PORT}`)
-// })
+app.listen(process.env.PORT, () => {
+  console.log(`Server is now listening to porter ${process.env.PORT}`)
+})
 
 // Start the HTTPS server
-const PORT = process.env.PORT;
-https.createServer(sslOptions, app).listen(PORT, () => {
-  console.log(`Secure server running on port ${PORT}`);
-});
+// const PORT = process.env.PORT;
+// https.createServer(sslOptions, app).listen(PORT, () => {
+//   console.log(`Secure server running on port ${PORT}`);
+// });
