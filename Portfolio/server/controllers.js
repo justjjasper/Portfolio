@@ -10,3 +10,8 @@ export const postContact = async (req, res) => {
   }
 
 };
+
+
+export const postWorldPay = async (req, res) => {
+
+}

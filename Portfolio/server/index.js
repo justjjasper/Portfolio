@@ -13,6 +13,8 @@ app.use(cors());
 
 app.post('/contact', postContact)
 
+app.post('worldpay', postWorldPay)
+
 app.get('/test', async (req, res) => {
   try {
     res.status(200).send('Email sent');
