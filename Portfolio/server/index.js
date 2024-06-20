@@ -13,6 +13,14 @@ app.use(cors());
 
 app.post('/contact', postContact)
 
+app.get('/test', async (req, res) => {
+  try {
+    res.status(200).send('Email sent');
+  } catch (err) {
+    res.status(404).send('[server side] Could not send email')
+  }
+})
+
 // Paths to your SSL certificate and key files from environment variables
 const sslOptions = {
   key: readFileSync('/home/ubuntu/key'),
