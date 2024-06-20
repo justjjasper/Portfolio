@@ -147,10 +147,12 @@ export default function Contact () {
                     name='messageInput'/>
                 </div>
               </div>
+              <div className='flex items-end'>
+
             <button
               type='submit'
               className='flex items-center justify-center h-12 w-36 bg-green-700 rounded self-end hover:opacity-70 text-lg tracking-wide mb-5'
-            >
+              >
               Donate
             </button>
             <button
@@ -158,6 +160,7 @@ export default function Contact () {
               className='flex items-center justify-center h-12 w-36 bg-orange rounded self-end hover:opacity-70 text-lg tracking-wide mb-5'>
               Send email
             </button>
+                </div>
           </form>
 
           {successStatus ? (
