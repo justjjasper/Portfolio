@@ -148,13 +148,13 @@ export default function Contact () {
                 </div>
               </div>
               <div className='flex self-end'>
-
+{/*
             <button
               type='submit'
               className='flex items-center justify-center h-12 w-36 bg-green-700 rounded self-end hover:opacity-70 text-lg tracking-wide mb-5 mr-3'
               >
               Donate
-            </button>
+            </button> */}
             <button
               type='submit'
               className='flex items-center justify-center h-12 w-36 bg-orange rounded self-end hover:opacity-70 text-lg tracking-wide mb-5'>
