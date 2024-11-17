@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, lazy } from 'react';
 const LazyFooter = lazy(() => import('../Footer'));
-import { fecLandingImage, selfImage, snowtumImage } from '../../images/images'
+import { selfImage, snowtumImage } from '../../images/images'
 import { reactNativeIcon, typeScriptIcon, reduxIcon, nodeJSIcon, expressJSIcon, figmaIcon, awsIcon, nextSVG } from '../../images/icons';
 
 export default function About () {
@@ -10,7 +10,7 @@ export default function About () {
 
   const [snowtumHovered, setSnowtumHovered] = useState(false)
   const [fitLogHovered, setFitLogHovered] = useState(false);
-  const [stringsHovered, setStringsHovered] = useState(false);
+  const [lakersHovered, setLakersHovered] = useState(false);
 
   const handleSnowtumMouseEnter = () => {
     setSnowtumHovered(true);
@@ -28,12 +28,12 @@ export default function About () {
     setFitLogHovered(false);
   };
 
-  const handleStringsMouseEnter = () => {
-    setStringsHovered(true);
+  const handleLakersMouseEnter = () => {
+    setLakersHovered(true);
   };
 
-  const handleStringsMouseLeave = () => {
-    setStringsHovered(false);
+  const handleLakersMouseLeave = () => {
+    setLakersHovered(false);
   };
 
   const aboutRef = useRef(null);
@@ -164,6 +164,50 @@ export default function About () {
                 </div>
             </div>
 
+            {/* Lakers Project */}
+            <div className='latestWork Strings relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform  hover:shadow-latetstWorksShadow-lg flex md:hidden flex-col overflow-hidden xl:flex'
+              onMouseEnter={handleLakersMouseEnter}
+              onMouseLeave={handleLakersMouseLeave}>
+              <span className='p-3'>
+                <img className={`h-[200px] w-[305px] object-cover rounded shadow-sm ${lakersHovered ? 'blur-sm' : ''}`} src="../../images/lakersStatApp.png" alt='Lakers Image' loading='lazy'/>
+              </span>
+              <p className='pl-3 text-xl text-black'>Lakers Stat App</p>
+              <p className='pl-3'>Stat Display Web Application</p>
+
+              <div className={`StringsDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
+              ${lakersHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
+                <div className='p-7 text-white flex flex-col justify-around h-full'>
+                  <div>
+                    <p className='text-xl font-semibold text-red-500'>Strings</p>
+                    <p className='font-thin'>A small web application that displays the top 3 players of a given stat within the Lakers team.
+                    </p>
+                  </div>
+
+                  <div className='py-2'>
+                    <p className='text-l font-semibold text-red-500'>Technology</p>
+                    <span className='techIcons flex justify-between w-10/12 font-thin'>
+                      Next.js |
+                      Tailwind CSS |
+                      React.js |
+                      AWS
+                    </span>
+                  </div>
+
+                  <div className='font-bold relative group w-40'>
+                    <a
+                      href='https://lakers-stat-lp4t6xo79-jasper-bucads-projects.vercel.app/'
+                      target='_blank'
+                      className='relative z-10 py-2 justify-center text-white transition duration-300 ease-in-out flex items-center'
+                      >
+                      <div className='relative z-10 flex px-4 whitespace-no-wrap'>Visit Website</div>
+                      <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
             {/* FitLog+ Project */}
             <div className='project FitLog relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
                 onMouseEnter={handleFitLogMouseEnter}
@@ -210,50 +254,6 @@ export default function About () {
                 </div>
             </div>
 
-
-            {/* Strings Project */}
-            <div className='latestWork Strings relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform  hover:shadow-latetstWorksShadow-lg flex md:hidden flex-col overflow-hidden xl:flex'
-              onMouseEnter={handleStringsMouseEnter}
-              onMouseLeave={handleStringsMouseLeave}>
-              <span className='p-3'>
-                <img className={`h-[200px] w-[305px] object-cover rounded shadow-sm ${stringsHovered ? 'blur-sm' : ''}`} src={fecLandingImage} alt='Strings Image' loading='lazy'/>
-              </span>
-              <p className='pl-3 text-xl text-black'>Strings</p>
-              <p className='pl-3'>Mock e-Commerce Web Page</p>
-
-              <div className={`StringsDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
-              ${stringsHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
-                <div className='p-7 text-white flex flex-col justify-around h-full'>
-                  <div>
-                    <p className='text-xl font-semibold text-red-500'>Strings</p>
-                    <p className='font-thin'>Created a mock e-commerce website where users can add reviews, questions and items into cart.
-                    </p>
-                  </div>
-
-                  <div className='py-2'>
-                    <p className='text-l font-semibold text-red-500'>Technology</p>
-                    <span className='techIcons flex justify-between w-10/12 font-thin'>
-                      React Native |
-                      Node.js |
-                      Express.js |
-                      AWS
-                    </span>
-                  </div>
-
-                  <div className='font-bold relative group w-40'>
-                    <a
-                      href='http://ec2-54-227-152-111.compute-1.amazonaws.com:3000/'
-                      target='_blank'
-                      className='relative z-10 py-2 justify-center text-white transition duration-300 ease-in-out flex items-center'
-                      >
-                      <div className='relative z-10 flex px-4 whitespace-no-wrap'>Visit Website</div>
-                      <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
-                    </a>
-                  </div>
-
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
