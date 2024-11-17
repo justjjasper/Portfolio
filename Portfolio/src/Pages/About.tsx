@@ -134,7 +134,7 @@ export default function About () {
                     <div className='p-7 text-white flex flex-col justify-around h-full'>
                       <div>
                         <p className='text-xl font-semibold text-red-500'>Snowtum Shredders</p>
-                        <p className='font-thin'>A fully functional, responsive web design e-Commerce website that sells snowgear.
+                        <p className='font-thin'>A modern look at a responsive web design e-Commerce website that sells snowgear.
                         </p>
                       </div>
 
