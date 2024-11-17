@@ -169,7 +169,7 @@ export default function About () {
               onMouseEnter={handleLakersMouseEnter}
               onMouseLeave={handleLakersMouseLeave}>
               <span className='p-3'>
-                <img className={`h-[200px] w-[305px] object-contain rounded shadow-sm ${lakersHovered ? 'blur-sm' : ''}`} src="../../images/lakersStatApp.png" alt='Lakers Image' loading='lazy'/>
+                <img className={`h-[200px] w-[305px] object-cover rounded shadow-sm ${lakersHovered ? 'blur-sm' : ''}`} src="../../images/lakersStatApp.png" alt='Lakers Image' loading='lazy'/>
               </span>
               <p className='pl-3 text-xl text-black'>Lakers Stat App</p>
               <p className='pl-3'>Stat Display Web Application</p>
