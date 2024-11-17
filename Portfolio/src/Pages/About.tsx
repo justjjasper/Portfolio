@@ -189,7 +189,7 @@ export default function About () {
                       Next.js |
                       Tailwind CSS |
                       React.js |
-                      AWS
+                      Vercel
                     </span>
                   </div>
 
