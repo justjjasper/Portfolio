@@ -15,6 +15,7 @@ export default function Projects () {
   const [stringsHovered, setStringsHovered] = useState(false);
   const [systemDesignHovered, setSystemDesignHovered] = useState(false);
   const [roadTripHovered, setRoadTripHovered] = useState(false);
+  const [lakersHovered, setLakersHovered] = useState(false);
 
   const handleSnowtumMouseEnter = () => {
     setSnowtumHovered(true);
@@ -30,6 +31,14 @@ export default function Projects () {
 
   const handleFitLogMouseLeave = () => {
     setFitLogHovered(false);
+  };
+
+  const handleLakersMouseEnter = () => {
+    setLakersHovered(true);
+  };
+
+  const handleLakersMouseLeave = () => {
+    setLakersHovered(false);
   };
 
   const handleStringsMouseEnter = () => {
@@ -117,6 +126,50 @@ export default function Projects () {
                 </div>
               </div>
           </div>
+
+          {/* Lakers Project */}
+            <div className='latestWork Strings relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform  hover:shadow-latetstWorksShadow-lg flex md:hidden flex-col overflow-hidden xl:flex'
+              onMouseEnter={handleLakersMouseEnter}
+              onMouseLeave={handleLakersMouseLeave}>
+              <span className='p-3'>
+                <img className={`h-[200px] w-[305px] object-cover rounded shadow-sm ${lakersHovered ? 'blur-sm' : ''}`} src="../../images/lakersStatApp.png" alt='Lakers Image' loading='lazy'/>
+              </span>
+              <p className='pl-3 text-xl text-black'>Lakers Stat App</p>
+              <p className='pl-3'>Stat Display Web Application</p>
+
+              <div className={`StringsDesc absolute w-full h-full bg-black-70 transform transition-all duration-300
+              ${lakersHovered ? 'hover:translate-x-0' : 'translate-x-full'}`}>
+                <div className='p-7 text-white flex flex-col justify-around h-full'>
+                  <div>
+                    <p className='text-xl font-semibold text-red-500'>Strings</p>
+                    <p className='font-thin'>A small web application that displays the top 3 players of a given stat within the Lakers team.
+                    </p>
+                  </div>
+
+                  <div className='py-2'>
+                    <p className='text-l font-semibold text-red-500'>Technology</p>
+                    <span className='techIcons flex justify-between w-10/12 font-thin'>
+                      Next.js |
+                      Tailwind CSS |
+                      React.js |
+                      Vercel
+                    </span>
+                  </div>
+
+                  <div className='font-bold relative group w-40'>
+                    <a
+                      href='https://lakers-stat-lp4t6xo79-jasper-bucads-projects.vercel.app/'
+                      target='_blank'
+                      className='relative z-10 py-2 justify-center text-white transition duration-300 ease-in-out flex items-center'
+                      >
+                      <div className='relative z-10 flex px-4 whitespace-no-wrap'>Visit Website</div>
+                      <div className='absolute w-full h-8 bg-red-500 rounded-full group-hover:opacity-75 duration-300'></div>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
 
           {/* FitLog+ Project */}
           <div className='project FitLog relative shadow-latestWorksShadow-md w-[330px] h-[275px] rounded-md transform transition-transform hover:shadow-latetstWorksShadow-lg flex flex-col overflow-hidden'
